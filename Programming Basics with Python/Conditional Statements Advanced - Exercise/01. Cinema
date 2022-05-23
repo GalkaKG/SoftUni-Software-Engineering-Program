@@ -1,0 +1,16 @@
+type_projection = input()
+rows = int(input())
+columns = int(input())
+price = 0
+
+if type_projection == 'Premiere':
+    price = 12.00
+elif type_projection == 'Normal':
+    price = 7.50
+else:
+    price = 5.00
+
+places = rows * columns
+total_sum = places * price
+
+print(f'{total_sum:.2f} leva')
