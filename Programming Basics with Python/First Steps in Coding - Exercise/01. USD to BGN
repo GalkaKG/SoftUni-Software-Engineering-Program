@@ -1,0 +1,4 @@
+count = float(input())
+bgn = count * 1.79549 
+
+print(bgn)
