@@ -1,2 +1,2 @@
-# SoftUni - Engineering Software
+# SoftUni - Software Engineering program
 This is student training. 
