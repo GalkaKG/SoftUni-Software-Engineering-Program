@@ -1,0 +1,6 @@
+number = str(input())
+
+num = sorted(number, reverse=True)
+result = ''.join(num)
+
+print(result)
