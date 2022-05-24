@@ -1,0 +1,19 @@
+budget = float(input())
+count_statists = int(input())
+price_one_outfit = float(input())
+decor = budget * 0.10
+outfits = count_statists * price_one_outfit
+
+if count_statists > 150:
+    outfits -= (outfits * 0.10)
+
+total_sum = outfits + decor
+diff = abs(total_sum - budget)
+
+if total_sum > budget:
+    print("Not enough money!")
+    print(f"Wingard needs {diff:.2f} leva more.")
+
+else:
+    print("Action!")
+    print(f"Wingard starts filming with {diff:.2f} leva left.")
