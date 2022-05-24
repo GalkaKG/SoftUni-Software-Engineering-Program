@@ -1,0 +1,8 @@
+string = input().split(", ")
+reversed_str = string[::-1]
+
+if string[-1] == 'wolf':
+    print("Please go away and stop eating my sheep")
+else:
+    index_sheep = reversed_str.index('wolf')
+    print(f'Oi! Sheep number {index_sheep}! You are about to be eaten by a wolf!')
