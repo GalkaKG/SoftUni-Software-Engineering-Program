@@ -1,0 +1,21 @@
+price_excursion = float(input())
+count_puzzles = int(input())
+count_dolls = int(input())
+count_teddy_bears = int(input())
+count_minions = int(input())
+count_trucks = int(input())
+toy_price = count_puzzles * 2.60 + count_dolls * 3 + count_teddy_bears * 4.10 \
+               + count_minions * 8.20 + count_trucks * 2
+all_toys_count = count_puzzles + count_dolls + count_teddy_bears + count_minions + count_trucks
+discount = 0
+
+if all_toys_count >= 50:
+    toy_price = toy_price * 0.75
+
+toy_price = toy_price * 0.90
+diff = abs(toy_price - price_excursion)
+
+if toy_price >= price_excursion:
+    print(f"Yes! {diff:.2f} lv left.")
+else:
+    print(f"Not enough money! {diff:.2f} lv needed.")
