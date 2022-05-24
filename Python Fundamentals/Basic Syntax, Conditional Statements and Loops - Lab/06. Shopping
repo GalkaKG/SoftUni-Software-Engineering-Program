@@ -1,0 +1,18 @@
+budget = int(input())
+command = input()
+bought_everything = True
+
+while command != "End":
+    price = int(command)
+
+    if budget < price:
+        bought_everything = False
+        print("You went in overdraft!")
+        break
+
+    budget -= price
+
+    command = input()
+
+if bought_everything:
+    print("You bought everything needed.")
