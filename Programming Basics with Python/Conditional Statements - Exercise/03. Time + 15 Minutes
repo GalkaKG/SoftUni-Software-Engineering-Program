@@ -1,0 +1,17 @@
+hour = int(input())
+minutes = int(input())
+sum_time = (hour * 60) + minutes
+time_plus_15_min = sum_time + 15
+hour_res = time_plus_15_min // 60
+minutes_res = time_plus_15_min % 60
+
+if hour_res > 23:
+    hour_res = 0
+
+if minutes_res > 59:
+    minutes_res = 0
+
+if minutes_res < 10:
+    print(f'{hour_res}:0{minutes_res}')
+else:
+    print(f'{hour_res}:{minutes_res}')
