@@ -1,0 +1,9 @@
+string = input()
+capital_letters = []
+
+for i in range(len(string)):
+    digit = string[i]
+    if digit.isupper():
+        capital_letters.append(i)
+
+print(capital_letters)
