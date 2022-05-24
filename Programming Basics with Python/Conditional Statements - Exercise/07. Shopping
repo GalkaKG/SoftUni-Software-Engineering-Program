@@ -1,0 +1,18 @@
+budget = float(input())
+count_VGA = int(input())
+count_CPU = int(input())
+count_RAM = int(input())
+price_VGA = count_VGA * 250
+price_CPU = count_CPU * (price_VGA * 0.35)
+price_RAM = count_RAM * (price_VGA * 0.10)
+sum_of_all = price_VGA + price_CPU + price_RAM
+
+if count_VGA > count_CPU:
+    sum_of_all -= (sum_of_all * 0.15)
+
+diff = abs(budget - sum_of_all)
+
+if budget >= sum_of_all:
+    print(f"You have {diff:.2f} leva left!")
+else:
+    print(f"Not enough money! You need {diff:.2f} leva more!")
