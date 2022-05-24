@@ -1,0 +1,12 @@
+n = int(input())
+
+for i in range(n):
+    how_times = n - 2
+
+    if i == 0:
+        print(f"+{' -' * how_times} +")
+    elif i == n - 1:
+        print(f"+{' -' * how_times} +")
+
+    else:
+        print(f"|{' -' * how_times} |")
