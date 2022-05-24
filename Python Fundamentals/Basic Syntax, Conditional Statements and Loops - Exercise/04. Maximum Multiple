@@ -1,0 +1,9 @@
+divisor = int(input())
+boundary = int(input())
+max_divisor = 0
+
+for current_number in range(boundary, divisor, -1):
+    if current_number % divisor == 0:
+        max_divisor = current_number
+        break
+print(max_divisor)
