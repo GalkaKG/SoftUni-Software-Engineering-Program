@@ -1,0 +1,12 @@
+record_in_sec = float(input())
+distance_in_ms = float(input())
+time_in_sec = float(input())
+slowly_times = distance_in_ms // 15
+how_slower = slowly_times * 12.5
+his_time = time_in_sec * distance_in_ms + how_slower
+diff = abs(his_time - record_in_sec)
+
+if his_time < record_in_sec:
+    print(f"Yes, he succeeded! The new world record is {his_time:.2f} seconds.")
+else:
+    print(f"No, he failed! He was {diff:.2f} seconds slower.")
