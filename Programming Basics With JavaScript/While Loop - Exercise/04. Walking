@@ -1,0 +1,39 @@
+function walking (input) {
+    let index = 0;
+    let counterSteps = 0;
+    let isGoalReached = false;
+    let command = input[index];
+
+    while (command !== "Going home") {
+        let steps = Number(command);
+        index++;
+        counterSteps += steps;
+        
+
+        if (counterSteps >= 10000) {
+            isGoalReached = true;
+            let diff = Math.abs(counterSteps - 10000);
+            console.log("Goal reached! Good job!");
+            console.log(`${diff} steps over the goal!`);
+            break;
+        }
+
+        command = input[index];
+
+    }
+
+    if (!isGoalReached) {
+        index++;
+        stepsToHome = Number(input[index]);
+        index++;
+        let sumSteps = counterSteps + stepsToHome;
+        let diffInSteps = Math.abs(10000 - sumSteps);
+        if (sumSteps >= 10000) {
+            console.log("Goal reached! Good job!");
+            console.log(`${diffInSteps} steps over the goal!`);
+        } else {
+            console.log(`${diffInSteps} more steps to reach goal.`);
+        }    
+    }
+
+}
