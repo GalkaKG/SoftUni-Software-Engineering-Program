@@ -1,0 +1,22 @@
+from math import pi
+
+type_of_figure = input()
+
+if type_of_figure == 'square':
+    side = float(input())
+    area = side * side
+    print(f"{area:.3f}")
+elif type_of_figure == 'rectangle':
+    side1 = float(input())
+    side2 = float(input())
+    area = side1 * side2
+    print(f"{area:.3f}")
+elif type_of_figure == 'circle':
+    radius = float(input())
+    area = pi * radius * radius
+    print(f"{area:.3f}")
+elif type_of_figure == 'triangle':
+    length_of_the_side = float(input())
+    length_of_the_high = float(input())
+    area = (length_of_the_side * length_of_the_high) / 2
+    print(f"{area:.3f}")
