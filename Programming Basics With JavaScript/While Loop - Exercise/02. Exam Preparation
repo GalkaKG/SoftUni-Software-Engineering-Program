@@ -1,0 +1,44 @@
+function examPreparation (input) {
+   let index = 0;
+   let countNeativeGrade = Number(input[index]);
+   index++;
+
+   let command = input[index];
+   index++;
+
+   let currentNegativeGrade = 0;
+   let sumGrade = 0;
+   let countProblems = 0;
+   let lastName = "";
+   let isNeedBreak = false;
+
+   while (command !== "Enough") {
+       let problemName = command;
+       let grade = Number(input[index]);
+       index++;
+
+       lastName = problemName;
+       countProblems++;
+       sumGrade += grade;
+
+       if(grade <= 4) {
+          currentNegativeGrade++;
+       }
+
+       if (currentNegativeGrade === countNeativeGrade) {
+           console.log(`You need a break, ${countNeativeGrade} poor grades.`);
+           isNeedBreak = true;
+           break;
+       }
+
+       command = input[index];
+       index++;
+   }
+   
+    if (!isNeedBreak) {
+        let avg = sumGrade / countProblems;
+        console.log(`Average score: ${avg.toFixed(2)}`);
+        console.log(`Number of problems: ${countProblems}`);
+        console.log(`Last problem: ${lastName}`);
+   }
+}
