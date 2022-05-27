@@ -1,0 +1,28 @@
+budget = int(input())
+season = input()
+count_fisherman = int(input())
+price = 0
+
+if season == 'Spring':
+    price = 3000
+elif season == 'Summer' or season == 'Autumn':
+    price = 4200
+else:
+    price = 2600
+
+if count_fisherman <= 6:
+    price -= (price * 0.10)
+elif count_fisherman <= 11:
+    price -= (price * 0.15)
+elif count_fisherman >= 12:
+    price -= (price * 0.25)
+
+if count_fisherman % 2 == 0 and season != 'Autumn':
+    price -= (price * 0.05)
+
+diff = abs(budget - price)
+
+if budget >= price:
+    print(f"Yes! You have {diff:.2f} leva left.")
+else:
+    print(f"Not enough money! You need {diff:.2f} leva.")
