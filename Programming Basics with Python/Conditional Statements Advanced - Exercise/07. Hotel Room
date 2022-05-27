@@ -1,0 +1,27 @@
+month = input()
+count_nights = int(input())
+studio = 0
+apartment = 0
+
+if month == 'May' or month == 'October':
+    studio = count_nights * 50
+    apartment = count_nights * 65
+    if count_nights > 14:
+        studio -= (studio * 0.30)
+        apartment -= (apartment * 0.10)
+    elif count_nights > 7:
+        studio -= (studio * 0.05)
+elif month == 'June' or month == 'September':
+    studio = count_nights * 75.20
+    apartment = count_nights * 68.70
+    if count_nights > 14:
+        studio -= (studio * 0.20)
+        apartment -= (apartment * 0.10)
+else:
+    studio = count_nights * 76
+    apartment = count_nights * 77
+    if count_nights > 14:
+        apartment -= (apartment * 0.10)
+
+print(f"Apartment: {apartment:.2f} lv.")
+print(f"Studio: {studio:.2f} lv.")
