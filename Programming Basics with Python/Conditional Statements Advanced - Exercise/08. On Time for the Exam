@@ -1,0 +1,30 @@
+exam_hour = int(input())
+exam_minutes = int(input())
+hour_arrive = int(input())
+minutes_arrive = int(input())
+
+exam_sum_time = exam_hour * 60 + exam_minutes
+arrive_sum_time = hour_arrive * 60 + minutes_arrive
+
+diff = abs(arrive_sum_time - exam_sum_time)
+
+if arrive_sum_time > exam_sum_time:
+    print("Late")
+    if diff >= 60:
+        h_late = diff // 60
+        m_late = diff % 60
+        print(f"{h_late}:{m_late:02d} hours after the start" )
+    elif diff < 60:
+        print(f"{diff} minutes after the start")
+elif arrive_sum_time <= exam_sum_time and diff <= 30:
+    print("On time")
+    if diff > 0:
+        print(f"{diff} minutes before the start")
+else:
+    print("Early")
+    if diff >= 60:
+        h_early = diff // 60
+        m_early = diff % 60
+        print(f"{h_early}:{m_early:02d} hours before the start")
+    else:
+        print(f"{diff} minutes before the start")
