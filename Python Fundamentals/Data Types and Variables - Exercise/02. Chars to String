@@ -1,0 +1,6 @@
+def chars_to_string(char1, char2, char3):
+
+    print(f'{char1}{char2}{char3}')
+
+
+chars_to_string(char1=input(), char2=input(), char3=input())
