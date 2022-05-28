@@ -1,0 +1,9 @@
+num = int(input())
+from math import sqrt
+
+for i in range(2, num):
+    if num % sqrt(i) == 0:
+        print('False')
+        break
+else:
+    print('True')
