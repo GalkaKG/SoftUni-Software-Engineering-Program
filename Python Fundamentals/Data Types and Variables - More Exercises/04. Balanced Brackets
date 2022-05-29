@@ -1,0 +1,18 @@
+number_of_lines = int(input())
+open_bracket = 0
+close_bracket = 0
+
+for _ in range(number_of_lines):
+    string = input()
+    if string == "(":
+        open_bracket += 1
+        if open_bracket == 2 and close_bracket == 0:
+            print('UNBALANCED')
+            exit()
+    elif string == ")":
+        close_bracket += 1
+
+if close_bracket > open_bracket or open_bracket > close_bracket:
+    print('UNBALANCED')
+else:
+    print('BALANCED')
