@@ -1,0 +1,23 @@
+w = int(input())
+l = int(input())
+h = int(input())
+
+size = w * l * h
+is_full = False
+
+command = input()
+
+while command != "Done":
+    box = int(command)
+
+    size -= box
+
+    if size < 0:
+        print(f'No more free space! You need {abs(size)} Cubic meters more.')
+        is_full = True
+        break
+
+    command = input()
+
+if not is_full:
+    print(f'{size} Cubic meters left.')
