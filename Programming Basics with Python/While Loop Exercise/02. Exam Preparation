@@ -1,0 +1,34 @@
+count_negative_grades = int(input())
+
+current_negative_grade = 0
+sum_grade = 0
+count_problems = 0
+lastName = ""
+is_need_break = False
+
+command = input()
+
+while command != "Enough":
+    problem_name = command
+    grade = int(input())
+
+    last_name = problem_name
+    count_problems += 1
+    sum_grade += grade
+
+    if grade <= 4:
+        current_negative_grade += 1
+
+    if current_negative_grade == count_negative_grades:
+        print(f'You need a break, {count_negative_grades} poor grades.')
+        is_need_break = True
+        break
+
+    command = input()
+
+
+if not is_need_break:
+    avg = sum_grade / count_problems
+    print(f'Average score: {avg:.2f}')
+    print(f'Number of problems: {count_problems}')
+    print(f'Last problem: {last_name}')
