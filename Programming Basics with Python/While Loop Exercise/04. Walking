@@ -1,0 +1,24 @@
+command = input()
+steps_count = 0
+
+while command != 'Going home':
+    steps = int(command)
+    steps_count += steps
+
+    if steps_count >= 10000:
+        break
+
+    command = input()
+
+if command == 'Going home':
+    steps_to_home = int(input())
+    steps_count += steps_to_home
+
+
+if steps_count >= 10000:
+    diff = steps_count - 10000
+    print('Goal reached! Good job!')
+    print(f'{diff} steps over the goal!')
+else:
+    diff = 10000 - steps_count
+    print(f'{diff} more steps to reach goal.')
