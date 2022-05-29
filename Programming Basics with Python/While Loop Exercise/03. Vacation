@@ -1,0 +1,24 @@
+money_needed = float(input())
+money_saved = float(input())
+saving_counter = 0
+spending_counter = 0
+
+while money_saved < money_needed and spending_counter < 5:
+    mood = input()
+    money = float(input())
+    saving_counter += 1
+    if mood == "save":
+        money_saved += money
+        spending_counter = 0
+    elif mood == "spend":
+        money_saved -= money
+        spending_counter += 1
+        if money_saved < 0:
+            money_saved = 0
+
+if spending_counter == 5:
+    print("You can't save the money.")
+    print(saving_counter)
+
+if money_saved >= money_needed:
+    print(f"You saved the money for {saving_counter} days.")
