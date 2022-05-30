@@ -1,0 +1,74 @@
+function tradeOnRange (input) {
+    let name = input[0];
+    let sales = Number(input[1]);
+    let s = 0
+    
+    	switch (name) {
+            case ("Sofia"):
+                if (sales >= 0 && sales <= 500 ) {
+                    let s = 0.05;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else if (sales > 500 && sales <= 1000) {
+                    let s = 0.07;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else if (1000 < sales && sales <= 10000) {
+                    let s = 0.08;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else if (sales > 10000) {
+                    let s = 0.12;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else {
+                    console.log("error");
+                }
+            break;
+            case ("Varna"):
+                if (sales >= 0 && sales <= 500 ) {
+                    let s = 0.045;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else if (sales > 500 && sales <= 1000) {
+                    let s = 0.075;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else if (1000 < sales && sales <= 10000) {
+                    let s = 0.10;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else if (sales > 10000) {
+                    let s = 0.13;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else {
+                    console.log("error");
+                }
+            break;
+            case ("Plovdiv"):
+                if (sales >= 0 && sales <= 500 ) {
+                    let s = 0.055;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else if (sales > 500 && sales <= 1000) {
+                    let s = 0.08;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else if (1000 < sales && sales <= 10000) {
+                    let s = 0.12;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else if (sales > 10000) {
+                    let s = 0.145;
+                    let sum = sales * s;
+                    console.log(sum.toFixed(2));
+                } else {
+                    console.log("error");
+                }
+            break;
+            default:
+                console.log("error");
+            }
+    
+        }
