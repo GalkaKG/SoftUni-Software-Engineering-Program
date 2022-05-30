@@ -1,0 +1,12 @@
+function basketballEquipment (input){
+let yearTaxBasketball = Number(input[0]);
+let basketballShoes = yearTaxBasketball * 0.40;
+let basketballShoesPrice = yearTaxBasketball - basketballShoes;
+let basketballClothes = basketballShoesPrice * 0.20;
+let basketballClothesPrice = basketballShoesPrice - basketballClothes;
+let basketBall = basketballClothesPrice * 1/4;
+let basketBallAcsessories = basketBall * 1/5;
+let sum = yearTaxBasketball + basketballShoesPrice + basketballClothesPrice + basketBall + basketBallAcsessories;
+
+console.log(sum);
+}
