@@ -1,0 +1,23 @@
+function building (input) {
+    let numberOfFloor = Number(input[0]);
+    let numberOfRooms = Number(input[1]);
+
+    for (let i = numberOfFloor; i >= 1; i--) {
+        let floor = "";
+        for (let j = 0; j < numberOfRooms; j++) {  
+        
+            if (i === numberOfFloor) {
+                 floor = floor + `L${i}${j} `;
+            }
+
+            if (i % 2 === 0 && i !== numberOfFloor) {
+                floor = floor + `O${i}${j} `;
+            }
+
+            if (i % 2 !== 0 && i !== numberOfFloor) {
+                floor = floor + `A${i}${j} `;
+            }
+        }
+        console.log(floor);
+    }
+}
