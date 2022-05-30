@@ -1,0 +1,17 @@
+function timePlus15Mins (input) {
+    let hour = Number (input[0]);
+    let minutes = Number (input[1]);
+    let time = hour * 60 + minutes;
+    time = time + 15;
+    let currentHour = Math.floor(time / 60);
+    let currentMin = time % 60;
+
+    if (currentHour === 24) {
+        currentHour = 0;
+    }
+    if (currentMin < 10) {
+        console.log(`${currentHour}:0${currentMin}`);
+    } else {
+        console.log(`${currentHour}:${currentMin}`);
+    }
+}
