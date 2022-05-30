@@ -1,0 +1,12 @@
+function sumNumbers (input) {
+    let n = Number(input[0]);
+    let sum = 0;
+    let index = 1;
+    while (sum < n) {
+        
+        let nums = Number(input[index]);
+        index++;
+        sum += nums
+    }
+    console.log(sum);
+}
