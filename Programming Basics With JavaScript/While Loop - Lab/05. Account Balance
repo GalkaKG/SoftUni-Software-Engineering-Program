@@ -1,0 +1,22 @@
+function accountBalance (input) {
+    let index = 0;
+    let total = 0;
+
+    while (true) {
+        let data = input[index];
+        if (data === "NoMoreMoney") {
+            break;
+        }
+
+        let increase = Number(data);
+        if (increase < 0) {
+            console.log("Invalid operation!");
+            break;
+        }
+
+        total += increase;
+        console.log(`Increase: ${increase.toFixed(2)}`);
+        index++;
+    }
+    console.log(`Total: ${total.toFixed(2)}`);
+}
