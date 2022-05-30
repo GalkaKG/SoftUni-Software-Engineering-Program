@@ -1,0 +1,40 @@
+function onTimeForExam (input) {
+    let hourExam = Number(input[0]);
+    let minExam = Number(input[1]);
+    let hourArrive = Number(input[2]);
+    let minArrive = Number(input[3]);
+    let timeArriveInMin = hourArrive * 60 + minArrive;
+    let timeExamInMin = hourExam * 60 + minExam;
+    let diff = Math.abs(timeArriveInMin - timeExamInMin);
+    let h = Math.floor(diff/ 60);
+    let m = diff % 60;
+
+    if (timeArriveInMin > timeExamInMin) {
+        if (h < 1) {
+            console.log("Late");
+            console.log(`${m} minutes after the start`)
+        } else if (m < 10) {
+            console.log("Late");
+            console.log(`${h}:0${m} hours after the start`)
+        } else {
+            console.log("Late");
+            console.log(`${h}:${m} hours after the start`)
+        }
+
+    } else if (timeArriveInMin === timeExamInMin || Math.abs(timeArriveInMin-timeExamInMin) <= 30) {
+        console.log("On time");
+        console.log(`${m} minutes before the start`);
+    
+    } else {
+         if (h < 1) {
+            console.log("Early");
+            console.log(`${m} minutes before the start`) 
+        } else if (m < 10){
+            console.log("Early");
+            console.log(`${h}:0${m} hours before the start`)
+        } else if (m > 10) {
+            console.log("Early");
+            console.log(`${h}:${m} hours before the start`)
+        }
+    }
+}
