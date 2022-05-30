@@ -1,0 +1,16 @@
+function lunchBreak (input) {
+    let nameOfSerial = input[0];
+    let durationOfEpisode = Number(input[1]);
+    let durationBreak = Number(input[2]);
+    let timeForLunch = durationBreak / 8;
+    let timeForBreak = durationBreak / 4;
+    let time = durationBreak - (timeForBreak + timeForLunch);
+
+    if (time >= durationOfEpisode) {
+        timeLeft = time - durationOfEpisode;
+        console.log(`You have enough time to watch ${nameOfSerial} and left with ${Math.ceil(timeLeft)} minutes free time.`)
+    } else {
+        needTime = durationOfEpisode - time;
+      console.log(`You don't have enough time to watch ${nameOfSerial}, you need ${Math.ceil(needTime)} more minutes.`)
+    }
+}
