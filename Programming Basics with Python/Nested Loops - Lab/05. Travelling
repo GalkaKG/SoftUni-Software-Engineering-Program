@@ -1,0 +1,14 @@
+destination = input()
+while destination != 'End':
+    destination = destination
+    needed_budget = float(input())
+    sum_saved_money = 0
+    while sum_saved_money < needed_budget:
+        money = float(input())
+        sum_saved_money += money
+
+        if sum_saved_money >= needed_budget:
+            print(f'Going to {destination}!')
+            break
+
+    destination = input()
