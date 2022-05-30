@@ -1,0 +1,19 @@
+starting_interval = int(input())
+final_interval = int(input())
+magic_number = int(input())
+combinations = 0
+flag = False
+for first_num in range(starting_interval, final_interval + 1):
+    for second_num in range(starting_interval, final_interval + 1):
+
+        combinations += 1
+
+        if first_num + second_num == magic_number:
+            flag = True
+            print(f'Combination N:{combinations} ({first_num} + {second_num} = {magic_number})')
+
+    if flag:
+        break
+
+if not flag:
+    print(f'{combinations} combinations - neither equals {magic_number}')
