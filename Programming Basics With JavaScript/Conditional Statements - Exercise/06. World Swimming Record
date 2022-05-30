@@ -1,0 +1,14 @@
+function worldSwimmingRecord (input) {
+    let recordInSec = Number(input[0]);
+    let distanceInM = Number(input[1]);
+    let timeInSecFor1M = Number(input[2]);
+    let timeInSec = timeInSecFor1M * distanceInM;
+    let slower =  Math.floor(distanceInM / 15) * 12.5;
+    let time = timeInSec + slower;
+    if (time < recordInSec) {
+        console.log(`Yes, he succeeded! The new world record is ${time.toFixed(2)} seconds.`);
+    } else {
+        notEnought = time - recordInSec
+        console.log(`No, he failed! He was ${notEnought.toFixed(2)} seconds slower.`)
+    }
+}
