@@ -1,0 +1,32 @@
+function graduation (input) {
+let name = input[0];
+let index = 1;
+let total = 0;
+let fails = 0;
+let grade = 1;
+
+    while (true) {
+        if (fails > 1) {
+            console.log(`${name} has been excluded at ${grade} grade`);
+            break;
+        }
+
+        let currentGrade = Number(input[index]);
+        if (currentGrade < 4) {
+           fails++;
+           index++;
+           continue;
+        }
+
+        total = total + currentGrade;
+        if (grade >= 12) {
+            let avarage = total / grade;
+            console.log(`${name} graduated. Average grade: ${avarage.toFixed(2)}`);
+           break;
+        }
+
+    grade++;
+    index++;
+    
+    }
+}
