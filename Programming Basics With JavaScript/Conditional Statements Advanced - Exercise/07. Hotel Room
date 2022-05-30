@@ -1,0 +1,37 @@
+function hotelRoom (input) {
+    let month = input[0];
+    let countNights = Number(input[1]);
+    let priceForApart = 0;
+    let priceForStudio = 0;
+    
+    if (month == "May" || month == "October") {
+        priceForStudio = 50 * countNights;
+        priceForApart = 65 * countNights;
+        if (countNights > 7 && countNights <= 14) {
+            priceForStudio = priceForStudio * 0.95;
+        } else if (countNights > 14){
+            priceForStudio = priceForStudio * 0.70;
+        }
+        if (countNights > 14) {
+           priceForApart = priceForApart * 0.90;
+        }
+
+    } else if (month == "June" || month == "September") {
+         priceForStudio = 75.20 * countNights;
+         priceForApart = 68.70 * countNights ;
+        if (countNights > 14) {
+            priceForStudio = priceForStudio * 0.80;
+        }
+        if (countNights > 14) {
+            priceForApart = priceForApart * 0.90;
+        }
+    } else if (month == "July" || month == "August") {
+        priceForStudio = 76 * countNights;
+        priceForApart = 77 * countNights;
+        if (countNights > 14) {
+            priceForApart = priceForApart * 0.90;
+        }
+    }
+    console.log(`Apartment: ${priceForApart.toFixed(2)} lv.`);
+    console.log(`Studio: ${priceForStudio.toFixed(2)} lv.`)
+} 
