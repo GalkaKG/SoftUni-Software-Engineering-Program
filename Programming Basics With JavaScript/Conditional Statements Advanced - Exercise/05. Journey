@@ -1,0 +1,34 @@
+function journey (input) {
+    let budget = Number(input[0]);
+    let season = input[1];
+    let destination = 0;
+    let price = 0;
+    let typeHoliday = 0;
+    if (budget <= 100) {
+       destination = "Bulgaria";
+       if (season === "summer") {
+           price = budget * 0.30;
+           typeHoliday = "Camp";
+       } else if (season === "winter") {
+           price = budget * 0.70;
+           typeHoliday = "Hotel";
+       }
+       
+    } else if (budget <= 1000) {
+        destination = "Balkans";
+        if (season === "summer") {
+            price = budget * 0.40;
+            typeHoliday = "Camp";
+        } else if (season === "winter") {
+            price = budget * 0.80;
+            typeHoliday = "Hotel";
+        }
+    } else if (budget > 1000) {
+        destination = "Europe";
+        price = budget * 0.90;
+        typeHoliday = "Hotel";
+    }
+   
+    console.log(`Somewhere in ${destination}`);
+    console.log(`${typeHoliday} - ${price.toFixed(2)}`);
+}
