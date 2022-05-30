@@ -1,0 +1,21 @@
+function traveling (input) {
+    let index = 0;
+    let command = input[index];
+    index++;
+
+    while (command !== "End") {
+        let destination = command;
+        let budget = Number(input[index]);
+        index++;
+        let saveMoney = 0;
+
+        while (budget > saveMoney) {
+            let tempMoney = Number(input[index]);
+            index++;
+            saveMoney += tempMoney;
+        }
+        console.log(`Going to ${destination}!`);
+        command = input[index];
+        index++;
+    }
+}
