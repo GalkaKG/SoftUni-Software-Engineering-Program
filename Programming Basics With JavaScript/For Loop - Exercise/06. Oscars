@@ -1,0 +1,33 @@
+function oscars (input) {
+    let index = 0;
+    let name = input[index];
+    index++;
+    let startPoints = Number(input[index]);
+    index++;
+    let countRaters = Number(input[index]);
+    index++;
+    let totalPoints = 0;
+    let finishPoints = 0;
+
+    for(let i = 1; i <= countRaters; i++) {
+        let nameRater = input[index];
+        index++;
+        let pointsRaiter = Number(input[index]);
+        index++;
+        
+        totalPoints += (nameRater.length * pointsRaiter) / 2;
+        finishPoints = startPoints + totalPoints;
+        if (finishPoints >= 1250.5) {
+            console.log(`Congratulations, ${name} got a nominee for leading role with ${finishPoints.toFixed(1)}!`);
+            break;
+        }
+
+    }
+    
+    let diff = Math.abs(1250.5 - finishPoints);
+
+    
+    if (finishPoints < 1250.5) {
+        console.log(`Sorry, ${name} you need ${diff.toFixed(1)} more!`)
+    }
+}
