@@ -1,0 +1,30 @@
+function salary (input) {
+    let index = 0;
+    let tabs = Number(input[index]);
+    index++;
+    let sum = Number(input[index]);
+    index++;
+
+    for (let i = 1; i <= tabs; i++) {
+       let name = input[index];
+       index++;
+
+       switch (name) {
+            case "Facebook":
+               sum -= 150;
+            break;
+            case "Instagram":
+                sum -= 100;
+            break;
+            case "Reddit": 
+                sum -= 50;    
+            break;
+       }
+    }
+
+    if (sum <= 0) {
+        console.log("You have lost your salary.");
+    } else {
+        console.log(Math.abs(sum));
+    }
+}
