@@ -1,0 +1,8 @@
+function numberInRange (input) {
+ let check = Number(input[0]);
+ if (check >= -100 && check <= 100 && check !== 0) {
+        console.log("Yes"); 
+    } else {
+        console.log("No");
+    }   
+}
