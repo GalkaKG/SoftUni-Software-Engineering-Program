@@ -1,0 +1,27 @@
+function smartLily (input) {
+    let age = Number(input[0])
+    let washingMashin = Number(input[1]);
+    let toy = Number(input[2]);
+    let money = 0;
+    let countToys = 0;
+    let saveMoney = 0;
+
+    for (let i = 1; i <= age; i++) {
+        if (i % 2 === 0) {
+            money += 10;
+            saveMoney += money
+            saveMoney -= 1;
+        } else {
+            countToys++;
+        }
+    }
+    let toySell = countToys * toy;
+    let sum = saveMoney + toySell;
+    let diff = Math.abs(sum - washingMashin);
+
+    if (sum >= washingMashin) {
+        console.log(`Yes! ${diff.toFixed(2)}`);
+    } else {
+        console.log(`No! ${diff.toFixed(2)}`);
+    }
+}
