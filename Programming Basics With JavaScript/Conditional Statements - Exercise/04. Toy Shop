@@ -1,0 +1,23 @@
+function toyShop(input) {
+    let priceExscursion = Number(input[0]);
+    let countPuzzles = Number(input[1]);
+    let countDolls = Number(input[2]);
+    let countBears = Number(input[3]);
+    let countMinions = Number(input[4]);
+    let countTrucks = Number(input[5]);
+    let toyPrice = countPuzzles * 2.60 + countDolls * 3 + countBears * 4.10  + countMinions * 8.20 + countTrucks * 2;
+    let countToys = countPuzzles + countDolls + countBears + countMinions 
+    + countTrucks;
+    if (countToys >= 50) {
+      toyPrice =  toyPrice * 0.75;
+     }
+
+     toyPrice = toyPrice * 0.90; 
+     let diff = Math.abs(priceExscursion - toyPrice);
+
+     if (priceExscursion <= toyPrice) {
+       console.log(`Yes! ${diff.toFixed(2)} lv left.`);
+     } else {
+       console.log(`Not enough money! ${diff.toFixed(2)} lv needed.`);
+     }
+}
