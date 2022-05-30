@@ -1,0 +1,49 @@
+function trekkingMania (input) {
+    let index = 0;
+    let groupsCount = Number(input[index]);
+    index++;
+    let mountainTop = 0;
+    let peopleMusala = 0;
+    let peopleMonblan = 0;
+    let peopleKilimandjaro = 0;
+    let peopleK2 = 0;
+    let peopleEverest = 0;
+
+    for (i = 0; i < groupsCount; i++) {
+        let countPeople = Number(input[index]);
+        index++;
+
+        if (countPeople <= 5) {
+          mountainTop = "Musala";
+          peopleMusala += countPeople;
+         
+        } else if (countPeople <= 12) {
+            mountainTop = "Monblan"
+            peopleMonblan += countPeople;
+            
+        } else if (countPeople <= 25) {
+            mountainTop = "Kilimandjaro";
+            peopleKilimandjaro += countPeople;
+        } else if (countPeople <= 40) {
+            mountainTop = "K2";
+            peopleK2 += countPeople;
+        } else {
+            mountainTop = "Everest";    
+            peopleEverest += countPeople;
+        }
+        
+    }
+    let allPeople = peopleMusala + peopleMonblan + peopleKilimandjaro + peopleK2 + peopleEverest;
+    let percMusala = peopleMusala  * 100 / allPeople;
+    let percMonblan = peopleMonblan * 100 / allPeople;
+    let percKilimandjaro = peopleKilimandjaro * 100 / allPeople;
+    let percK2 = peopleK2 * 100 / allPeople;
+    let percEverest = peopleEverest * 100 / allPeople;
+
+        console.log(percMusala.toFixed(2) + "%");
+        console.log(percMonblan.toFixed(2) + "%");
+        console.log(percKilimandjaro.toFixed(2) + "%");
+        console.log(percK2.toFixed(2) + "%");
+        console.log(percEverest.toFixed(2) + "%");
+
+}
