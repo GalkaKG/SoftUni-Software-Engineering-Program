@@ -1,0 +1,7 @@
+kv_ms_will_greening = float(input())
+price = kv_ms_will_greening * 7.61
+discount = price * 0.18
+price_with_discount = price - discount
+
+print(f"The final price is: {price_with_discount} lv.")
+print(f"The discount is: {discount} lv.")
