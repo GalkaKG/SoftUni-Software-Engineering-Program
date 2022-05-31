@@ -1,0 +1,21 @@
+name_of_actor = input()
+points_from_academy = float(input())
+count_evaluators = int(input())
+points = 0
+result = 0
+
+for i in range(count_evaluators):
+    name_evaluator = input()
+    points_from_evaluator = float(input())
+
+    points += len(name_evaluator) * points_from_evaluator / 2
+    result = points_from_academy + points
+
+    if result > 1250.5:
+        break
+
+if result > 1250.5:
+    print(f"Congratulations, {name_of_actor} got a nominee for leading role with {result:.1f}!")
+else:
+    diff = abs(1250.5 - result)
+    print(f"Sorry, {name_of_actor} you need {diff:.1f} more!")
