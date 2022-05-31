@@ -1,0 +1,11 @@
+needed_nylon = int(input())
+needed_paint = int(input())
+quantity_thinner = int(input())
+hours = int(input())
+price_nylon = (needed_nylon + 2) * 1.50
+price_paint = ((needed_paint * 0.10) + needed_paint) * 14.50
+price_thinner = quantity_thinner * 5.00
+materials = price_nylon + price_paint + price_thinner + 0.40
+money_for_workers = (materials * 0.30) * hours
+
+print(materials + money_for_workers)
