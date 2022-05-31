@@ -1,0 +1,8 @@
+chicken_menus = int(input())
+fish_menus = int(input())
+vegetarian_menus = int(input())
+price_for_all_menus = chicken_menus * 10.35 + fish_menus * 12.40 + vegetarian_menus * 8.15
+dessert = price_for_all_menus * 0.20
+sum_for_all = price_for_all_menus + dessert + 2.50
+
+print(sum_for_all)
