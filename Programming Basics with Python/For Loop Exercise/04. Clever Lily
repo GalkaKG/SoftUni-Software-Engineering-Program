@@ -1,0 +1,23 @@
+age = int(input())
+washing_machine = float(input())
+price_1_toy = int(input())
+total_sum = 0
+toys = 0
+sum_from_birthday = 0
+
+for i in range(1, age + 1):
+    if i % 2 == 0:
+        sum_from_birthday += 10
+        total_sum += sum_from_birthday - 1  # 1 is stolen money from her brother
+    else:
+        toys += 1
+
+sum_from_toys = toys * price_1_toy
+total_sum += sum_from_toys 
+
+diff = abs(total_sum - washing_machine)
+
+if total_sum >= washing_machine:
+    print(f'Yes! {diff:.2f}')
+else:
+    print(f'No! {diff:.2f}')
