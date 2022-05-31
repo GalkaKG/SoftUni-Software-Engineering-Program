@@ -1,0 +1,7 @@
+count_pages = int(input())
+pages_read_for_hour = int(input())
+count_days = int(input())
+hours_for_read = count_pages / pages_read_for_hour
+hours_per_day = hours_for_read / count_days
+
+print(round(hours_per_day))
