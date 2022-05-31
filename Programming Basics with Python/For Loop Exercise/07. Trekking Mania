@@ -1,0 +1,38 @@
+count_groups = int(input())
+ppl_Musala = 0
+ppl_MontBlank = 0
+ppl_Kilimanjaro = 0
+ppl_K2 = 0
+ppl_Everest = 0
+sum_people = 0
+
+for _ in range(count_groups):
+    people_in_group = int(input())
+    sum_people += people_in_group
+
+    if people_in_group <= 5:
+        ppl_Musala += people_in_group
+
+    elif people_in_group <= 12:
+        ppl_MontBlank += people_in_group
+
+    elif people_in_group <= 25:
+        ppl_Kilimanjaro += people_in_group
+
+    elif people_in_group <= 40:
+        ppl_K2 += people_in_group
+
+    elif people_in_group > 40:
+        ppl_Everest += people_in_group
+
+perc_Musala = ppl_Musala / sum_people * 100
+perc_MontBlanc = ppl_MontBlank / sum_people * 100
+perc_Kilimanjaro = ppl_Kilimanjaro / sum_people * 100
+perc_K2 = ppl_K2 / sum_people * 100
+perc_Everest = ppl_Everest / sum_people * 100
+
+print(f'{perc_Musala:.2f}%')
+print(f'{perc_MontBlanc:.2f}%')
+print(f'{perc_Kilimanjaro:.2f}%')
+print(f'{perc_K2:.2f}%')
+print(f'{perc_Everest:.2f}%')
