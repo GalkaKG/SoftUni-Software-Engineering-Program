@@ -1,0 +1,9 @@
+count_packets_pens = int(input())
+count_packets_markers = int(input())
+litres_detergent = int(input())
+percentage_discount = int(input())
+sum = count_packets_pens * 5.80 + count_packets_markers * 7.20 + litres_detergent * 1.20
+discount = sum * (percentage_discount / 100)
+sum_with_discount = sum - discount
+
+print(sum_with_discount)
