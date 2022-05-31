@@ -1,0 +1,9 @@
+length_sms = int(input())
+wide_sms = int(input())
+high_sms = int(input())
+percentage = float(input())
+volume_in_sms3 = length_sms * wide_sms * high_sms
+volume_in_litres = volume_in_sms3 / 1000
+needed_litres = volume_in_litres * (1 - (percentage / 100))
+
+print(needed_litres)
