@@ -1,0 +1,23 @@
+count_tournaments = int(input())
+start_points = int(input())
+points = 0
+wins = 0
+
+for _ in range(count_tournaments):
+    stage_of_tournaments = input()
+
+    if stage_of_tournaments == 'W':
+        points += 2000
+        wins += 1
+    elif stage_of_tournaments == 'F':
+        points += 1200
+    elif stage_of_tournaments == 'SF':
+        points += 720
+
+avg_points = points // count_tournaments
+points += start_points
+per_wins = wins / count_tournaments * 100
+
+print(f"Final points: {points}")
+print(f"Average points: {avg_points}")
+print(f"{per_wins:.2f}%")
