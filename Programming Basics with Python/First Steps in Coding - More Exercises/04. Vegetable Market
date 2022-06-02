@@ -1,0 +1,9 @@
+vegetables_kg_price = float(input())
+fruits_kg_price = float(input())
+kgs_vegetables = int(input())
+kgs_fruits = int(input())
+sum_vegetables = vegetables_kg_price * kgs_vegetables
+sum_fruits = fruits_kg_price * kgs_fruits
+total_sum = (sum_vegetables + sum_fruits) / 1.94
+
+print(f"{total_sum:.2f}")
