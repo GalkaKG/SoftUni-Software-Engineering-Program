@@ -1,0 +1,11 @@
+import math
+
+length_in_ms = float(input())
+wide_in_ms = float(input())
+wide_in_sms = wide_in_ms * 100
+length_in_sms = length_in_ms * 100
+desks = (wide_in_sms - 100) // 70
+rows = length_in_sms // 120
+count_seats = (desks * rows) - 3
+
+print(math.floor(count_seats))
