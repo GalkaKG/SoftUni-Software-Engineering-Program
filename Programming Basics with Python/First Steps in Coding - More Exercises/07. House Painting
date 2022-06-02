@@ -1,0 +1,18 @@
+x = float(input())
+y = float(input())
+h = float(input())
+side = x * y
+window = 1.5 * 1.5
+two_sides = side * 2 - 2 * window
+front_side = x * x
+entrance = 1.2 * 2
+back_and_front_side = front_side * 2 - entrance
+sum_all_sides = two_sides + back_and_front_side
+green_paint = sum_all_sides / 3.4
+rectangles_of_roof = 2 * (x * y)
+triangles_of_roof = 2 * ((x * h) / 2)
+sum_all_roof = rectangles_of_roof + triangles_of_roof
+red_paint = sum_all_roof / 4.3
+
+print(f"{green_paint:.2f}")
+print(f"{red_paint:.2f}")
