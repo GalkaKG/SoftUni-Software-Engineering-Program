@@ -1,0 +1,19 @@
+function weatherForecast2 (input) {
+    let degreece = Number(input[0]);
+
+    if(degreece <= "4.9") {
+        console.log("unknown");
+    } else if(degreece <= "11.9") {
+        console.log("Cold");
+    } else if(degreece <= "14.9") {
+        console.log("Cool");
+    } else if(degreece <= "20") {
+        console.log("Mild");
+    } else if(degreece <= "25.9") {
+        console.log("Warm");
+    } else if (degreece <= "35") {
+        console.log("Hot");
+    } else {
+        console.log("unknown"); 
+    }
+}
