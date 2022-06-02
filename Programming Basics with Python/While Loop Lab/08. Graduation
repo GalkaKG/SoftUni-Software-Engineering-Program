@@ -1,0 +1,25 @@
+name = input()
+counter_low_grades = 0
+sum_grades = 0
+classes = 0
+
+while True:
+    annual_grade = float(input())
+    classes += 1
+
+    if annual_grade < 4:
+        counter_low_grades += 1
+
+        if counter_low_grades == 2:
+            print(f'{name} has been excluded at {classes} grade')
+            break
+
+        classes -= 1
+
+    else:
+        sum_grades += annual_grade
+
+    if classes == 12:
+        average_grade = sum_grades / 12
+        print(f'{name} graduated. Average grade: {average_grade:.2f}')
+        break
