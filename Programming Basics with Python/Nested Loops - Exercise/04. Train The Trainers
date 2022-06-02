@@ -1,0 +1,20 @@
+count_jury = int(input())
+sum_all_assessments = 0
+count_assessments = 0
+command = input()
+
+while command != 'Finish':
+    name_presentation = command
+    sum_assessment = 0
+
+    for j in range(count_jury):
+        assessment = float(input())
+        sum_assessment += assessment
+        count_assessments += 1
+
+    print(f'{name_presentation} - {(sum_assessment/count_jury):.2f}.')
+    sum_all_assessments += sum_assessment
+    command = input()
+
+if command == 'Finish':
+    print(f'Student\'s final assessment is {(sum_all_assessments/count_assessments):.2f}.')
