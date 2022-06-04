@@ -1,0 +1,21 @@
+numbers = input().split(' ')
+half_numbers = len(numbers) // 2
+left_side = numbers[:half_numbers]
+right_side = numbers[-1:half_numbers:-1]
+time_car_1 = 0
+time_car_2 = 0
+
+for car_1 in left_side:
+    time_car_1 += int(car_1)
+    if car_1 == '0':
+        time_car_1 -= (time_car_1 * 0.20)
+
+for car_2 in right_side:
+    time_car_2 += int(car_2)
+    if car_2 == '0':
+        time_car_2 -= (time_car_2 * 0.20)
+
+if time_car_1 < time_car_2:
+    print(f'The winner is left with total time: {time_car_1:.1f}')
+else:
+    print(f'The winner is right with total time: {time_car_2:.1f}')
