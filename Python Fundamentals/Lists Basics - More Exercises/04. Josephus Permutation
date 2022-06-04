@@ -1,0 +1,24 @@
+number_of_people = input().split(' ')
+who_has_to_be_executed = int(input())
+executed_persons = []
+len_number_of_ppl = len(number_of_people)
+
+index = 0
+num = 1
+while len(number_of_people) > 0:
+    new_list = []
+
+    for i, ch in enumerate(number_of_people):
+        person = number_of_people[i]
+
+        if num % who_has_to_be_executed == 0:
+            executed_persons.append(int(person))
+        else:
+            new_list.append(person)
+
+        num += 1
+
+    number_of_people = new_list
+    index = (index + 1) % len_number_of_ppl
+
+print(str(executed_persons).replace(' ', ''))
