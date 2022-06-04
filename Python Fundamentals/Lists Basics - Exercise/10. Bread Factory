@@ -1,0 +1,38 @@
+event_list = input().split('|')
+energy = 100
+coins = 100
+is_close = False
+
+for event in event_list:
+    event_type = event.split('-')
+    event_name = event_type[0]
+    number = int(event_type[1])
+
+    if event_name == 'rest':
+        temp_energy = energy
+        energy += number
+        if energy > 100:
+            energy = 100    
+        print(f'You gained {energy - temp_energy} energy.')
+        print(f'Current energy: {energy}.')
+    elif event_name == 'order':
+        if energy >= 30:
+            energy -= 30
+            coins += number
+            print(f'You earned {number} coins.')
+        else:
+            print('You had to rest!')
+            energy += 50
+    else:
+        if coins >= number:
+            coins -= number
+            print(f'You bought {event_name}.')
+        else:
+            print(f'Closed! Cannot afford {event_name}.')
+            is_close = True
+            break
+
+if not is_close:
+    print('Day completed!')
+    print(f'Coins: {coins}')
+    print(f'Energy: {energy}')
