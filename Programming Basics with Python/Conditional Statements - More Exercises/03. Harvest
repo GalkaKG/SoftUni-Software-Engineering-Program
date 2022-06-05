@@ -1,0 +1,15 @@
+from math import floor
+from math import ceil
+vineyard = int(input())
+grapes_for_1sqm = float(input())
+needed_wine = int(input())
+count_workers = int(input())
+kg_production = (vineyard * 0.40) * grapes_for_1sqm
+litres_wine = kg_production / 2.5
+diff = abs(needed_wine - litres_wine)
+
+if litres_wine < needed_wine:
+    print(f"It will be a tough winter! More {floor(diff)} liters wine needed.")
+else:
+    print(f"Good harvest this year! Total wine: {floor(litres_wine)} liters.")
+    print(f"{ceil(diff)} liters left -> {ceil(diff / count_workers)} liters per person.")
