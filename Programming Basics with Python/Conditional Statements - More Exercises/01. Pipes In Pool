@@ -1,0 +1,17 @@
+volume_of_the_pool = int(input())
+pipe1 = int(input())
+pipe2 = int(input())
+hours_missing = float(input())
+first_pipe_full = pipe1 * hours_missing
+second_pipe_full = pipe2 * hours_missing
+how_full_is_pool = first_pipe_full + second_pipe_full
+diff = abs(how_full_is_pool - volume_of_the_pool)
+percent_full_pool = (how_full_is_pool / volume_of_the_pool) * 100
+percent_first_pipe = (first_pipe_full / how_full_is_pool) * 100
+percent_second_pipe = (second_pipe_full / how_full_is_pool) * 100
+
+if how_full_is_pool <= volume_of_the_pool:
+    print(f"The pool is {percent_full_pool:.2f}% full. Pipe 1: {percent_first_pipe:.2f}%."
+          f" Pipe 2: {percent_second_pipe:.2f}%.")
+else:
+    print(f"For {hours_missing} hours the pool overflows with {diff:.2f} liters.")
