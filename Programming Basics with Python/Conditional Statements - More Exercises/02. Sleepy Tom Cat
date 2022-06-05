@@ -1,0 +1,13 @@
+count_days_off = int(input())
+working_days = 365 - count_days_off
+sum_time_for_play = (working_days * 63) + (count_days_off * 127)
+diff = abs(sum_time_for_play - 30000)
+hours = diff // 60
+minutes = diff % 60
+
+if sum_time_for_play > 30000:
+    print("Tom will run away")
+    print(f"{hours} hours and {minutes} minutes more for play")
+else:
+    print("Tom sleeps well")
+    print(f"{hours} hours and {minutes} minutes less for play")
