@@ -1,0 +1,15 @@
+from math import floor
+from math import ceil
+magnolias = int(input())
+hyacinths = int(input())
+roses = int(input())
+cactuses = int(input())
+price_gift = float(input())
+sum_flowers = magnolias * 3.25 + hyacinths * 4 + roses * 3.50 + cactuses * 8
+total_sum = sum_flowers - (sum_flowers * 0.05)
+diff = abs(total_sum - price_gift)
+
+if total_sum >= price_gift:
+    print(f'She is left with {floor(diff)} leva.')
+else:
+    print(f'She will have to borrow {ceil(diff)} leva.')
