@@ -1,0 +1,15 @@
+kms = int(input())
+time = input()
+price = 0
+
+if kms < 20:
+    if time == 'day':
+        price = 0.70 + (0.79 * kms)
+    else:
+        price = 0.70 + (0.90 * kms)
+elif kms < 100:
+    price = kms * 0.09
+else:
+    price = kms * 0.06
+
+print(f'{price:.2f}')
