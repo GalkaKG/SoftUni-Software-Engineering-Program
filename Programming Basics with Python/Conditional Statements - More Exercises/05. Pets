@@ -1,0 +1,15 @@
+from math import floor
+from math import ceil
+count_days = int(input())
+kgs_food = int(input())
+dog_food_for_day = float(input())
+cat_food_for_day = float(input())
+turtle_food_grs_for_day = float(input())
+turtle_kgs_food_for_day = turtle_food_grs_for_day / 1000
+needed_food = dog_food_for_day * count_days + cat_food_for_day * count_days + turtle_kgs_food_for_day * count_days
+diff = abs(kgs_food - needed_food)
+
+if kgs_food >= needed_food:
+    print(f'{floor(diff)} kilos of food left.')
+else:
+    print(f'{ceil(diff)} more kilos of food are needed.')
