@@ -1,0 +1,26 @@
+type_fuel = input()
+litres_fuel = float(input())
+club_card = input()
+price = 0
+
+if club_card == 'Yes':
+    if type_fuel == 'Gas':
+        price = (0.93 - 0.08) * litres_fuel
+    elif type_fuel == 'Gasoline':
+        price = (2.22 - 0.18) * litres_fuel
+    else:
+        price = (2.33 - 0.12) * litres_fuel
+else:
+    if type_fuel == 'Gas':
+        price = 0.93 * litres_fuel
+    elif type_fuel == 'Gasoline':
+        price = 2.22 * litres_fuel
+    else:
+        price = 2.33 * litres_fuel
+
+if litres_fuel > 25:
+    price -= (price * 0.10)
+elif litres_fuel >= 20:
+    price -= (price * 0.08)
+
+print(f'{price:.2f} lv.')
