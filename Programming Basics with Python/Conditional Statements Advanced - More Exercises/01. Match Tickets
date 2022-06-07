@@ -1,0 +1,29 @@
+budget = float(input())
+category = input()
+count_people = int(input())
+transport = 0
+price_tickets = 0
+
+if category == 'VIP':
+    price_tickets = 499.99 * count_people
+else:
+    price_tickets = 249.99 * count_people
+
+if 1 <= count_people <= 4:
+    transport = budget * 0.75
+elif count_people <= 9:
+    transport = budget * 0.60
+elif count_people <= 24:
+    transport = budget * 0.50
+elif count_people <= 49:
+    transport = budget * 0.40
+elif count_people >= 50:
+    transport = budget * 0.25
+
+needed_money = transport + price_tickets
+left_money = abs(budget - needed_money)
+
+if budget >= needed_money:
+    print(f'Yes! You have {left_money:.2f} leva left.')
+else:
+    print(f'Not enough money! You need {left_money:.2f} leva.')
