@@ -1,0 +1,22 @@
+function challengeTheWedding (input) {
+    let mens = Number(input[0]);
+    let womens = Number(input[1]);
+    let tables = Number(input[2]);
+    let meets = "";
+    let isFull = false;
+
+    for (let i = 1; i <= mens; i++) {
+        for (let j = 1; j <= womens; j++) {
+            tables--;
+            meets = meets + `(${i} <-> ${j}) `;  
+            if (tables <= 0) {
+                isFull = true;
+                break;
+            }
+        }
+        if (isFull) {
+            break;
+        }
+    }
+    console.log(meets)
+}
