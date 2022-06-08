@@ -1,0 +1,39 @@
+function weddingSeats (input) {
+    let lastSector = input.shift().charCodeAt(0);
+    let rows = Number(input[0]);
+    let placesOdd = Number(input[1]);
+    let first = 'A';
+    let firstDigit = first.charCodeAt();
+    let buff = "";
+    let countJ = rows;
+    let countPlaces = 0;
+
+    for (let i = firstDigit; i <= lastSector; i++ ) {
+        for (let j = 1; j <= countJ; j++) {
+
+            let smallDigit = 'a';
+            let resultSmallDigit = smallDigit.charCodeAt();
+
+            if (j % 2 !== 0) {
+                for (let k = 1; k <= placesOdd; k++) {
+                    buff = String.fromCharCode(i) + j + String.fromCharCode(resultSmallDigit);
+                    console.log(buff);
+                    resultSmallDigit++;
+                    countPlaces++;
+                }
+            } else { 
+                for (let l = 1; l <= placesOdd + 2; l++) {
+                    buff = String.fromCharCode(i) + j + String.fromCharCode(resultSmallDigit);
+                    console.log(buff);
+                    resultSmallDigit++
+                    countPlaces++;
+                }
+            }
+            
+        }
+        countJ++
+
+    }
+
+    console.log(countPlaces);
+}
