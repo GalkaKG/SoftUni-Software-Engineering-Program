@@ -1,0 +1,19 @@
+function profit (input) {
+    let countCoins1Lev = Number(input[0]);
+    let countCoins2Levs = Number(input[1]);
+    let countMoney5Levs = Number(input[2]);
+    let sum = Number(input[3]);
+
+    for (let i = 0; i <= countCoins1Lev; i++) {
+        
+        for (let j = 0; j <= countCoins2Levs; j++) {
+
+            for (let k = 0; k <= countMoney5Levs; k++) {
+
+                if (i * 1 + j * 2 + k * 5 === sum) {
+                    console.log(`${i} * 1 lv. + ${j} * 2 lv. + ${k} * 5 lv. = ${sum} lv.`);
+                }
+            }
+        } 
+    }   
+}
