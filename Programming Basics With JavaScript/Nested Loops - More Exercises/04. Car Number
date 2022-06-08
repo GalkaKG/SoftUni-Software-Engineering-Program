@@ -1,0 +1,21 @@
+function carNumber (input) {
+    let start = Number(input[0]);
+    let end = Number(input[1]);
+    let number = "";
+
+    for (let i = start; i <= end; i++) {
+        for (let j = start; j <= end; j++) {
+            for (let k = start; k <= end; k++) {
+                for (let h = start; h <= end; h++) {
+                    let sum2And3 = j + k;
+                    if (i % 2 === 0 && h % 2 !== 0 && i > h && sum2And3 % 2 === 0) {
+                        number = number + "" + i + j + k + h + " ";
+                    } else if (i % 2 !== 0 && h % 2 === 0 && i > h && sum2And3 % 2 === 0) {
+                        number = number + "" + i + j + k + h + " ";
+                    }
+                }
+            }
+        }
+    }
+console.log(number)
+}
