@@ -1,0 +1,30 @@
+function solve (input) {
+    let index = 0;
+    let start = Number(input[index]);
+    index++;
+    let end = Number(input[index]);
+    index++;
+    let magic = Number(input[index]);
+    index++;
+    let combination = 0;
+    let isCombination = false;
+
+    for (let x = start; x <= end; x++) {
+        for (let y = start; y <= end; y++) {
+            combination++;
+            if (x + y === magic) {
+                isCombination = true;
+                console.log(`Combination N:${combination} (${x} + ${y} = ${magic})`);
+                break;
+            }
+        }
+        if (isCombination) {
+            break;
+        }
+    }
+
+    if (isCombination === false) {
+        console.log(`${combination} combinations - neither equals ${magic}`);
+    }
+
+}
