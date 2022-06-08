@@ -1,10 +1,17 @@
-first_num_to = int(input())
-second_num_to = int(input())
-third_num_to = int(input())
+function uniquePinCodes (input) {
+    let num1 = Number(input[0]);
+    let num2 = Number(input[1]);
+    let num3 = Number(input[2]);
 
-for i in range(1, first_num_to + 1):
-    for j in range(1, second_num_to + 1):
-        for k in range(1, third_num_to + 1):
-            if i % 2 == 0 and k % 2 == 0:
-                if j == 2 or j == 3 or j == 5 or j == 7:
-                    print(f'{i} {j} {k}')
+    for (let i = 1; i <= num1; i++) { 
+        for(let j = 2; j <= num2; j++) { 
+            for (let k = 1; k <= num3; k++) { 
+                if (i % 2 === 0 && k % 2 === 0) {
+                    if (j == 2 || j== 3|| j == 5 || j == 7) {
+                        console.log(i + " " + j + " " + k + " ")
+                    }
+                }
+            }
+        }  
+    }  
+}
