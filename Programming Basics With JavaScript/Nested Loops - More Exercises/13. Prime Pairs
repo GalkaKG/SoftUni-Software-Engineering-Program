@@ -1,0 +1,37 @@
+function praimPairs (input) {
+    let startFirst = Number(input[0]);
+    let startSecond = Number(input[1]);
+    let differenceFirst = Number(input[2]);
+    let differenceSecond = Number(input[3]);
+
+    let endFirstDouble = startFirst + differenceFirst;
+    let endSecondDouble = startSecond + differenceSecond;
+    let num1 = "";
+    let num2 = "";
+    let buff = "";
+
+    for (let a = startFirst; a <= endFirstDouble; a++) {
+        for (let b = startSecond; b <= endSecondDouble; b++) {
+            let isNonPrime = false;
+               for (let i = 2; i < a; i++) {
+                   if (a % i === 0) { 
+                       isNonPrime = true; 
+                       break;
+                   }   
+               }
+               for (let j = 2; j < b; j++) {
+                   if (b % j === 0) {
+                      isNonPrime = true;
+                      break;
+                   } 
+               }
+
+               if (isNonPrime === false) {
+                   num1 = a;
+                   num2 = b;
+                   buff = "" + num1 + num2;
+                   console.log(buff)
+               }
+        }
+    }  
+}
