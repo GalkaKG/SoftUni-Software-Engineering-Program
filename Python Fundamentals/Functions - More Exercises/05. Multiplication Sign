@@ -1,0 +1,27 @@
+def multiplication_sign(num1: int, num2: int, num3: int):
+    count_negative = 0
+    count_positive = 0
+
+    if num1 == 0 or num2 == 0 or num3 == 0:
+        return 'zero'
+
+    if num1 > 0:
+        count_positive += 1
+    else:
+        count_negative += 1
+    if num2 > 0:
+        count_positive += 1
+    else:
+        count_negative += 1
+    if num3 > 0:
+        count_positive += 1
+    else:
+        count_negative += 1
+
+    if count_positive == 3 or count_negative == 2:
+        return 'positive'
+    else:
+        return 'negative'
+
+
+print(multiplication_sign(num1=int(input()), num2=int(input()), num3=int(input())))
