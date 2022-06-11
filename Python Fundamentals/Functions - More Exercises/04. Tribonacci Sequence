@@ -1,0 +1,24 @@
+def tribonacci_seq(num: int):
+    n1 = 1
+    n2 = 1
+    n3 = 2
+    if num == 1:
+        return '1'
+    elif num == 2:
+        return '1 1'
+    elif num == 3:
+        return '1 1 2'
+    else:
+        for i in range(4, num + 1):
+            current_num = n1 + n2 + n3
+            list_nums.append(str(current_num))
+            n1 = n2
+            n2 = n3
+            n3 = current_num
+
+        return ' '.join(list_nums)
+
+
+list_nums = ['1', '1', '2']
+
+print(tribonacci_seq(num=int(input())))
