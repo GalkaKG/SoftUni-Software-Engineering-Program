@@ -1,0 +1,10 @@
+def data_types(string, sec_inp):
+    if string == 'int':
+        print(int(sec_inp) * 2)
+    elif string == 'real':
+        print(f'{float(sec_inp) * 1.5:.2f}')
+    elif string == 'string':
+        print(f'${sec_inp}$')
+
+
+data_types(string=input(), sec_inp=input())
