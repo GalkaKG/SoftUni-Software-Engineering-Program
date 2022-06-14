@@ -1,0 +1,36 @@
+function grades (input) {
+    let index = 0;
+    let students = Number(input[index]);
+    index++;
+    let failStudents = 0;
+    let between3And4 = 0;
+    let between4And5 = 0;
+    let topStudents = 0;
+    let sum = 0;
+
+    for (let i = 1; i <= students; i++) {
+        let evaluation = Number(input[index]);
+        index++;
+        if (evaluation >= 5 ) {
+            topStudents++;
+        } else if (evaluation >= 4) {
+             between4And5++;
+        } else if (evaluation >= 3) {
+             between3And4++;
+        } else {
+             failStudents++;
+        }
+     
+        sum += evaluation;
+    }
+    let percFail = failStudents / students * 100;
+    let percBetween3And4 = between3And4 / students * 100;
+    let percBetween4And5 = between4And5 / students * 100;
+    let percTopStudents = topStudents / students * 100;
+
+    console.log(`Top students: ${percTopStudents.toFixed(2)}%`);
+    console.log(`Between 4.00 and 4.99: ${percBetween4And5.toFixed(2)}%`);
+    console.log(`Between 3.00 and 3.99: ${percBetween3And4.toFixed(2)}%`);
+    console.log(`Fail: ${percFail.toFixed(2)}%`);
+    console.log(`Average: ${(sum / students).toFixed(2)}`);
+}
