@@ -1,0 +1,45 @@
+function logistics (input) {
+    index = 0;
+    let countLoads = Number (input[index]);
+    index++;
+    let vichle = 0;
+    let priceMinibus = 0;
+    let priceTruck = 0;
+    let priceTrain = 0;
+    let price = 0;
+    let tons = 0;
+    let loadMinibus = 0;
+    let loadTruck = 0;
+    let loadTrain = 0;
+
+    for (let i = 1; i <= countLoads; i++) {
+    let tonsLoads = Number(input[index]);
+    index++
+
+        if (tonsLoads <= 3) {
+           vichle = "minibus"
+           priceMinibus += 200 * tonsLoads;
+           loadMinibus += tonsLoads
+           
+        } else if (tonsLoads <= 11) {
+           vichle = "truck";
+           priceTruck += 175 * tonsLoads;
+           loadTruck += tonsLoads;
+
+        } else {
+           vichle = "train";
+           priceTrain += 120 * tonsLoads;
+           loadTrain += tonsLoads
+        }
+        tons += tonsLoads
+      price = (priceMinibus + priceTruck + priceTrain) / tons;
+
+    }
+    let percentageMinibus = loadMinibus / tons * 100;
+    let percentaeTruck = loadTruck / tons * 100;
+    let percentageTrain = loadTrain / tons * 100;
+    console.log(price.toFixed(2));
+    console.log(percentageMinibus.toFixed(2) + "%");
+    console.log(percentaeTruck.toFixed(2) + "%");
+    console.log(percentageTrain.toFixed(2) + "%");
+}
