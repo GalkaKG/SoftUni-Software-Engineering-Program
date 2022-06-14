@@ -1,0 +1,25 @@
+function bills (input) {
+    let index = 0;
+    let months = Number(input[index]);
+    index++;
+    let water = 20;
+    let internet = 15;
+    let electricityBill = 0;
+    let other = 0;
+
+    for (let i = 1; i <= months; i++) {
+        let electricity = Number(input[index]);
+        index++;
+        electricityBill += electricity;
+        other += (electricity + water + internet) + ((electricity + water + internet) * 0.20);
+
+    }
+    let waterBill = water * months;
+    let internetBill = internet * months;
+    let avarege = (electricityBill + waterBill + internetBill + other) / months;
+    console.log(`Electricity: ${electricityBill.toFixed(2)} lv`);
+    console.log(`Water: ${waterBill.toFixed(2)} lv`);
+    console.log(`Internet: ${internetBill.toFixed(2)} lv`);
+    console.log(`Other: ${other.toFixed(2)} lv`);
+    console.log(`Average: ${avarege.toFixed(2)} lv`)
+}
