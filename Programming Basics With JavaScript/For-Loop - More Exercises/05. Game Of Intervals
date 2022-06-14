@@ -1,0 +1,56 @@
+function gameOfIntervals (input) {
+    let index = 0;
+    let course = Number(input[index]);
+    index++
+    let res = 0;
+    let nums0To9 = 0;
+    let nums10T019 = 0;
+    let nums20To29 = 0;
+    let nums30To39 = 0;
+    let nums40To50 = 0;
+    let invalidNums = 0;
+
+    for(let i = 1; i <= course; i++) {
+        let nums = Number(input[index]);
+        index++;
+        
+          if (nums >= 0 && nums <= 9) {
+              points = nums * 0.20;
+              res += points;
+              nums0To9++;
+          } else if (nums >= 10 && nums <= 19) {
+              points = nums * 0.30;
+              res += points;
+              nums10T019++
+          } else if (nums >= 20 && nums <= 29) {
+            points = nums * 0.40;
+            res += points;
+            nums20To29++;
+          } else if (nums >= 30 && nums <= 39) {
+              points = 50;
+              res += points;
+              nums30To39++;
+          } else if (nums >= 40 && nums <= 50) {
+              points = 100;
+              res += points;
+              nums40To50++;
+          } if (nums > 50 || nums < 0) {
+              res /= 2;
+              invalidNums ++
+          }
+    }
+    let percNums0To9 = nums0To9 / course * 100;
+    let percNums10T019 = nums10T019 / course * 100;
+    let percNums20To29 = nums20To29 / course * 100;
+    let percNums30T039 = nums30To39 / course * 100;
+    let percNums40To50 = nums40To50 / course * 100;
+    let percInvalidNums = invalidNums / course * 100;
+
+    console.log(res.toFixed(2));
+    console.log(`From 0 to 9: ${percNums0To9.toFixed(2)}%`);
+    console.log(`From 10 to 19: ${percNums10T019.toFixed(2)}%`);
+    console.log(`From 20 to 29: ${percNums20To29.toFixed(2)}%`);
+    console.log(`From 30 to 39: ${percNums30T039.toFixed(2)}%`);
+    console.log(`From 40 to 50: ${percNums40To50.toFixed(2)}%`);
+    console.log(`Invalid numbers: ${percInvalidNums.toFixed(2)}%`);
+}
