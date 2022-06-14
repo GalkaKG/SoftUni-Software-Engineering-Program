@@ -1,0 +1,27 @@
+function hospital (input) {
+    let index = 0;
+    let days = Number(input[index]);
+    index++;
+    let doctors = 7;
+    let treatedPatients = 0;
+    let untreatedPatients = 0;
+    let sumUntreatedPatients = 0;
+    let sumTreatedPatients = 0;
+    
+    for(let i = 1; i <= days; i++) {
+        let countPatients = Number(input[index]);
+        index++;
+
+        if (i % 3 === 0 && untreatedPatients > treatedPatients) {
+            doctors++;
+        } 
+        if (countPatients > doctors) {
+            treatedPatients += doctors;
+            untreatedPatients += countPatients - doctors;
+        } else {
+            treatedPatients += countPatients;
+        }
+    }
+    console.log(`Treated patients: ${treatedPatients}.`);
+    console.log(`Untreated patients: ${untreatedPatients}.`);
+}
