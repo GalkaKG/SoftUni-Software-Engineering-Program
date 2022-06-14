@@ -1,0 +1,35 @@
+function equalPairs (input) {
+    let index = 0;
+    let countPairs = Number(input[index]);
+    index++;
+    let sum1 = 0;
+    let sum2 = 0;
+    let diff = 0;
+    let max = 0;
+
+    for (let i = 1; i <= countPairs; i++) {
+       sum2 = sum1;
+       let n = Number(input[index]);
+       index++;
+       let m =Number(input[index]);
+       index++;
+       sum1 = n + m;
+
+       if (i === 1) {
+           continue;
+       }
+    
+       diff = Math.abs(sum1 - sum2);
+
+       if (diff > max) {
+           max = diff;
+       }
+    }
+
+    if (max === 0) {
+        console.log(`Yes, value=${sum1}`);
+    } else {
+        console.log(`No, maxdiff=${max}`);
+    }
+
+}
