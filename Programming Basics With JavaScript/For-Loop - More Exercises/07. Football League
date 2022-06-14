@@ -1,0 +1,42 @@
+function equalPairs (input) {
+    let index = 0;
+    let stadiumCapacity = Number(input[index]);
+    index++;
+    let countFens = Number(input[index]);
+    index++;
+    let fensA = 0;
+    let fensB = 0;
+    let fensV = 0;
+    let fensG = 0;
+
+    for(let i = 1; i <= countFens; i++) {
+        let sector = input[index];
+        index++;
+
+        switch (sector) {
+            case "A":
+                fensA++;
+            break;
+            case "B":
+                fensB++;
+            break;
+            case "V":
+                fensV++;
+            break;
+            case "G":
+                fensG++;
+            break;        
+        }
+    }
+    let percFensA = fensA / countFens * 100;
+    let percFensB = fensB / countFens * 100;
+    let percFensV = fensV / countFens * 100;
+    let percFensG = fensG / countFens * 100;
+    let percAllFens = countFens / stadiumCapacity * 100;
+
+    console.log(percFensA.toFixed(2) + "%");
+    console.log(percFensB.toFixed(2) + "%");
+    console.log(percFensV.toFixed(2) + "%");
+    console.log(percFensG.toFixed(2) + "%");
+    console.log(percAllFens.toFixed(2) + "%");
+}
