@@ -1,0 +1,47 @@
+function cinemaTickets2 (input) {
+    let index = 0;
+    let command = input[index];
+    let studentTicket = 0;
+    let standardTicket = 0;
+    let kidTicket = 0;
+
+    while (command !== "Finish") {
+        let nameOfMovie = input[index];
+        index++
+        let freeSpaces = Number(input[index]);
+        index++;
+        let type = input[index];
+        let ticketsforMovie = 0;     
+
+        while (type !== "End") {
+            
+            switch (type) {
+                case "student": studentTicket++;  break;
+                case "standard": standardTicket++;  break;
+                case "kid": kidTicket++;  break;
+            }
+            ticketsforMovie++;
+
+            if (ticketsforMovie >= freeSpaces) {
+                break;
+            }
+            
+            index++;
+            type = input[index];
+        }
+         let percTicketsForMovie = ticketsforMovie /freeSpaces * 100;      
+         console.log(`${nameOfMovie} - ${percTicketsForMovie.toFixed(2)}% full.`);
+
+        index++
+        command = input[index];
+    }
+    let totalTicket = studentTicket + standardTicket + kidTicket;
+    let pStudent = studentTicket / totalTicket * 100;
+    let pStandard = standardTicket / totalTicket * 100;
+    let pKid = kidTicket / totalTicket * 100;
+
+    console.log(`Total tickets: ${totalTicket}`);
+    console.log(`${pStudent.toFixed(2)}% student tickets.`);
+    console.log(`${pStandard.toFixed(2)}% standard tickets.`);
+    console.log(`${pKid.toFixed(2)}% kids tickets.`);
+}
