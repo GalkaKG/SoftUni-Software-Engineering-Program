@@ -1,0 +1,11 @@
+function fruitMarket (priceStrowberries, bananasKg, orangesKg, raspebresKg, strowberriesKg) {
+   
+    let priceRaspebries = priceStrowberries / 2;
+    let priceOranges = priceRaspebries - (priceRaspebries * 0.40);
+    let priceBananas = priceRaspebries - (priceRaspebries * 0.80);
+
+    let sum = priceStrowberries * strowberriesKg + priceBananas * bananasKg + priceOranges * orangesKg + priceRaspebries * raspebresKg;
+
+    console.log(sum.toFixed(2));
+
+}
