@@ -1,0 +1,23 @@
+function godzillaVsKong (input) {
+    let budget = Number(input[0]);
+    let statists = Number(input[1]);
+    let priceClothesForOne = Number(input[2]);
+    let decor = budget * 0.10;
+    let clothes = statists * priceClothesForOne;
+
+    if (statists >= 150) {
+       clothes = clothes - (clothes * 0.10);
+    }
+
+    let money = clothes + decor;
+    let diff = Math.abs(budget - money);
+
+    if (money > budget) {
+        console.log(`Not enough money!`);
+        console.log(`Wingard needs ${diff.toFixed(2)} leva more.`)
+    } else {
+        console.log("Action!") 
+        console.log(`Wingard starts filming with ${diff.toFixed(2)} leva left.`)
+    }
+
+}
