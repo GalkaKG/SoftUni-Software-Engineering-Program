@@ -1,0 +1,9 @@
+function easterLunch (input) {
+    let countEasterBreads = Number(input[0]);
+    let countEggShells = Number(input[1]);
+    let kgCookies = Number(input[2]);
+    let eggs = countEggShells * 12;
+    let sum = countEasterBreads * 3.20 + countEggShells * 4.35 + kgCookies * 5.40 + eggs * 0.15;
+    
+    console.log(sum.toFixed(2))
+}
