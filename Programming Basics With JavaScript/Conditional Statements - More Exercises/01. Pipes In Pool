@@ -1,0 +1,19 @@
+function pipesInPool (input) {
+    let v = Number(input[0]);
+    let P1 = Number(input[1]);
+    let P2 = Number(input[2]);
+    let h = Number(input[3]);
+    let fullP1 = P1 * h;
+    let fullP2 = P2 * h;
+    let sumOf2 = fullP1 + fullP2;
+    
+    if (v >= sumOf2) {
+        let fullPull = sumOf2 * 100 / v;
+        let percensP1 = fullP1 / sumOf2 * 100;
+        let percensP2 = fullP2 / sumOf2 * 100;
+        console.log(`The pool is ${fullPull.toFixed(2)}% full. Pipe 1: ${percensP1.toFixed(2)}%. Pipe 2: ${percensP2.toFixed(2)}%.`);
+    } else {
+        let litersMore = sumOf2 - v;
+        console.log(`For ${h} hours the pool overflows with ${litersMore.toFixed(2)} liters.`);
+    }
+}
