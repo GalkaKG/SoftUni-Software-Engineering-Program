@@ -1,0 +1,11 @@
+function oscarsCeremony (input) {
+    let rent = Number(input[0]);
+
+    let statuete = rent - (rent * 0.30);
+    let catering = statuete - (statuete * 0.15);
+    let soundSystem = catering / 2;
+    let sum = statuete + catering + soundSystem + rent;
+  
+    console.log(sum.toFixed(2))
+
+}
