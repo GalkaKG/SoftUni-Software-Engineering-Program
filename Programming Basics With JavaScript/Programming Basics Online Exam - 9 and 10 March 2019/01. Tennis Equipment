@@ -1,0 +1,15 @@
+function tennisEcquipment (input) {
+    let priceTennisRacket = Number(input[0]);
+    let countTennisRaqckets = Number(input[1]);
+    let countShoes = Number(input[2]);
+    let priceAllRackets = priceTennisRacket * countTennisRaqckets;
+    let priceShoes = countShoes * (priceTennisRacket / 6);
+    let priceForElse = (priceAllRackets + priceShoes) * 0.20;
+    let sum = priceAllRackets + priceShoes + priceForElse;
+    let priceForHim = sum / 8;
+    let sponsorsPrice = (sum * 7) / 8;
+
+    console.log(`Price to be paid by Djokovic ${Math.floor(priceForHim)}`);
+    console.log(`Price to be paid by sponsors ${Math.ceil(sponsorsPrice)}`)
+
+}
