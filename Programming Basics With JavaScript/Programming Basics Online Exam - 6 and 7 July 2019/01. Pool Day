@@ -1,0 +1,12 @@
+function poolDay (input) {
+    let poeople = Number(input[0]);
+    let entryTax = Number(input[1]);
+    let priceChair = Number(input[2]);
+    let priceUmbrella = Number(input[3]);
+    let taxEntryAll = poeople * entryTax;
+    let umbrellas = priceUmbrella * Math.ceil(poeople / 2);
+    let chairs = Math.ceil(poeople * 0.75) * priceChair;
+    let sum = taxEntryAll + chairs + umbrellas;
+
+    console.log(`${sum.toFixed(2)} lv.`)
+}
