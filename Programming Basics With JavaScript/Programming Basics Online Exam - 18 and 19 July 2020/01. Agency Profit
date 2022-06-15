@@ -1,0 +1,14 @@
+function agencyProfit(input) {
+    let nameCompany = input [0];
+    let adultTicketPs = Number(input[1]);
+    let childTicketPs = Number(input[2])
+    let netPriceAdultTicket = Number(input[3]);
+    let serviceTax = Number(input[4]);
+    let percentChildTicket = netPriceAdultTicket * 0.70;
+    let netChildTicketPrice = netPriceAdultTicket - percentChildTicket;
+    let priceAdultWithTax = netPriceAdultTicket + serviceTax;
+    let priceChildTicket = netChildTicketPrice + serviceTax;
+    let allTicketsPrice = (childTicketPs * priceChildTicket) + (adultTicketPs * priceAdultWithTax);
+    let profit = allTicketsPrice * 0.20;
+    console.log("The profit of your agency from " + `${nameCompany}` + " " + "tickets is" + " " + `${profit.toFixed(2)}` + " " + "lv.");
+}
