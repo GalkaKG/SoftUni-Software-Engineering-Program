@@ -1,0 +1,11 @@
+function seriesCalculator (input) {
+    let nameOfSerial = input[0];
+    let seasons = Number(input[1]);
+    let episodes = Number(input[2]);
+    let timeWithoutAdvertising = Number(input[3]);
+    let episodeWithAdvertising = (timeWithoutAdvertising * 0.20) + timeWithoutAdvertising;
+    let moreTimeForSpecialepisodes = seasons * 10;
+    let totalTime = episodeWithAdvertising * seasons * episodes + moreTimeForSpecialepisodes;
+    console.log(`Total time needed to watch the ${nameOfSerial} series is ${Math.floor(totalTime)} minutes.`)
+
+}
