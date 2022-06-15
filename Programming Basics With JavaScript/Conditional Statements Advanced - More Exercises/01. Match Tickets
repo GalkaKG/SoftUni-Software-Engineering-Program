@@ -1,0 +1,55 @@
+function matchTickets (input) {
+    let budget = Number(input[0]);
+    let category = input[1];
+    let people = Number(input[2]);
+    let normalPrice = people * 249.99;
+    let vipPrice = people * 499.99;
+    let sum = 0;
+    let left = 0;
+
+     switch (category) {
+         case "VIP":
+            if (people <= 4) {
+            sum = budget - (budget * 0.75);
+            left = sum - vipPrice;
+            } else if (people <= 9) {
+            sum = budget - (budget * 0.60);
+            left = sum - vipPrice;
+           } else if (people <= 24) {
+            sum = budget - (budget * 0.50);
+            left = sum - vipPrice;
+           } else if (people <= 49) {
+            sum = budget - (budget * 0.40);
+            left = sum - vipPrice;
+           } else {
+            sum = budget - (budget * 0.25);
+            left = sum - vipPrice;
+           }
+          
+         break
+         case "Normal": 
+            if (people <= 4) {
+                sum= budget - (budget * 0.75);
+                left = sum - normalPrice;
+            } else if (people <= 9) {
+                sum = budget - (budget * 0.60);
+                left = sum - normalPrice;
+            } else if (people <= 24) {
+                sum = budget - (budget * 0.50);
+                left = sum - normalPrice;
+            } else if (people <= 49) {
+                sum = budget - (budget * 0.40);
+                left = sum - normalPrice;
+            } else {
+                sum = budget - (budget * 0.25);
+                left = sum - normalPrice;
+             }
+             
+         break  
+     } 
+     if (left >= 0) {
+     console.log(`Yes! You have ${Math.abs(left).toFixed(2)} leva left.`)
+    } else {
+        console.log(`Not enough money! You need ${Math.abs(left).toFixed(2)} leva.`)
+    }
+}
