@@ -1,0 +1,41 @@
+function cinemaVoucher (input) {
+    let index = 0;
+    let priceVoucher = Number(input[index]);
+    index++;
+    let command = input[index];
+
+    
+    let countTickets = 0;
+    let others = 0;
+    let price = 0;
+    let priceLeft = 0;  
+
+    while (command !== "End") {
+        let purches = input[index];
+        
+        if (purches.length > 8 ) {
+              price = purches.charCodeAt(0) + purches.charCodeAt(1);
+           if (price > priceVoucher) {
+            break;
+           }
+              priceVoucher -= price;
+              countTickets++;
+        }
+
+        if (purches.length <= 8) {
+                price = purches.charCodeAt(0);
+            if (price > priceVoucher) {
+                break;
+               }
+                priceVoucher -= price;
+                others++;
+        }
+
+        index++
+        command = (input[index]);
+    }
+
+    console.log(countTickets);
+    console.log(others);
+
+}
