@@ -1,0 +1,18 @@
+secret_message = input().split()
+secret_message_2 = ''
+
+for i in range(len(secret_message)):
+    word = secret_message[i]
+    digit = ''
+    for ch in word:
+        if ch.isdigit():
+            digit += ch
+    digit = int(digit)
+    ch_in_digit = chr(digit)
+    digit = str(digit)
+
+    new_word = list(word.replace(digit, ch_in_digit))
+    new_word[1], new_word[-1] = new_word[-1], new_word[1]
+    secret_message_2 += ''.join(new_word) + ' '
+
+print(secret_message_2)
