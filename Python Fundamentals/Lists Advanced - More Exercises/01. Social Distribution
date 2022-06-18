@@ -1,0 +1,23 @@
+population = [int(i) for i in input().split(', ')]
+minimum_wealth = int(input())
+nums_bigger_than_min_wealth = [num for num in population if num > minimum_wealth]
+nums_smaller_than_min_wealth = [num for num in population if num < minimum_wealth]
+diff_of_the_bigger_nums = sum(nums_bigger_than_min_wealth) - (len(nums_bigger_than_min_wealth) * minimum_wealth)
+diff_of_the_smaller_nums = (len(nums_smaller_than_min_wealth) * minimum_wealth) - sum(nums_smaller_than_min_wealth)
+
+if diff_of_the_smaller_nums > diff_of_the_bigger_nums:
+    print('No equal distribution possible')
+else:
+    for i, num in enumerate(population):
+        max_num = max(population)
+        index_max_num = population.index(max_num)
+        diff = max_num - (minimum_wealth - num)
+        if num < minimum_wealth and diff >= (minimum_wealth - num):
+            max_num -= (minimum_wealth - num)
+            num += (minimum_wealth - num)
+        elif num < minimum_wealth and diff < (minimum_wealth - num):
+            max_num -= diff
+            num += diff
+        population[i] = num
+        population[index_max_num] = max_num
+    print(population)
