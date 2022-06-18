@@ -1,0 +1,29 @@
+data_list = input().split()
+
+while True:
+    data = input()
+    if data == '3:1':
+        break
+    command, num1, num2 = data.split()
+    num1 = int(num1)
+    num2 = int(num2)
+    if command == 'merge':
+        if num1 < 0:
+            num1 = 0
+        if num2 >= len(data_list):
+            num2 = len(data_list) - 1
+        data_list[num1:num2 + 1] =[''.join(data_list[num1:num2 + 1])]
+
+    elif command == 'divide':
+        divider = len(data_list[num1]) // num2
+        element = data_list[num1]
+        equal = []
+        for i in range(0, len(data_list[num1]), divider):
+            part = element[i:i + divider]
+            if i < num2 * divider:
+                equal.append(part)
+            else:
+                equal[-1] += part
+        data_list[num1:num1 + 1] = equal
+
+print(' '.join(data_list))
