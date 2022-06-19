@@ -1,0 +1,7 @@
+numbers = list(map(int, input().split(' ')))
+avg_sum = sum(numbers) / len(numbers)
+top_5 = [num for num in numbers if num > avg_sum]
+if len(top_5) == 0:
+    print('No')
+else:
+    print(*sorted(top_5, reverse=True)[:5])
