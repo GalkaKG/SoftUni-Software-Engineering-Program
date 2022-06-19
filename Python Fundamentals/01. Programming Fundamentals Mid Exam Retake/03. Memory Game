@@ -1,0 +1,29 @@
+elements = input().split()
+count_moves = 0
+
+while True:
+    two_indexes = input()
+    if two_indexes == 'end':
+        break
+    two_indexes = two_indexes.split()
+    index_1 = int(two_indexes[0])
+    index_2 = int(two_indexes[1])
+    count_moves += 1
+    if index_1 < 0 or index_1 >= len(elements) or index_2 < 0 or index_2 >= len(elements) or index_1 == index_2:
+        half = len(elements) // 2
+        additional_element = f'-{count_moves}a'
+        elements.insert(half, additional_element), elements.insert(half, additional_element)
+        print("Invalid input! Adding additional elements to the board")
+        continue
+    if elements[index_1] == elements[index_2]:
+        print(f"Congrats! You have found matching elements - {elements[index_1]}!")
+        current_element = elements[index_1]
+        elements.remove(current_element), elements.remove(current_element)
+    elif elements[index_1] != elements[index_2]:
+        print('Try again!')
+    if len(elements) == 0:
+        print(f"You have won in {count_moves} turns!")
+        break
+
+if len(elements) > 0:
+    print(f"Sorry you lose :( \n{' '.join(elements)}")
