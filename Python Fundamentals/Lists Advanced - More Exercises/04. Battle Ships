@@ -3,11 +3,11 @@ def attack(field, square):
     for att in square:
         turn = att.split('-')
         row = int(turn[0])
-        colon = int(turn[1])
+        column = int(turn[1])
 
-        if field[row][colon] > 0:
-            field[row][colon] -= 1
-            if field[row][colon] == 0:
+        if field[row][column] > 0:
+            field[row][column] -= 1
+            if field[row][column] == 0:
                 ships_destroyed += 1
 
     return ships_destroyed
