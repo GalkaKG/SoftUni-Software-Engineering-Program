@@ -15,7 +15,7 @@ def attack(field, square):
 
 rows = int(input())
 fields = []
-for i in range(rows):
+for _ in range(rows):
     temp_field = input().split()
     fields.append(list(map(int, ''.join(temp_field))))
 square_attacked = input().split()
