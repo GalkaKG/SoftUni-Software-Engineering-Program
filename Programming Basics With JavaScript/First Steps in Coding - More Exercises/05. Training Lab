@@ -1,0 +1,9 @@
+function trainingLab(input) {
+    let w = Number(input[0]);
+    let h = Number(input[1]);
+    let labH = h*100 - 100;
+    let deskH = labH / 70;
+    let deskW = (w * 100) / 120;
+    let numberPlaces = (Math.floor(deskH) * Math.floor(deskW)) - 3;
+    console.log(numberPlaces); 
+}
