@@ -1,0 +1,10 @@
+function vegetableMarket(input) {
+    let priceForKgVegetables = Number(input[0]);
+    let priceForKgFruits = Number(input[1]);
+    let kgVegetables = Number(input[2]);
+    let kgFruits = Number(input[3]);
+    let sumVegetables = kgVegetables * priceForKgVegetables;
+    let sumFruits = kgFruits * priceForKgFruits;
+    let sum = (sumVegetables + sumFruits) / 1.94;
+console.log(sum.toFixed(2));
+}
