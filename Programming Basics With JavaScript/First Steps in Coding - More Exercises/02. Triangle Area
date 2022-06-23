@@ -1,0 +1,6 @@
+function triangleArea(input) {
+    let side = Number(input[0]);
+    let high = Number(input[1]);
+    let area = side * high / 2.; 
+    console.log(area.toFixed(2))
+}
