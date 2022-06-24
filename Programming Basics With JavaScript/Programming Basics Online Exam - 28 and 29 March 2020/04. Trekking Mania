@@ -1,0 +1,46 @@
+function trekkingmania (input) {
+    let index = 0;
+    let countTeams = Number(input[index]);
+    index++
+    let allPeople = 0;
+    let pplMusala = 0;
+    let pplMonblan = 0;
+    let pplKilimandjaro = 0;
+    let pplK2 = 0;
+    let pplEverest = 0;
+
+    for (let i = 1; i <= countTeams; i++) {
+        let people = Number(input[index]);
+        index++;
+        allPeople += people;
+
+        if (people <= 5) {
+           pplMusala += people;
+
+        } else if (people <= 12) {
+            pplMonblan += people;
+
+        } else if (people <= 25) {
+            pplKilimandjaro += people;
+
+        } else if (people <= 40) {
+            pplK2 += people;
+
+        } else if (people >= 41) {
+            pplEverest += people;
+        }
+    }
+
+    let percMusala = pplMusala / allPeople * 100;
+    let percMonblan = pplMonblan / allPeople * 100;
+    let percKilimandjaro = pplKilimandjaro / allPeople * 100;
+    let percK2 = pplK2 / allPeople * 100;
+    let percEverest = pplEverest / allPeople * 100;
+
+    console.log(percMusala.toFixed(2) + "%");
+    console.log(percMonblan.toFixed(2) + "%");
+    console.log(percKilimandjaro.toFixed(2) + "%");
+    console.log(percK2.toFixed(2) + "%");
+    console.log(percEverest.toFixed(2) + "%");
+
+}
