@@ -1,0 +1,36 @@
+function foodForPets (input) {
+    let index = 0;
+    let days = Number(input[index]);
+    index++;
+    let allFood = Number(input[index]);
+    index++;
+    let catFood = 0;
+    let dogFood = 0;
+    let cookie = 0;
+    let allEatedFood = 0;
+    let eatedCookies = 0;
+
+    for (let i = 1; i <= days; i++) {
+        let eatedByDog = Number(input[index]);
+        index++;
+        let eatedByCat = Number(input[index]);
+        index++;
+        dogFood += eatedByDog;
+        catFood += eatedByCat;
+        allEatedFood += eatedByDog + eatedByCat;
+
+        if (i % 3 === 0) {
+          cookie = (eatedByDog + eatedByCat) * 0.10;
+          eatedCookies += cookie
+        }
+        
+    }
+    let percAllFood = allEatedFood / allFood * 100;
+    let percEatedDod = dogFood / allEatedFood * 100;
+    let percEatedCat = catFood / allEatedFood * 100;
+
+    console.log(`Total eaten biscuits: ${Math.round(eatedCookies)}gr.`);
+    console.log(`${percAllFood.toFixed(2)}% of the food has been eaten.`);
+    console.log(`${percEatedDod.toFixed(2)}% eaten from the dog.`);
+    console.log(`${percEatedCat.toFixed(2)}% eaten from the cat.`)
+}
