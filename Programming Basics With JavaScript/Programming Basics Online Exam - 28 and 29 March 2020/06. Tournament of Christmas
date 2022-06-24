@@ -1,0 +1,52 @@
+function tournamentOfChristmas (input) {
+    let index = 0;
+    let days = Number(input[index]);
+    index++;
+    let command = input[index];
+
+    let allMoney = 0;
+    let daysWin = 0;
+    let daysLose = 0;
+    
+    for (let i = 1; i <= days; i++) { 
+        let sport = command;
+        index++;
+        command = input[index];
+        let money = 0;
+        let counterWin = 0;
+        let counterLose = 0;
+        while (command !== "Finish") {
+             let result = input[index];
+             index++;
+
+             switch (result) {
+                 case "win": 
+                    money += 20;
+                    counterWin++;
+                 break;
+                 case "lose":
+                    counterLose++
+                 break;
+             }
+             command = input[index];
+             index++;
+        }
+
+        if (counterWin > counterLose) {
+            daysWin++
+            money += (money * 0.10);
+            allMoney += money
+        } else {
+            daysLose++;
+            allMoney += money
+        }
+       
+    }
+
+    if (daysWin > daysLose) {
+        allMoney += (allMoney * 0.20);
+        console.log(`You won the tournament! Total raised money: ${allMoney.toFixed(2)}`);
+    } else {
+        console.log(`You lost the tournament! Total raised money: ${allMoney.toFixed(2)}`);
+    }
+}
