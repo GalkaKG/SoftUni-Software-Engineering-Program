@@ -1,0 +1,11 @@
+count_bitcoins = int(input())
+count_chinese_yuan = float(input())
+commission = float(input())
+one_yuan_in_lev = 0.15 * 1.76
+yuans_in_lev = one_yuan_in_lev * count_chinese_yuan
+bitcoins_in_lev = 1168 * count_bitcoins
+sum_in_levs = yuans_in_lev + bitcoins_in_lev
+sum_in_euro = sum_in_levs / 1.95
+sum_without_commission = sum_in_euro - ((sum_in_euro * commission) / 100)
+
+print(f'{sum_without_commission:.2f}')
