@@ -1,0 +1,11 @@
+function changeBureau (input) {
+    let countBitcoin = Number(input[0]);
+    let countChineese = Number(input[1]);
+    let comission = Number(input[2]);
+    let bitcoins = countBitcoin * 1168;
+    let chineeseUan = (countChineese * 0.15) * 1.76;
+    let sumEuro = (bitcoins + chineeseUan) / 1.95;
+    let sum = sumEuro - ((sumEuro * comission) / 100);
+
+    console.log(sum.toFixed(2));
+}
