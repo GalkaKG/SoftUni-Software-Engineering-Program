@@ -1,0 +1,14 @@
+function catWalking (input) {
+    let minsDay = Number(input[0]);
+    let countWalkingDay = Number(input[1]);
+    let caloriesDay = Number(input[2]);
+    let spendCalories = minsDay * countWalkingDay * 5;
+    let percentage = caloriesDay - (caloriesDay * 0.50);
+
+    if (spendCalories >= percentage) {
+        console.log(`Yes, the walk for your cat is enough. Burned calories per day: ${spendCalories}.`)
+    } else {
+         console.log(`No, the walk for your cat is not enough. Burned calories per day: ${spendCalories}.`)
+    }
+
+}
