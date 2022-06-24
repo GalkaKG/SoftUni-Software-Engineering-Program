@@ -1,0 +1,23 @@
+function careOfPuppy (input) {
+    let index = 0;
+    let kgFood = Number(input[index]);
+    index++;
+    let command = input[index];
+    let theFoodInGrs = kgFood * 1000;
+    let eatedFood = 0;
+
+    while(command !== "Adopted") {
+        let gramsEated = Number(input[index]);
+        eatedFood += gramsEated
+        index++;
+        command = input[index];
+    }
+
+    let diff = Math.abs(theFoodInGrs - eatedFood);
+
+    if (theFoodInGrs >= eatedFood) {
+        console.log(`Food is enough! Leftovers: ${diff} grams.`)
+    } else {
+        console.log(`Food is not enough. You need ${diff} grams more.`)
+    }
+}
