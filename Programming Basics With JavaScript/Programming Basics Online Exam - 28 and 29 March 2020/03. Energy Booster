@@ -1,0 +1,49 @@
+function energyBooster (input) {
+    let fruit = input[0];
+    let size = input[1];
+    let countOrdered = input[2];
+    let small = 2;
+    let big = 5;
+    let price = 0;
+
+    switch (fruit) {
+        case "Watermelon":
+            if (size === "small") {
+                price = small * 56;
+            } else {
+                price = big * 28.70;
+            }
+        break;
+        case "Mango":
+            if (size === "small") {
+                price = small * 36.66;
+            } else {
+                price = big * 19.60;
+            }
+        break;
+        case "Pineapple":
+            if (size === "small") {
+                price = small * 42.10;
+            } else {
+                price = big * 24.80;
+            }
+        break;
+        case "Raspberry":
+            if (size === "small") {
+                price = small * 20;
+            } else {
+                price = big * 15.20;
+            }
+        break;
+    }
+
+    let sum = price * countOrdered;
+
+    if (sum >= 400 && sum <= 1000) {
+        sum = sum - (sum * 0.15);
+    } else if (sum > 1000) {
+        sum = sum - (sum * 0.50);
+    }
+
+    console.log(`${sum.toFixed(2)} lv.`)
+}
