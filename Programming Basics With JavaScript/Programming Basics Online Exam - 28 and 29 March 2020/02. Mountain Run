@@ -1,0 +1,15 @@
+function mountainRun (input) {
+    let recordInSecs = Number(input[0]);
+    let distanceInMeters = Number(input[1]);
+    let timeInSecsFor1M = Number(input[2]);
+    let time = distanceInMeters * timeInSecsFor1M;
+    let timeSlow = Math.floor(distanceInMeters / 50) * 30;
+    let sum = time + timeSlow;
+    let diff = Math.abs(recordInSecs - sum);
+
+    if (recordInSecs > sum) {
+        console.log(`Yes! The new record is ${sum.toFixed(2)} seconds.`);
+    } else {
+        console.log(`No! He was ${diff.toFixed(2)} seconds slower.`)
+    }
+}
