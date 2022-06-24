@@ -1,0 +1,11 @@
+from math import floor
+record = float(input())
+distance = float(input())
+time_walk_up_for_1m = float(input())
+slower = floor(distance / 50) * 30
+his_result = (distance * time_walk_up_for_1m) + slower
+
+if his_result < record:
+    print(f'Yes! The new record is {his_result:.2f} seconds.')
+else:
+    print(f'No! He was {(his_result - record):.2f} seconds slower.')
