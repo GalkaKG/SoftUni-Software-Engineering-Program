@@ -1,0 +1,35 @@
+function suitcasesLoad (input) {
+    let index = 0;
+    let capacity = Number(input[index]);
+    index++;
+    let command = input[index];
+    let suitcases = 0;
+    isHaveSpace = true;
+
+    while(command !== "End") {
+        let v = Number(input[index]);
+
+        if (index % 3 === 0) {
+            v = v + (v * 0.10);
+        }
+        
+        if (v > capacity) {
+            isHaveSpace = false;
+            console.log("No more space!");
+            break;
+        } 
+
+        capacity -= v;
+        suitcases++;
+
+        index++;
+        command = input[index];
+    }
+
+    if (command === "End") {
+        console.log("Congratulations! All suitcases are loaded!");
+    }
+
+    console.log(`Statistic: ${suitcases} suitcases loaded.`)
+
+}
