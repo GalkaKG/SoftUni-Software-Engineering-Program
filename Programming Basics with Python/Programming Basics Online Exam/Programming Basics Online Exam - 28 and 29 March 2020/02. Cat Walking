@@ -1,0 +1,11 @@
+min_walking = int(input())
+count_walks = int(input())
+consumed_calories = int(input())
+walking_sum = min_walking * count_walks
+burned_calories = walking_sum * 5
+enough_walk = consumed_calories / 2
+
+if burned_calories >= enough_walk:
+    print(f'Yes, the walk for your cat is enough. Burned calories per day: {burned_calories}.')
+else:
+    print(f'No, the walk for your cat is not enough. Burned calories per day: {burned_calories}.')
