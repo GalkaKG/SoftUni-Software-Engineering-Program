@@ -1,0 +1,66 @@
+function aluminumJoinery (input) {
+let count = Number(input[0]);
+let type = input[1];
+let delivery = input[2];
+let priceDelivery = 60;
+let price = 0;
+let order = 0;
+let isValid = true;
+
+if (count < 10) {
+    isValid = false;
+    console.log(`Invalid order`);
+}
+
+if (type === "90X130") {
+    price = 110;
+    order = count * price;
+    if (count >= 30 && count < 59) {
+        order = order - (order * 0.05);
+    } else if (count >= 60) {
+        order = order - (order * 0.08);
+    }
+} else if (type === "100X150") {
+    price = 140;
+    order = count * price;
+    if (count >= 40 && count < 80) {
+        order = order - (order * 0.06);
+    } else if (count >= 80) {
+        order = order - (order * 0.10);
+    }
+} else if (type === "130X180") {
+    price = 190;
+    order = count * price;
+    if (count >= 20 && count < 50) {
+        order = order - (order * 0.07);
+    } else if (count >= 50) {
+        order = order - (order * 0.12);
+    }
+} else {
+    price = 250;
+    order = count * price;
+    if (count >= 25 && count < 50) {
+        order = order - (order * 0.09);
+    } else if (count >= 50) {
+        order = order - (order * 0.14);
+    }
+}
+    let orderWithDelivery = order + priceDelivery;
+
+    if (delivery === "With delivery" && isValid === true) {
+        if (count > 99) {
+            orderWithDelivery = orderWithDelivery - (orderWithDelivery * 0.04);
+            console.log(`${orderWithDelivery.toFixed(2)} BGN`)
+        } else {
+            console.log(`${orderWithDelivery.toFixed(2)} BGN`)
+        } 
+
+    } else if (delivery === "Without delivery" && isValid === true) {
+        if (count > 99) {
+            order = order - (order * 0.04);
+            console.log(`${order.toFixed(2)} BGN`)
+        } else {
+            console.log(`${order.toFixed(2)} BGN`)
+        }
+    } 
+}
