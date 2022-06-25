@@ -1,0 +1,57 @@
+function addBags(input) {
+    let priceOver20Kg = Number(input[0]);
+    let kg = Number(input[1]);
+    let daysUntilFly = Number(input[2]);
+    let countLuggage = Number(input[3]);
+    
+    if (kg < 10) {
+        if (daysUntilFly > 30) {
+           let price = priceOver20Kg * 0.20;
+           let tax = price + (price * 0.10);
+           let sum = tax * countLuggage
+           console.log(`The total price of bags is: ${sum.toFixed(2)} lv.`);
+        } else if (daysUntilFly >= 7) {
+            let price = priceOver20Kg * 0.20;
+            let tax = price + (price * 0.15);
+            let sum = tax * countLuggage
+            console.log(`The total price of bags is: ${sum.toFixed(2)} lv.`);
+        } else if (daysUntilFly < 7) {
+            let price = priceOver20Kg * 0.20;
+            let tax = price + (price * 0.40);
+            let sum = tax * countLuggage
+            console.log(`The total price of bags is: ${sum.toFixed(2)} lv.`);
+        }
+    } else if (kg <= 20){
+        if (daysUntilFly > 30) {
+            let price = priceOver20Kg * 0.50;
+            let tax = price + (price * 0.10);
+            let sum = tax * countLuggage
+            console.log(`The total price of bags is: ${sum.toFixed(2)} lv.`);
+        } else if (daysUntilFly >= 7) {
+            let price = priceOver20Kg * 0.50;
+            let tax = price + (price * 0.15);
+            let sum = tax * countLuggage
+            console.log(`The total price of bags is: ${sum.toFixed(2)} lv.`);
+        } else if (daysUntilFly < 7) {
+            let price = priceOver20Kg * 0.50;
+            let tax = price + (price * 0.40);
+            let sum = tax * countLuggage
+            console.log(`The total price of bags is: ${sum.toFixed(2)} lv.`);
+        }   
+    } else if (kg > 20) {
+        if (daysUntilFly > 30) {
+            let tax = priceOver20Kg + (priceOver20Kg * 0.10);
+            let sum = tax * countLuggage
+            console.log(`The total price of bags is: ${sum.toFixed(2)} lv.`);
+        } else if (daysUntilFly >= 7) {
+            let tax = priceOver20Kg + (priceOver20Kg * 0.15);
+            let sum = tax * countLuggage
+            console.log(`The total price of bags is: ${sum.toFixed(2)} lv.`);
+        } else if (daysUntilFly < 7) {
+            let tax = priceOver20Kg + (priceOver20Kg * 0.40);
+            let sum = tax * countLuggage
+            console.log(`The total price of bags is: ${sum.toFixed(2)} lv.`);
+        }   
+
+    }
+}
