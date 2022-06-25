@@ -1,0 +1,31 @@
+function bestPlayer (input) {
+    let index = 0;
+    let command = input[index];
+    let max = Number.MIN_SAFE_INTEGER;
+    let bestPlayer = ""
+
+    while (command !== "END") {
+        let namePlayer = input[index];
+        index++;
+        let countGoals = Number(input[index]);
+        index++;
+
+        if (countGoals > max) {
+            max = countGoals;
+            bestPlayer = namePlayer;
+        }
+        
+        if (countGoals >= 10) {
+            break;
+        }
+        command = input[index];
+    }
+
+    console.log(`${bestPlayer} is the best player!`);
+
+    if (max >= 3) {
+        console.log(`He has scored ${max} goals and made a hat-trick !!!`)
+    } else {
+        console.log(`He has scored ${max} goals.`)
+    }
+}
