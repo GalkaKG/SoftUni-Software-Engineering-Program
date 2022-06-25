@@ -1,0 +1,21 @@
+function barcodeGenerator (input) {
+    let start = input[0];
+    let end = input[1];
+    let currentNum = ""
+    
+       for (let j = Number(start.charAt(0)); j <= Number(end.charAt(0)); j++) {
+        for (let k = Number(start.charAt(1)); k <= Number(end.charAt(1)); k++) {
+            for (let h = Number(start.charAt(2)); h <= Number(end.charAt(2)); h++) {
+                for (let m = Number(start.charAt(3)); m <= Number(end.charAt(3)); m++) {
+                    
+                     if (j % 2 !== 0 && k % 2 !== 0 && h % 2 !== 0 && m % 2 !== 0) {
+                         currentNum = currentNum + j + k + h + m + " ";
+                     }
+                }
+            }
+        }
+           
+       } 
+    
+    console.log(currentNum)   
+}
