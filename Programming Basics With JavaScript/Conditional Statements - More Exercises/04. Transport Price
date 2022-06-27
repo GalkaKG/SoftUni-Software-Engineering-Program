@@ -1,0 +1,18 @@
+function transportPrice (input) {
+    let km = Number(input[0]);
+    let dayOrNight = input[1];
+    let taxiDay = 0.70 + 0.79 * km;
+    let taxyNight = 0.70 + 0.90 * km;
+    let busDayNight = 0.09 * km;
+    let trainDayNight = 0.06 * km; 
+
+    if (km < 20 && dayOrNight == "day") {
+        console.log(taxiDay.toFixed(2))
+    } else if (km < 20 && dayOrNight == "night") {
+        console.log(taxyNight.toFixed(2));
+    } else if (km <= 99) {
+        console.log(busDayNight.toFixed(2));
+    } else if (km >= 100) {
+        console.log(trainDayNight.toFixed(2));
+  }
+}
