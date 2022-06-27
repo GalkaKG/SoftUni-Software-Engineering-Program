@@ -1,0 +1,27 @@
+function fuelTank (input) {
+    let fuel = input[0].toLowerCase();
+    let litres = Number(input[1]);
+    
+    if (litres >= 25) {
+        if (fuel == "diesel") {
+            console.log(`You have enough ${fuel}.`);
+        } else if ( fuel == "gasoline") {
+            console.log(`You have enough ${fuel}.`);
+        } else if (fuel == "gas") {
+            console.log(`You have enough ${fuel}.`);
+        } else { 
+            console.log("Invalid fuel!")
+         }
+    
+    } else  if (litres < 25) {
+        if ( fuel == "gasoline") {
+        console.log(`Fill your tank with ${fuel}!`);
+      } else if ( fuel == "diesel" ){
+        console.log(`Fill your tank with ${fuel}!`);
+      } else if ( fuel == "gas") {
+        console.log(`Fill your tank with ${fuel}!`);
+      } else {
+        console.log("Invalid fuel!") 
+    }
+  }
+}
