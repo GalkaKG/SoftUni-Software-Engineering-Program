@@ -1,0 +1,20 @@
+function sleepyTomCat (input) {
+    let countDayOff = Number(input[0]);
+    let year = 365;
+    let daysOffPlay = countDayOff * 127;
+    let workingDays = year - countDayOff;
+    let workingDaysPlay = workingDays * 63;
+    let allTimeForPlay = workingDaysPlay + daysOffPlay;
+    let normTom = 30000; 
+    let diff = Math.abs(allTimeForPlay - normTom);
+    let h = Math.floor(diff / 60);
+    let m = diff % 60;
+
+    if (allTimeForPlay > normTom) {
+        console.log("Tom will run away");
+        console.log(`${Math.floor(h)} hours and ${m} minutes more for play`)
+    } else {
+        console.log("Tom sleeps well");
+        console.log(`${h} hours and ${m} minutes less for play`)
+    }
+}
