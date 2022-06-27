@@ -1,0 +1,44 @@
+function fuelTank2 (input) {
+    let type = input[0];
+    let litresFuel = Number(input[1]);
+    let clubCard = input[2];
+    let price = 0;
+    let discount = 0;
+
+    if (clubCard === "Yes") {
+        if (type === "Gas") {
+            discount = 0.93 - 0.08; 
+            price = discount * litresFuel;
+            
+
+        } else if (type === "Gasoline") {
+            discount = 2.22 - 0.18;
+            price = discount * litresFuel;
+
+        } else {
+            discount = 2.33 - 0.12;
+            price = discount * litresFuel;
+        }
+
+    } else if (clubCard === "No") {
+        if (type === "Gas") {
+            price = 0.93 * litresFuel;
+
+        } else if (type === "Gasoline") {
+            price = 2.22 * litresFuel;
+
+        } else {   
+            price = 2.33 * litresFuel;
+        }
+    }
+
+    if (litresFuel > 25) {
+        price -= (price * 0.10);
+
+    } else if (litresFuel >= 20) {
+        price -= (price * 0.08);
+    }
+
+    console.log(`${price.toFixed(2)} lv.`);
+
+}
