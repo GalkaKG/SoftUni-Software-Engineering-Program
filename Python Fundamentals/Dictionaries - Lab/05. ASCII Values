@@ -1,0 +1,7 @@
+characters = input().split(', ')
+char_dict = {char: ord(char) for char in characters}
+
+print(char_dict)
+
+# Second solution:
+# print({char: ord(char) for char in input().split(', ')})
