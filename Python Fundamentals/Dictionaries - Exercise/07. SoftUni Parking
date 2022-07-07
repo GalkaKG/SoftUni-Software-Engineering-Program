@@ -1,0 +1,24 @@
+n = int(input())
+registered_users = {}
+
+for command in range(n):
+    commands = input().split()
+    username = commands[1]
+
+    if 'register' in commands:
+        license_plate_number = commands[2]
+        if username not in registered_users:
+            registered_users[username] = license_plate_number
+            print(f"{username} registered {license_plate_number} successfully")
+        else:
+            print(f"ERROR: already registered with plate number {license_plate_number}")
+
+    elif 'unregister' in commands:
+        if username in registered_users:
+            registered_users.pop(username)
+            print(f"{username} unregistered successfully")
+        else:
+            print(f"ERROR: user {username} not found")
+
+for registered in registered_users.items():
+    print(f"{registered[0]} => {registered[1]}")
