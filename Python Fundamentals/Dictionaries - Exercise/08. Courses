@@ -1,0 +1,21 @@
+course_dict = {}
+course_name = ''
+
+while True:
+    command = input()
+
+    if command == 'end':
+        break
+
+    command = command.split(' : ')
+    course_name = command[0]
+    student_name = command[1]
+
+    if course_name not in course_dict:
+        course_dict[course_name] = []
+    course_dict[course_name].append(student_name)
+
+for courses in course_dict:
+    print(f'{courses}: {len(course_dict[courses])}')
+    for student in course_dict[courses]:
+        print(f'-- {student}')
