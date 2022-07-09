@@ -1,0 +1,36 @@
+contests = dict()
+ 
+students = dict()
+ 
+while True:
+    data = input()
+    if data == 'end of contests':
+        break
+    k, v = data.split(':')
+    contests[k] = v
+ 
+while True:
+    data = input()
+    if data == 'end of submissions':
+        break
+ 
+    contest, password, username, points = data.split('=>')
+    points = int(points)
+ 
+    if contest in contests and contests[contest] == password:  # contest and password are correct
+        if username not in students:
+            students[username] = {contest: points}
+ 
+        # username is already stored
+        old_score = students[username].setdefault(contest, points)
+        students[username][contest] = max(old_score, points)
+ 
+best_candidate = sorted([(sum(score.values()), student) for student, score in students.items()])[-1]
+print('Best candidate is {0} with total {1} points.'.format(best_candidate[-1], best_candidate[0]))
+ 
+print('Ranking:')
+for student in sorted(students):
+    print(student)
+    for data in sorted(students[student].items(), key=lambda item: -1 * item[1]):
+        topic, grade = data
+        print(f'#  {topic} -> {grade}')
