@@ -1,0 +1,23 @@
+# 1-st decision:
+
+def capitals():
+    countries_data = input().split(', ')
+    capitals_data = input().split(', ')
+    result = dict(zip(countries_data, capitals_data))
+
+    for country, capital in result.items():
+        print(f'{country} -> {capital}')
+
+
+capitals()
+
+
+
+# 2-nd decision:
+
+countries = input().split(', ')
+capitals = input().split(', ')
+# result = {countries[index] : capitals[index] for index in range(len(countries))}
+result = dict(zip(countries, capitals))
+for country, capital in result.items():
+    print(f'{country} -> {capital}')
