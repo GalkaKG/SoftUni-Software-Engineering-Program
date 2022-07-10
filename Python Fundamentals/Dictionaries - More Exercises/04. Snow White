@@ -1,22 +1,24 @@
-items = input()
 dwarfs = {}
-colors = {}
-while items != "Once upon a time":
-    tokens = items.split(" <:> ")
-    name = tokens[0]
-    color = tokens[1]
-    physics = int(tokens[2])
-    id = name + ":" + color
-    if id not in dwarfs:
-        if color not in colors:
-            colors[color] = 1
-        else:
-            colors[color] += 1
-        dwarfs[id] = [0, color]
-    dwarfs[id][0] = max([dwarfs[id][0], physics])
-    items = input()
+hat_colours = {}
 
-sorted_dwrafs = dict(sorted(dwarfs.items(), key=lambda x: (x[1][0], colors[x[1][1]]), reverse=True))
-for key, value in sorted_dwrafs.items():
-    tokens = key.split(":")
-    print(f"({tokens[1]}) {tokens[0]} <-> {value[0]}")
+while True:
+	input_line = input()
+	if input_line == 'Once upon a time':
+		break
+		
+	name, colour, physics = input_line.split(' <:> ')
+	key = (name, colour)
+	value = int(physics)
+	
+	if key in dwarfs:
+		dwarfs[key] = max(value, dwarfs.get(key))
+	else:
+		dwarfs[key] = value
+		
+		if not colour in hat_colours:
+			hat_colours[colour] = 0
+		hat_colours[colour] += 1
+		
+sorted_dwarfes = sorted(dwarfs.items(), key= lambda item: (item[1], hat_colours[item[0][1]]), reverse= True)
+for dwarf in sorted_dwarfes:
+	print(f'({dwarf[0][1]}) {dwarf[0][0]} <-> {dwarf[1]}')
