@@ -1,0 +1,65 @@
+def rate_func(plant, rating, plant_rating):
+    if plant in plant_rating:
+        plant_rating[plant].append(rating)
+    else:
+        print('error')
+    return plant_rating
+
+
+def update_func(plant, new_rarity, plant_rarity):
+    if plant in plant_rarity:
+        plant_rarity[plant] = new_rarity
+    else:
+        print('error')
+    return plant_rarity
+
+
+def reset_func(plant, plant_ratings):
+    if plant in plant_ratings:
+        plant_ratings[plant].clear()
+    else:
+        print('error')
+    return plant_ratings
+
+
+def plant_commands(plant_rarity, plant_rating):
+    while True:
+        command = input()
+        if command == 'Exhibition':
+            break
+        command = command.split(': ')
+        command2 = command[1].split(' - ')
+        plant = command2[0]
+        if 'Rate' in command:
+            rating = int(command2[1])
+            rate_func(plant, rating, plant_rating)
+        elif 'Update' in command:
+            new_rarity = int(command2[1])
+            update_func(plant, new_rarity, plant_rarity)
+        elif 'Reset' in command:
+            reset_func(plant, plant_rating)
+
+
+def plant_discovery():
+    n = int(input())
+    plant_rarity_info = {}
+    plant_rating_info = {}
+
+    for _ in range(n):
+        input_line = input().split('<->')
+        plant = input_line[0]
+        rarity = int(input_line[1])
+        plant_rarity_info[plant] = rarity
+        plant_rating_info[plant] = []
+    plant_commands(plant_rarity_info, plant_rating_info)
+
+    print('Plants for the exhibition:')
+    for k, v in plant_rarity_info.items():
+        if len(plant_rating_info[k]) <= 0:
+            avg_rating = 0
+        else:
+            avg_rating = sum(plant_rating_info[k]) / len(plant_rating_info[k])
+        print(f'- {k}; Rarity: {v}; Rating: {avg_rating:.2f}')
+
+
+plant_discovery()
