@@ -1,3 +1,4 @@
+# 1-st decision:
 line = input()
 
 current_result = ''
@@ -22,3 +23,32 @@ while index < len(line):
 
 print(f'Unique symbols used: {len(set(result))}')
 print(result)
+
+
+
+
+
+# 2-nd decision:
+def rage_quit(text):
+    new_text = ''
+    part = ''
+
+    for i in range(len(text)):
+        num = ''
+        if text[i].isdigit():
+            while i < len(text) and text[i].isdigit():
+                num += text[i]
+                i += 1
+            num = int(num)
+            new_text += part.upper() * num
+            part = ''
+            continue
+        if not text[i].isdigit():
+            part += text[i]
+
+    print(f'Unique symbols used: {len(set(new_text))}')
+    print(new_text)
+
+
+input_line = input()
+rage_quit(input_line)
