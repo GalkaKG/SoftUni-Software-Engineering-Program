@@ -30,32 +30,19 @@ char_multiplier(data[0], data[1])
 
 # 2-nd decision:
 
-def lenght_is_valid(username):
-    if 3 <= len(username) <= 16:
-        return True
-    return False
- 
- 
-def characters_are_valid(username):
-    for character in username:
-        if not (character.isalnum() or character == "-" or character == "_"):
-            return False
-    return True
- 
- 
-def no_redundant_symbols(username):
-    if ' ' in username:
-        return False
-    return True
- 
- 
-def username_is_valid(username):
-    if lenght_is_valid(username) and characters_are_valid(username) and no_redundant_symbols(username):
-        return True
-    return False
- 
- 
-usernames = input().split(", ")
-for username in usernames:
-    if username_is_valid(username):
-        print(username)
+first_string, second_string = input().split()
+total_sum = 0
+if len(first_string) > len(second_string):
+    for index in range(len(second_string)):
+        total_sum += ord(first_string[index]) * ord(second_string[index])
+    for index in range(len(second_string), len(first_string)):
+        total_sum += ord(first_string[index])
+elif len(second_string) > len(first_string):
+    for index in range(len(first_string)):
+        total_sum += ord(first_string[index]) * ord(second_string[index])
+    for index in range(len(first_string), len(second_string)):
+        total_sum += ord(second_string[index])
+elif len(first_string) == len(second_string):  # else
+    for index in range(len(first_string)):
+        total_sum += ord(first_string[index]) * ord(second_string[index])
+print(total_sum)
