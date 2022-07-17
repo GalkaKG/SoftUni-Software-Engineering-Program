@@ -1,0 +1,76 @@
+def additional_func(partition):
+    current_max_num = 0
+    special_char = ''
+
+    for ch in partition:
+        if ch != special_char:
+            if current_max_num >= 6:
+                break
+            current_max_num = 1
+            special_char = ch
+        else:
+            current_max_num += 1
+    return [current_max_num, special_char]
+
+
+def ticket_validator(ticket):
+    ticket_condition = 'Invalid ticket'
+
+    if len(ticket) != 20:
+        ticket_condition = 'invalid ticket'
+    elif ticket[0] * 20 == ticket and ticket[0] in '@#$^':
+        ticket_condition = f'ticket "{ticket}" - 10{ticket[0]} Jackpot!'
+    else:
+        data_source = ''
+        if additional_func(ticket[0:int(len(ticket)/ 2)]) > additional_func(ticket[int(len(ticket) / 2):]):
+            data_source = additional_func(ticket[int(len(ticket) / 2):])
+        else:
+            data_source = additional_func(ticket[0: int(len(ticket) / 2)])
+        number_of_special_signs = data_source[0]
+        special_sign = data_source[1]
+
+        if number_of_special_signs < 6 or special_sign not in '@#$^':
+            ticket_condition = f'ticket "{ticket}" - no match'
+        else:
+            ticket_condition = f'ticket "{ticket}" - {number_of_special_signs}{special_sign}'
+
+    return ticket_condition
+
+
+def winning_ticket(data):
+
+    for ticket in data:
+        print(ticket_validator(ticket))
+
+
+tickets_info = input()
+data = [x.strip() for x in tickets_info.split(', ')]
+winning_ticket(data)
+
+
+
+
+
+
+# 2-nd decision:
+
+def is_winning(ticket):
+    if len(ticket) != 20:
+        return "invalid ticket"
+    left_side = ticket[:10]
+    right_side = ticket[10:]
+    winning_symbols = ['@', '#', '$', '^']
+    for winning_symbol in winning_symbols:
+        for repetition in range(10, 5, -1):
+            winning_symbol_repetition = winning_symbol * repetition
+            if winning_symbol_repetition in left_side and winning_symbol_repetition in right_side:
+                if repetition == 10:
+                    return f'ticket "{ticket}" - {repetition}{winning_symbol} Jackpot!'
+                return f'ticket "{ticket}" - {repetition}{winning_symbol}'
+ 
+    return f'ticket "{ticket}" - no match'
+ 
+ 
+tickets = [ticket.strip() for ticket in input().split(", ")]
+for ticket in tickets:
+    print(is_winning(ticket))
