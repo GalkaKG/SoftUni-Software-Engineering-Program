@@ -1,0 +1,34 @@
+# 1-st decision:
+import re
+
+pattern = r'((www)\.([A-Za-z0-9]+(\-[A-Za-z0-9]+)*(\.[a-z]+)+))'
+text = input()
+valids = []
+
+while text:
+    matches = re.finditer(pattern, text)
+    for match in matches:
+        valids.append(match.group(1))
+    text = input()
+
+for valid in valids:
+    print(valid)
+    
+    
+    
+    
+# 2-nd decision:    
+import re
+ 
+valid_urls = []
+pattern = '((w{3})\.[A-Za-z0-9]+(\-[A-Za-z0-9]+)*(\.[a-z]+)+)'
+sentence = input()
+while sentence:
+    matches = re.search(pattern, sentence)
+    if matches:
+        valid_urls.append(matches.group(0))
+    sentence = input()
+for valid_url in valid_urls:
+    print(valid_url)
+ 
+    
