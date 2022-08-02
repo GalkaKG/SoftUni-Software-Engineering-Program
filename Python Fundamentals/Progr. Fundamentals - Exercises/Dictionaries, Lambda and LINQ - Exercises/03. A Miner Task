@@ -1,0 +1,14 @@
+data = {}
+
+while True:
+    command = input()
+    if command == 'stop':
+        break
+    quantity = int(input())
+    if command not in data:
+        data[command] = quantity
+    else:
+        data[command] += quantity
+
+for k, v in data.items():
+    print(f'{k} -> {v}')
