@@ -1,0 +1,17 @@
+email = input().split('@')
+first_part = email[0]
+second_part = email[1]
+first_sum = 0
+second_sum = 0
+
+for ch in first_part:
+    first_sum += ord(ch)
+for ch in second_part:
+    second_sum += ord(ch)
+
+result = first_sum - second_sum
+
+if result >= 0:
+    print('Call her!')
+else:
+    print('She is not the one.')
