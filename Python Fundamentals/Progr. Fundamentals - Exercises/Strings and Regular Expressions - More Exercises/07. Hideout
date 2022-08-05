@@ -1,0 +1,16 @@
+import re
+
+the_map = input()
+arrays = input().split()
+while arrays:
+    searched_character = arrays[0]
+    minimum_count = int(arrays[1])
+    pattern = fr'\{searched_character}{{{minimum_count},}}'
+    result = re.findall(pattern, the_map)
+    for match in re.finditer(pattern, the_map):
+        start_index = match.start()
+        length = match.end() - match.start()
+    if result:
+        print(f'Hideout found at index {start_index} and it is with size {length}!')
+        break
+    arrays = input().split()
