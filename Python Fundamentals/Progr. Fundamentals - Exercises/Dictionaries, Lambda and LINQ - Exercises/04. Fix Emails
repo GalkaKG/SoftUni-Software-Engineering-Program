@@ -1,0 +1,16 @@
+data = {}
+
+while True:
+    command = input()
+    if command == 'stop':
+        break
+    email = input()
+    email_split = email.split('@')
+    last_piece = email_split[1]
+    last_element = last_piece.split('.')
+    if last_element[1] == 'us' or last_element[1] == 'uk':
+        continue
+    data[command] = email
+
+for k, v in data.items():
+    print(f'{k} -> {v}')
