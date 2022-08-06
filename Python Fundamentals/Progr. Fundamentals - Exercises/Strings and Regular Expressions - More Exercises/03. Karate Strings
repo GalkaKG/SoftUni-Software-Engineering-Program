@@ -1,0 +1,14 @@
+input_line = input()
+strength = 0
+new_line = ''
+
+for i in range(len(input_line)):
+    if input_line[i] != '>' and strength > 0:
+        strength -= 1
+    elif input_line[i] == '>':
+        strength += int(input_line[i + 1])
+        new_line += input_line[i]
+    else:
+        new_line += input_line[i]
+
+print(new_line)
