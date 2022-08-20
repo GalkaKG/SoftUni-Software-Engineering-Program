@@ -1,0 +1,18 @@
+body > main {
+    width: 900px;
+    height: 140px;
+}
+
+body > main > img {
+    border-right: 1px solid #d1d1d1;
+    float: left;
+    margin-right: 19px;
+    padding-right: 19px;
+}
+
+body > main > p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #2e2e2e;
+    text-align: justify;
+}
