@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: "Halvetica", sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: #D3D3D3;
+}
+
+nav > ul {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+nav > ul > li > a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color:#70A629;
+    border-radius: 5px;
+
+}
+
+a:hover {
+    color: white;
+    background-color: #009900;
+}
