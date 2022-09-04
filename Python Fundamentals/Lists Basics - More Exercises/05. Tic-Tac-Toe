@@ -1,3 +1,5 @@
+# 1-st decision:
+
 first_line = input().split(' ')
 second_line = input().split(' ')
 third_line = input().split(' ')
@@ -37,6 +39,48 @@ elif second == first_line[2] and second == second_line[2] and second == third_li
 elif second == first_line[0] and second == second_line[1] and second == third_line[2]:
     print('Second player won')
 elif second == first_line[2] and second == second_line[1] and second == third_line[0]:
+    print('Second player won')
+else:
+    print('Draw!')
+    
+    
+
+
+# 2-nd decision - modified:
+
+first_won = ['1', '1', '1']
+second_won = ['2', '2', '2']
+
+matrix = []
+for _ in range(3):
+    matrix.append(input().split())
+
+# The rows
+if matrix[0] == first_won or matrix[1] == first_won or matrix[2] == first_won:
+    print('First player won')
+elif matrix[0] == second_won or matrix[1] == second_won or matrix[2] == second_won:
+    print('Second player won')
+# The cols
+elif matrix[0][0] == '1' and matrix[1][0] == '1' and matrix[2][0] == '1':
+    print('First player won')
+elif matrix[0][0] == '2' and matrix[1][0] == '2' and matrix[2][0] == '2':
+    print('Second player won')
+elif matrix[0][1] == '1' and matrix[1][1] == '1' and matrix[2][1] == '1':
+    print('First player won')
+elif matrix[0][1] == '2' and matrix[1][1] == '2' and matrix[2][1] == '2':
+    print('Second player won')
+elif matrix[0][2] == '1' and matrix[1][2] == '1' and matrix[2][2] == '1':
+    print('First player won')
+elif matrix[0][2] == '2' and matrix[1][2] == '2' and matrix[2][2] == '2':
+    print('Second player won')
+# The diagonals
+elif matrix[0][0] == '1' and matrix[1][1] == '1' and matrix[2][2] == '1':
+    print('First player won')
+elif matrix[0][0] == '2' and matrix[1][1] == '2' and matrix[2][2] == '2':
+    print('Second player won')
+elif matrix[0][2] == '1' and matrix[1][1] == '1' and matrix[2][0] == '1':
+    print('First player won')
+elif matrix[0][2] == '2' and matrix[1][1] == '2' and matrix[2][0] == '2':
     print('Second player won')
 else:
     print('Draw!')
