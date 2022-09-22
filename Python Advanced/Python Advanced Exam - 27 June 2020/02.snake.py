@@ -8,10 +8,8 @@ def find_snake_position(matrix):
 def is_valid(matrix, next_row, next_col):
     if 0 <= next_row < len(matrix) and 0 <= next_col < len(matrix):
         return True
-    else:
-        return False
 
-
+    
 size = int(input())
 matrix = [list(input()) for _ in range(size)]
 
