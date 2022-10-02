@@ -20,7 +20,7 @@ while True:
     if '@' in email:
         name_email, domain = email.split('@')[0], email.split('@')[1]
         domain = domain.split('.')[1]
-        if len(name_email) < 4:
+        if len(name_email) <= 4:
             raise NameTooShortError("Name must be more than 4 characters")
         elif domain not in valid_domains:
             raise InvalidDomainError("Domain must be one of the following: .com, .bg, .org, .net")
