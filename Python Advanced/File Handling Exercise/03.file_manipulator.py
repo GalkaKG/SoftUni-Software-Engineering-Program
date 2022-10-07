@@ -10,10 +10,12 @@ while True:
 
     if 'Create' in command:
         open(file_name, 'w').close()
+        
     elif 'Add' in command:
         content = command[2]
         with open(file_name, 'a') as file:
             file.write(content + '\n')
+            
     elif 'Replace' in command:
         old_string, new_string = command[2], command[3]
         try:
@@ -24,6 +26,7 @@ while True:
                 file.write(new_content)
         except FileNotFoundError:
             print('An error occurred')
+            
     elif 'Delete' in command:
         if path.exists(file_name):
             remove(file_name)
