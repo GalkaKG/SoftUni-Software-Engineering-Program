@@ -1,3 +1,65 @@
+# 1-st decision
+
+chessboard = []
+
+for row in range(8, 0, -1):
+    result = []
+    for col in range(8):
+        result.append(f'{chr(97 + col)}{row}')
+    chessboard.append(result)
+
+matrix = [input().split() for row in range(8)]
+
+white_row, white_col, black_row, black_col = 0, 0, 0, 0
+
+for idx, row in enumerate(matrix):
+    if 'w' in row:
+        white_row, white_col = idx, row.index('w')
+    if 'b' in row:
+        black_row, black_col = idx, row.index('b')
+
+white_diagonals = [(-1, -1), (-1, +1)]
+black_diagonals = [(+1, -1), (+1, +1)]
+
+while True:
+    if white_col != 0:
+        if matrix[white_row - 1][white_col - 1] == 'b':
+            print(f"Game over! White win, capture on {chessboard[white_row - 1][white_col - 1]}.")
+            break
+    if white_col != 7:
+        if matrix[white_row - 1][white_col + 1] == 'b':
+            print(f"Game over! White win, capture on {chessboard[white_row - 1][white_col + 1]}.")
+            break
+
+    matrix[white_row][white_col], matrix[white_row - 1][white_col] = '-', 'w'
+    white_row -= 1
+
+    if white_row == 0:
+        print(f'Game over! White pawn is promoted to a queen at {chessboard[white_row][white_col]}.')
+        break
+
+    if black_col != 0:
+        if matrix[black_row + 1][black_col - 1] == 'w':
+            print(f"Game over! Black win, capture on {chessboard[black_row + 1][black_col - 1]}.")
+            break
+    if black_col != 7:
+        if matrix[black_row + 1][black_col + 1] == 'w':
+            print(f"Game over! Black win, capture on {chessboard[black_row + 1][black_col + 1]}.")
+            break
+
+    matrix[black_row][black_col], matrix[black_row + 1][black_col] = '-', 'b'
+    black_row += 1
+
+    if black_row == 7:
+        print(f'Game over! Black pawn is promoted to a queen at {chessboard[black_row][black_col]}.')
+        break
+
+
+
+
+
+# 2-nd decision
+
 def find_player_position(matrix, player):
     for row_index, row in enumerate(matrix):
         if player in row:
