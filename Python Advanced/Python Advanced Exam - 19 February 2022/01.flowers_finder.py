@@ -42,20 +42,16 @@ from collections import deque
 vowels = deque(input().split())
 consonants = input().split()
 
-word1 = 'rose'
-word2 = 'tulip'
-word3 = 'lotus'
-word4 = 'daffodil'
-copy_word_1 = word1
-copy_word_2 = word2
-copy_word_3 = word3
-copy_word_4 = word4
+word1, word2, word3, word4 = 'rose', 'tulip', 'lotus', 'daffodil'
+copy_word_1, copy_word_2, copy_word_3, copy_word_4 = word1, word2, word3, word4
 
 founded_word = ''
+is_found_word = False
 
-while vowels and consonants:
-    curr_vowel = vowels[0]
-    curr_cons = consonants[-1]
+while vowels and consonants and not is_found_word:
+    curr_vowel = vowels.popleft()
+    curr_cons = consonants.pop()
+
     if curr_vowel in word1:
         word1 = word1.replace(curr_vowel, '')
     if curr_cons in word1:
@@ -73,21 +69,14 @@ while vowels and consonants:
     if curr_cons in word4:
         word4 = word4.replace(curr_cons, '')
 
-    vowels.popleft()
-    consonants.pop()
-
     if not word1:
-        founded_word = copy_word_1
-        break
+        founded_word, is_found_word = copy_word_1, True
     elif not word2:
-        founded_word = copy_word_2
-        break
+        founded_word, is_found_word = copy_word_2, True
     elif not word3:
-        founded_word = copy_word_3
-        break
+        founded_word, is_found_word = copy_word_3, True
     elif not word4:
-        founded_word = copy_word_4
-        break
+        founded_word, is_found_word = copy_word_4, True
 
 if founded_word:
     print(f"Word found: {founded_word}")
