@@ -12,10 +12,8 @@ while vowels and consonants and not word_found:
     vowel, consonant = vowels.popleft(), consonants.pop()
 
     for key, value in flowers_dict.items():
-        if vowel in value:
             value = value.replace(vowel, '')
             flowers_dict[key] = value
-        if consonant in value:
             value = value.replace(consonant, '')
             flowers_dict[key] = value
 
