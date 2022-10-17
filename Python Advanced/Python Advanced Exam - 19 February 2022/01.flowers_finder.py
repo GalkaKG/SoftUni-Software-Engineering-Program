@@ -11,13 +11,11 @@ word_found = False
 while vowels and consonants and not word_found:
     vowel, consonant = vowels.popleft(), consonants.pop()
 
-    for key, value in flowers_dict.items():
-            value = value.replace(vowel, '')
-            flowers_dict[key] = value
-            value = value.replace(consonant, '')
-            flowers_dict[key] = value
+    for key in flowers_dict.keys():
+        flowers_dict[key] = flowers_dict[key].replace(vowel, '')
+        flowers_dict[key] = flowers_dict[key].replace(consonant, '')
 
-        if value == '':
+        if flowers_dict[key] == '':
             word_found = True
             print(f'Word found: {key}')
 
@@ -31,6 +29,7 @@ if consonants:
     print(f'Consonants left: {" ".join(consonants)}')
 
 
+    
     
 
 # 2-nd decision
