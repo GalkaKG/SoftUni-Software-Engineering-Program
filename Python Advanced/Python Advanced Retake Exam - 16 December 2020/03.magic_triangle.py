@@ -4,18 +4,16 @@ def get_magic_triangle(n):
     triangle = []
     for row in range(n):
         curr_nums = []
-        idx = -1
         for col in range(row + 1):
             if col == 0:
                 curr_nums.append(1)
             elif col == row:
                 curr_nums.append(1)
             else:
-                idx += 1
-                num = triangle[row - 1][idx] + triangle[row - 1][idx + 1]
+                num = triangle[row - 1][col - 1] + triangle[row - 1][col]
                 curr_nums.append(num)
         triangle.append(curr_nums)
-        
+
     return triangle
 
 
