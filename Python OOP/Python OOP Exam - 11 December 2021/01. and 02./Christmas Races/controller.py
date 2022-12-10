@@ -78,3 +78,20 @@ class Controller:
 
         race.drivers.append(driver)
         return f"Driver {driver_name} added in {race_name} race."
+    
+     def start_race(self, race_name: str):
+        race = self._find_race(race_name)
+        if race not in self.races:
+            raise Exception(f"Race {race_name} could not be found!")
+        if len(race.drivers) < 3:
+            raise Exception(f"Race {race_name} cannot start with less than 3 participants!")
+        fastest_drivers = []
+        counter = 0
+        for driver in sorted(race.drivers, key=lambda x: -x.car.speed_limit):
+            if counter == 3:
+                break
+            driver.number_of_wins += 1
+            fastest_drivers.append(f"Driver {driver.name} wins the {race_name} race with a speed of {driver.car.speed_limit}.")
+            counter += 1
+
+        return '\n'.join(fastest_drivers)
