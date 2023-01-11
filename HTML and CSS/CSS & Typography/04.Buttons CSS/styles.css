@@ -1,0 +1,55 @@
+@import "https://use.fontawesome.com/releases/v5.6.3/css/all.css";
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px;
+}
+
+button {
+  background-color: rgb(251, 251, 251);
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 21px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button,
+a {
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 21px;
+  background-color: transparent;
+  color: rgb(51, 51, 51);
+  outline: none;
+}
+
+.button.fill {
+  background-color: rgb(51, 51, 51);
+  color: rgb(251, 251, 251);
+}
+
+.button.fill.hover:hover {
+  background-color: rgb(0, 102, 0);
+  border-color: rgb(0, 102, 0);
+}
+
+.button.hover:hover {
+  border-color: rgb(0, 102, 0);
+  color: rgb(0, 102, 0);
+}
+
+.icon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f063";
+  margin-right: 5px;
+}
