@@ -1,0 +1,18 @@
+@import "https://use.fontawesome.com/releases/v6.1.2/css/all.css";
+
+ul {
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 13px;
+  margin: 5px;
+  background-color: #ececec;
+  border-radius: 20px;
+}
+
+a {
+  border-radius: 50%;
+}
