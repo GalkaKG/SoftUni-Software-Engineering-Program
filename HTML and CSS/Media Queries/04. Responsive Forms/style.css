@@ -1,0 +1,24 @@
+@import "https://use.fontawesome.com/releases/v6.1.2/css/all.css";
+
+body {
+  display: flex;
+}
+
+legend {
+  border: solid 1px black;
+  padding: 3px 25px;
+  text-align: left;
+}
+
+button {
+  background-color: black;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+input:focus {
+  background-color: lightblue;
+}
