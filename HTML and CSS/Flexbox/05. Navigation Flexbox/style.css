@@ -1,0 +1,24 @@
+body {
+  margin: 40px;
+}
+
+header {
+  border-bottom: 2px solid rgb(0, 0, 0);
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  /* justify-content: end; */
+}
+
+li {
+  padding: 10px;
+}
+
+a {
+  color: rgb(0, 153, 0);
+}
