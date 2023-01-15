@@ -27,10 +27,8 @@ img {
 
 table {
   width: 100%;
-}
-
-td {
-  border: 1px green solid;
+  border-collapse: collapse;
+  border-color: green;
 }
 
 span {
