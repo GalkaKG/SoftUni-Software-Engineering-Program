@@ -14,6 +14,10 @@ h6 {
   font-family: "Montserrat", sans-serif;
 }
 
+h2 {
+  padding-bottom: 8px;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -31,25 +35,16 @@ section {
 }
 
 article {
-  margin-top: 0;
-}
-
-h3 {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-article p {
-  margin-top: 0;
-  margin-left:  54px;
+  display: flex;
 }
 
 .icon {
-  width: 50px;
-
+  width: 15%;
+  padding-right: 10px;
 }
 
 .car {
-  width: 600px;
-  height: 500px;
+  width: 550px;
+  height: 490px;
+  padding-top: 20px;
 }
