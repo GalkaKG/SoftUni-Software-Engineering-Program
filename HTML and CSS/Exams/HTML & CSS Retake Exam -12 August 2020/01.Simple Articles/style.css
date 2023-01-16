@@ -1,0 +1,65 @@
+@import "https://use.fontawesome.com/releases/v6.1.2/css/all.css";
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap");
+
+main {
+  display: flex;
+  justify-content: center;
+  color: lightslategray;
+  margin-top: 10%;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  margin-top: 80px;
+}
+
+h2 {
+  margin-left: 38px;
+  margin-top: 10%;
+}
+
+section {
+  width: 500px;
+  height: 300px;
+}
+
+li {
+  list-style: none;
+}
+span {
+  color: #3e9ce5;
+  font-size: xx-large;
+}
+
+button {
+  background-color: #3e9ce5;
+  color: #fff;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+h1,
+h2,
+span {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul li:before {
+  content: "✓ ";
+  color: #3e9ce5;
+}
+
+.first {
+  background-color: #e1f1fb;
+  margin-right: 40px;
+}
+
+.second {
+  border: 5px solid #3e9ce5;
+  height: 290px;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 40px;
+}
