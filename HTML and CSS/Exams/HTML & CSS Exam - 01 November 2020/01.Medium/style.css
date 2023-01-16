@@ -1,0 +1,54 @@
+h1,
+h3 {
+  font-family: Georgia, sans-serif;
+}
+
+p,
+button {
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  color: lightslategray;
+}
+
+header {
+  margin-left: 23.5%;
+}
+
+button {
+  background-color: #03a87c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 30px;
+  margin-top: 37%;
+}
+
+span {
+  text-shadow: 1px 0 15px #03a87c;
+}
+
+hr {
+  width: 20%;
+}
+
+.first {
+  margin-top: 100px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.text {
+  width: 400px;
+  height: 300px;
+}
+
+.button {
+  width: 400px;
+  height: 300px;
+}
