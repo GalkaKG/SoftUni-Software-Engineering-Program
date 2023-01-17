@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "https://use.fontawesome.com/releases/v6.1.2/css/all.css";
+
+body {
+  background-image: url("image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 25% 25%;
+  font-family: "Poppins", sans-serif;
+  background-color: gray;
+  background-blend-mode: darken;
+}
+
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+div {
+  position: absolute;
+  left: 38%;
+  top: 28%;
+  text-align: center;
+}
+
+form {
+  background-color: #fff;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+p {
+  border-bottom: 2px lightgray solid;
+  color: lightslategray;
+  padding-top: 22px;
+  font-size: larger;
+}
+
+i {
+  padding: 0 30px;
+}
+
+button {
+  background-color: #d41872;
+  position: absolute;
+  bottom: 20px;
+  left: 24%;
+  border: none;
+  padding: 10px 50px;
+  color: #fff;
+  border-radius: 1rem;
+  font-size: larger;
+}
