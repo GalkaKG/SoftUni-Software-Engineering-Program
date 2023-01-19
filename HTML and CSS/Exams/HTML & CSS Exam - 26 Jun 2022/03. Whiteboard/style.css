@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Ubuntu&display=swap");
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css";
+
+body {
+  margin: 0 5%;
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+
+header {
+  background-image: url(image/computer-main.jpg);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-color: gray;
+  background-blend-mode: multiply;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
+button {
+  background-color: #00d08e;
+  border: none;
+  color: white;
+  margin: 70px 46%;
+  padding: 10px 3px;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header > h1 {
+  font-size: 50px;
+  padding-top: 60px;
+}
+
+header > p {
+  margin-top: 0;
+  padding: 10px 33%;
+  font-size: 19px;
+  line-height: 27px;
+}
+
+.fa-arrow-right {
+  background-color: white;
+  color: #050403;
+  border-radius: 50%;
+  padding: 1px;
+  font-size: 13px;
+}
+
+button:hover {
+  border: white solid 3px;
+  background-color: transparent;
+}
+
+/* Main */
+
+main {
+  padding: 0;
+}
+
+.first-main,
+.second-main {
+  display: flex;
+}
+
+.first-main img {
+  width: 680px;
+  height: 500px;
+}
+
+.hustle-what {
+  margin: 20px 30px 0 60px;
+}
+
+.fa-check {
+  background-color: #00d08e;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px;
+  position: absolute;
+  left: 54%;
+}
+
+.first-main li {
+  padding: 20px;
+}
+
+.first-main p {
+  font-size: 18px;
+  padding-right: 80px;
+  line-height: 1.5rem;
+}
+
+.second-main h2 {
+  text-align: center;
+  font-size: 30px;
+  /* margin: 0; */
+}
+
+.small-img {
+  height: 100px;
+  width: 100px;
+  padding-bottom: 10px;
+}
+
+.pen,
+.hustle-case-icons,
+.div-pen {
+  width: 684px;
+  height: 500px;
+}
+
+.second-main ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.second-main ul li {
+  color: #00d08e;
+  display: flex;
+  flex-direction: column;
+  padding: 36px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+/* Footer */
+
+footer {
+  background-color: #b2f1dd;
+  text-align: center;
+  height: 500px;
+}
+
+footer > h2 {
+  margin: 0;
+  padding: 30px;
+  font-size: 30px;
+}
+
+footer > section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+footer > section > div > p {
+  padding: 0 30px;
+  margin: 0 40px;
+}
+
+footer > section > div > h4 {
+  margin: 10px;
+  padding-top: 20px;
+}
+
+footer p {
+  padding-top: 30px;
+  font-size: 15px;
+}
