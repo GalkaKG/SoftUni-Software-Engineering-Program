@@ -1,0 +1,199 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css";
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.search > ul {
+  display: flex;
+  justify-content: right;
+  color: #4f5773;
+  font-size: 20px;
+}
+
+.search > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  padding: 50px 5% 20px 0;
+}
+
+.search > ul > li > i {
+  font-size: 25px;
+}
+
+.budapest > ul {
+  display: flex;
+  justify-content: right;
+  padding: 20px 5% 10px 0;
+  gap: 50px;
+  font-size: 20px;
+  color: #4f5773;
+}
+
+.logo {
+  background-color: #a37716;
+  background: linear-gradient(rgb(235, 181, 67), rgb(151, 109, 20));
+  width: 250px;
+  height: 180px;
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  z-index: 1;
+}
+
+.logo img {
+  width: 150px;
+  height: 130px;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+.main-div {
+  background-image: url(image/slider.jpg);
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.shuttle {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.shuttle > h2 {
+  font-size: 30px;
+  margin: 23px;
+}
+
+.shuttle > p {
+  line-height: 25px;
+  font-size: 20px;
+}
+
+.shuttle > h2,
+.shuttle > p,
+.shuttle > button {
+  margin-left: 30px;
+}
+
+.shuttle > button {
+  padding: 10px;
+  background-color: transparent;
+  color: #edb02d;
+  border: solid 2px white;
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.card {
+  background-color: #a37716;
+  color: white;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.card > h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 2% 60px 20px 5%;
+}
+
+.card > ul {
+  font-size: 22px;
+  line-height: 25px;
+  width: 500px;
+}
+
+.card > ul > li {
+  padding: 10px;
+}
+
+.card > button {
+  background-color: transparent;
+  border: white solid;
+  width: 130px;
+  height: 45px;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 160px;
+}
+
+.card i {
+  padding-right: 10px;
+}
+
+.card-images > ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-align: center;
+  margin-left: 15%;
+}
+
+.card-images h1 {
+  font-size: 35px;
+  text-align: center;
+  padding-top: 30px;
+  color: #4f5773;
+}
+
+.card-images p {
+  font-size: 20px;
+  text-align: center;
+  color: #4f5773;
+  padding: 30px;
+}
+
+.card-images img {
+  border-radius: 50%;
+  border: #4f5773 solid 5px;
+  padding: 2px;
+}
+
+footer > section {
+  background-color: #a37716;
+  color: white;
+  font-size: 20px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer > section h3 {
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+footer > section p {
+  padding-left: 20px;
+  padding-top: 5px;
+  font-size: 18px;
+}
+
+footer > section > button {
+  margin: 20px;
+  background-color: transparent;
+  color: white;
+  border: white solid;
+  padding: 5px 30px;
+}
+
+footer > p {
+  font-size: 20px;
+  text-align: center;
+  color: #4f5773;
+  padding: 16px;
+}
