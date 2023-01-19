@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto&display=swap');
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css";
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Abril Fatface", sans-serif;
+}
+
+/* Header */
+
+header {
+    background-image: url("image/image.jpg");
+    background-repeat: no-repeat;
+    background-size: 59%;
+    background-position: center;
+    height: 680px;
+    position: relative;
+}
+
+h1 {
+    padding-top: 30px;
+}
+
+hr#header {
+   border-style: none;
+   border-top: solid;
+   border-width: 2px;
+   border-color: white;
+   width: 60%;
+   margin-left: 10px;
+}
+
+i {
+    padding: 22px 15px 0 0;
+    font-size:xx-large;
+    color: gray;
+}
+
+.first-section {
+   height: 160px;
+   width: 200px;
+   border: outset;
+   position: absolute;
+   left: 23%;
+   top: 3%;
+}
+
+.second-section {
+  height: 240px;
+  width: 270px;
+  position: absolute;
+  top: 24%;
+  right: 22%;
+  text-align: right;
+  background: linear-gradient(to right, #A19790, #CCC9C8);
+  color: #fff;
+  border-style: outset;
+}
+
+.first-section h1 {
+    font-size: xx-large;
+    margin: 0;
+    padding: 10px 0 0 10px;
+}
+
+.first-section p {
+    margin: 0;
+    padding: 5px 0 0 10px;
+}
+
+.second-section p {
+    font-size: 15px;
+    padding-right: 10px;
+}
+
+/* Main */
+
+main {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+i.fa-arrow-right {
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 2px;
+    margin-right: 10px;
+    
+}
+
+main h1 {
+    text-transform: uppercase;
+}
+
+.main-div {
+    display: flex;
+    margin: 0 310px;
+    background-color: #F2F0F3;
+    
+}
+
+aside {
+  background-color: #BAB1AD;
+  color: #fff;
+  padding: 30px 40px 30px 30px;
+  font-size: 50px;
+  letter-spacing: 2px;
+
+}
+
+hr#line {
+    border-style: none;
+    border-top: solid;
+    border-color: gray;
+    margin-left: 0;
+}
+
+aside p {
+    color: black;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0;
+}
+
+.aside {
+    padding: 20px 20px 60px 15px;
+    
+}
+
+/* Footer */
+
+footer {
+    font-size: 13px;
+}
+
+ul {
+    padding-left: 0;
+   
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px 10px 0px;
+    margin-left: 30px;
+}
+
+.input {
+    background-color: #BAB1AD;
+    color: white;
+    display: inline-block;
+    padding: 10px 80px 10px 20px;
+    border-radius: 3px;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #67784D;
+    color: white;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 2px;
+    margin: 0;
+}
+
