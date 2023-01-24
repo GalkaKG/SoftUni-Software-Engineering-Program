@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body,
+textarea::placeholder {
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.left-to-right:first-child {
+    height: 750px;
+    padding: 75px;
+    background: linear-gradient(0deg, rgba(29, 63, 97, 0.3),
+    rgba(29, 63, 97, 0.2)),
+    url(img/spot-bg-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0px 0px, 100% 0px, 100% 84%, 0px 100%);
+
+}
+
+main .left-to-right article {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 450px;
+    padding: 75px 81px 75px 90px;
+    color: #6c6c6c;
+    border-radius: 50%;
+    background-color: white;
+    justify-content: center;
+}
+
+main .left-to-right article header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 20px auto;
+    color: #1D3F61;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #1D3F61;
+}
+
+p {
+    font-weight: 300;
+    line-height: 2;
+}
+
+button {
+    font-size: 1.15rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    width: 30%;
+    margin: 20px auto;
+    padding: 10px 30px;
+    padding: .375rem .75rem;
+    user-select: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    background-color: #1D3F61;
+}
+
+main section.left-to-right:nth-child(3) {
+    display: flex;
+    height: 790px;
+    padding: 75px;
+    background: linear-gradient(0deg, rgba(29, 63, 97, 0.3),
+    rgba(29, 63, 97, 0.2)),
+    url(img/spot-bg-02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0px 0px, 100% 14%, 100% 86%, 0px 100%);
+    align-items: center;
+}
+
+main section:nth-child(2),
+main section:nth-child(4) {
+    display: flex;
+    margin: 40px;
+    margin: 20px auto;
+    background-color: white;
+}
+
+main section:nth-child(2) article,
+main section:nth-child(4) article {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    justify-content: center;
+    margin-right: 0;
+}
+
+main section:nth-child(2) article img {
+    border-radius: 50%;
+}
+
+main section:nth-child(2) article img,
+main section:nth-child(4) article img {
+    width: 90%;
+}
+
+main section:nth-child(2) button,
+main section:nth-child(4) button {
+    width: 15%;
+    margin: 0;
+}
+
+section form label {
+    display: block;
+}
+
+form {
+    width: 889px;
+    font-size: 1.7rem;
+}
+
+section form label input,
+section form textarea {
+    padding-bottom: 15px;
+    outline: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #1D3F61;
+    width: 40%;
+    font-size: 17px;
+}
+
+form input[type="submit"] {
+    background-color: #1D3F61;
+    color: white;
+    border-radius: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    padding: 10px 30px;
+    font-size: 1.15rem;
+    font-weight: 300;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin: 30px auto;
+    width: auto;
+}
+
+textarea {
+    padding-top: 15px;
+}
