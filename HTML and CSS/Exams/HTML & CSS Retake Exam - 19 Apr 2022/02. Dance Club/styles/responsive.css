@@ -1,0 +1,67 @@
+@media screen and (max-width: 800px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 6px;
+  }
+
+  header div {
+    background-image: url("/EXAMS/dance-club/image/dancing-girl.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .trainings {
+    flex-direction: column;
+  }
+
+  .instructors-pic {
+    justify-content: center;
+  }
+
+  .classes ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .classes li {
+    width: 100%;
+  }
+
+  .classes li:nth-child(even) {
+    padding-left: 30px;
+  }
+
+  .getInTouch {
+    flex-direction: column;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form form {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .wrapper .about {
+    flex-basis: 100%;
+  }
+}
