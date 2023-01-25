@@ -196,5 +196,6 @@ footer span {
 }
 
 body > footer > p {
-  padding-bottom: 10px;
+  padding: 10px;
+  background-color: #262B2F;
 }
