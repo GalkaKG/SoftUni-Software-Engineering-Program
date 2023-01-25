@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i");
+@import url('https://fonts.googleapis.com/css?family=Yellowtail');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: PT Sans, sans-serif;
+  font-size: 16px;
+  box-sizing: inherit;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+li{
+  list-style: none;
+}
+
+nav {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  color: #645c5c;
+}
+
+nav p {
+  font-weight: bolder;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #afbaff;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+nav ul li {
+  list-style: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #645c5c;
+}
+
+header div {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("/image/dancing-girl.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 9em 0 9em 3em;
+}
+
+header div h1 {
+  padding-bottom: 0.5em;
+  width: 50%;
+  font-size: 70px;
+}
+
+header div i {
+  color: #afbaff;
+}
+
+.trainings{
+    background: #F6F6F6;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3em;
+}
+
+.trainings div{
+    width: 20%;
+    margin: 0 auto;
+    color: #645c5c;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.trainings div img{
+    width: 120px;
+    height: 120px;
+    background: white;
+    border: 2px dotted #afbaff;
+    border-radius: 50%;    
+}
+
+.trainings div h3{
+    color: #afbaff;
+    padding: 1em 0;
+}
+
+.classes,
+.instructors{
+  width: 85%;
+  margin: 0 auto;
+  padding: 6em 0;
+  text-align: center;
+}
+
+hr{
+  width: 5%;
+  margin: 0 auto;
+  border: none;
+  height: 3px;
+  background: #afbaff;
+  margin-bottom: 2rem;
+}
+
+.instructors > p {
+  padding: 2rem 0;
+  font-size: 18px;
+  width: 80%;
+  color: #8F8F8F;
+  margin: 0 auto;
+}
+
+h2{
+  font-size: 36px;
+  text-align: center;
+}
+
+.instructors-pic{
+  display: flex;  
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.instructors-pic div{  
+  width: 20rem;
+	display: inline-block;
+	background: #FFF;
+	border: 0.4rem solid #000;
+	padding: 1rem;
+	vertical-align: middle;
+	margin: 0.5rem;
+}
+
+.instructors-pic li{  
+  padding-bottom: 1.5rem;  
+}
+
+.instructors-pic img{  
+  display: block;
+	width: 100%;
+	height: auto;
+}
+
+.instructors-pic h3{
+  padding: 2rem 0 0.2rem 0;
+  color: #645c5c;
+}
+
+.instructors-pic p{
+  color: #afbaff;
+  font-weight: bold;
+}
+
+
+.classes{
+  background: rgb(87, 90, 99);
+  color: white;
+  width: 100%;
+}
+
+.classes h2{
+  padding-bottom: 2rem;
+}
+
+.classes ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.classes li{
+  width: 30%;
+  display: flex;
+  text-align: left;
+  padding-bottom: 1.3rem;
+}
+
+.classes li > p{
+  font-family: 'Yellowtail', serif;
+  color: #afbaff;
+  font-size: 66px;
+  font-weight: bolder;
+  padding-right: 1.6rem;
+}
+
+.classes li div{
+  align-self: flex-end;
+}
+
+.classes li div h3{
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  font-size: 26px;
+  align-self: flex-start;
+}
+
+.classes li div p{
+  color: #BDBDBD;
+  font-size: 18px;
+}
+
+/*get in touch*/
+
+.getInTouch{
+  display: flex;  
+  align-items: center; 
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: space-evenly;
+ 
+  
+}
+
+.form{
+  flex: 1 1 45%;  
+}
+
+.map{
+  flex: 1 1 45%;
+  overflow: hidden;
+  position: relative;  
+}
+
+.map:after{
+  display: block;
+  content: '';
+  padding-top: 70%;
+}
+
+.map img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 100%;
+  height: auto;
+  border: 3px solid black;
+  padding: 1rem;
+}
+
+.form{
+  padding-top: 2.8rem;
+}
+
+.getInTouch hr{
+  width: 10%;
+}
+
+.getInTouch h2{
+  padding-bottom: 1.5rem;
+}
+
+.getInTouch form{
+  display: block;
+  width: 90%;
+  margin: 0 auto; 
+  text-align: center;
+}
+
+.getInTouch form input{
+  width: 60%;  
+  height: 3.2rem;
+  border-radius: 0.4rem;
+  padding-left: 1rem;
+  font-size: 16px;
+  margin-bottom: 0.7rem;
+  outline: none;
+  border: 1px solid #BDBDBD;
+}
+
+.getInTouch textarea{
+  border-radius: 0.4rem;
+  padding-left: 1rem;
+  font-size: 17px;
+  margin-bottom: 0.7rem;
+  outline: none;
+  border: 1px solid #BDBDBD;
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+  width: 60%;
+  font-family: PT Sans, sans-serif;
+}
+
+.getInTouch button{
+  padding: 1rem 3.5rem;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.3rem;
+  background: #afbaff;
+  margin-bottom: 2rem;
+}
+
+
+/*footer*/
+
+.site-footer{
+  background: #272727;
+  color: white; 
+}
+
+.site-footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+	padding: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.site-footer ul {
+	padding: 0;
+	margin: 0;
+}
+
+.site-footer li {
+	display: block;
+	list-style: none outside;
+}
+
+.site-footer .about {
+	flex: 0 0 30%;
+}
+
+.about header > p{
+  font-size: 12px;
+  padding-bottom: 1.5rem;
+} 
+
+.about hr{  
+  width: 100%;
+  height: 1px;
+}
+
+.about > p{
+  padding-bottom: 1.2rem;
+}
+
+.site-footer .sitemap {
+	flex: 0 0 20%;
+}
+
+.site-footer .contacts {
+	flex: 0 0 30%;
+}
+
+.contacts h3,
+.sitemap h3{
+  padding-bottom: 2.2rem;
+}
+
+.site-footer .sitemap ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.site-footer .sitemap li {
+	display: block;
+	list-style: none outside;
+	flex: 0 0 60%;
+}
+
+.site-footer .sitemap li a {
+	text-decoration: none;
+	color: white;
+}
+
+.site-footer .contacts li {
+	display: block;
+	list-style: none outside;
+	flex: 0 0 50%;	
+	line-height: 1.2;
+	position: relative;
+	padding-left: 2rem;
+	padding-bottom: 0.5rem;
+}
+
+.site-footer .contacts li i {
+	display: inline-block;
+	position: absolute;
+	top: 0.1rem; left: 0;
+	width: 1.7rem;
+	text-align: center;
+}
+
