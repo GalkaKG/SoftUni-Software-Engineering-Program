@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap");
+
+body {
+  font-family: "Open Sans";
+  box-sizing: border-box;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins";
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+.nav nav ul li {
+  list-style-type: none;
+  color: #041e4d;
+  font-weight: bold;
+}
+
+.we-care {
+  background-image: url(images/header-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.we-care img {
+  position: relative;
+  top: 85px;
+}
+
+.we-care div {
+  color: #fff;
+  height: 300px;
+  position: relative;
+  top: 200px;
+  left: 200px;
+}
+
+.we-care div h1 {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.we-care div p {
+  line-height: 0.5em;
+}
+
+.we-care div button {
+  border: none;
+  background-color: #fff;
+  color: #ff2700;
+  border-radius: 1rem;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.services {
+  margin-top: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.services > p {
+  padding: 0 30% 2% 30%;
+}
+
+.services-imgs {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.services-imgs div {
+  border: 1px solid black;
+  height: 400px;
+  width: 300px;
+}
+
+.second-img {
+  position: relative;
+  bottom: 110px;
+}
+
+.services-imgs img:nth-child(1) {
+  margin: 35px 35px 0 35px;
+}
+
+.services-imgs h4 {
+  position: relative;
+  bottom: 60px;
+  font-size: 20px;
+  font-weight: x-large;
+}
+
+.services-imgs p {
+  position: relative;
+  bottom: 60px;
+  color: lightslategray;
+  line-height: 1.6;
+}
+
+.cat {
+  display: flex;
+  height: 700px;
+  justify-content: space-around;
+  margin-top: 10%;
+}
+
+.cat div {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  top: 110px;
+  right: 140px;
+}
+
+.cat div h2 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: unset;
+}
+
+.cat div > h2:nth-child(2) {
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.cat p {
+  line-height: 1;
+}
+
+.cat button {
+  border: none;
+  background-color: #ff2700;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5rem;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.why-go {
+  background-image: url(images/cats-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.why-go div {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.why-go h2 {
+  padding-top: 10%;
+}
+
+.why-go > p {
+  padding: 10px 30%;
+}
+
+.why-go button {
+  color: #ff2700;
+  border: none;
+  border-radius: 3rem;
+  padding: 10px 30px;
+  margin: auto 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer div {
+  margin: 5% 0;
+  line-height: 2;
+}
+
+footer div ul {
+  padding: 0;
+}
+
+footer div ul li {
+  list-style-type: none;
+}
+
+footer div img {
+  margin-top: 19px;
+}
+
+footer div:nth-child(4) {
+  width: 250px;
+}
