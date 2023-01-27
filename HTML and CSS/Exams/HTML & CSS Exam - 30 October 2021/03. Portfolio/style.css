@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #efefef;
+}
+
+header nav {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  margin-right: 3%;
+}
+
+header nav i {
+  margin-top: 0.8%;
+  font-size: 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header img {
+  height: 700px;
+  width: 100%;
+}
+
+.header h1 {
+  position: relative;
+  bottom: 66.6%;
+  font-weight: 100;
+  font-size: 3rem;
+  left: 100.5%;
+  color: #767676;
+}
+
+.camera {
+  display: flex;
+  background-color: #efefef;
+  margin-top: 20px;
+}
+
+.camera div {
+  flex: 50;
+}
+
+.camera img {
+  width: 80%;
+}
+
+.camera div:nth-child(2) {
+  line-height: 2;
+}
+
+.camera img {
+  margin: 20px 0 10px 40px;
+}
+
+.camera h2 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 0;
+  margin-top: 80px;
+}
+
+.camera h2 span {
+  color: #767676;
+  font-weight: 100;
+}
+
+.camera p {
+  margin-right: 90px;
+  margin-left: 30px;
+}
+
+.camera i {
+  color: #767676;
+  font-size: 25px;
+  padding-top: 20px;
+  margin-left: 32px;
+}
+
+.camera hr {
+  width: 10%;
+  border-top: solid 2px #767676;
+  position: relative;
+  top: 21%;
+  right: 40%;
+}
+
+.women img {
+  width: 100%;
+  height: 630px;
+}
+
+.women {
+  margin: 20px 0;
+}
+
+.bridge {
+  display: flex;
+  background-color: #efefef;
+  margin-bottom: 20px;
+}
+
+.bridge img {
+  width: 100%;
+}
+
+.bridge div:nth-child(2) {
+  padding: 50px 5% 50px 0;
+}
+
+.bridge div:first-child {
+  padding: 80px 0 80px 10%;
+}
+
+.bridge h2 span {
+  color: #767676;
+  font-weight: 100;
+}
+
+.bridge h2 {
+  font-size: 35px;
+}
+
+.bridge .line {
+  border-left: 2px solid black;
+  padding: 30px;
+}
+
+.bridge p {
+  padding-right: 35%;
+  line-height: 1.8;
+}
+
+.images {
+  background-color: #efefef;
+  position: relative;
+  height: 480px;
+  margin-bottom: 20px;
+}
+
+.images img {
+  width: 30%;
+  margin: 20px;
+}
+
+.images img:nth-child(1) {
+  width: 25%;
+  position: relative;
+  left: 19%;
+  top: 20%;
+}
+
+.images img:nth-child(2) {
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  left: 35%;
+}
+
+.images img:nth-child(3) {
+  position: relative;
+  width: 25%;
+  left: 28%;
+  top: 20%;
+}
+
+footer {
+  background-color: #efefef;
+  text-align: center;
+}
+
+footer h2 {
+  padding-top: 50px;
+  font-size: 2rem;
+}
+
+footer span {
+  color: #767676;
+  font-weight: 100;
+}
+
+footer p {
+  padding: 0 20%;
+}
+
+form {
+  position: relative;
+  height: 250px;
+  width: 500px;
+  left: 33%;
+  margin: 3% 0;
+  display: grid;
+  gap: 20px;
+}
+
+body > main > footer > form > input[type="text"]:nth-child(1) {
+  width: 40%;
+}
+
+body > main > footer > form > input[type="text"]:nth-child(2) {
+  width: 40%;
+  position: absolute;
+  left: 58.5%;
+  height: 12%;
+}
+
+form button {
+  background-color: black;
+  color: white;
+  padding: 3px;
+}
+
+form input:nth-child(3) {
+  padding-bottom: 100px;
+}
