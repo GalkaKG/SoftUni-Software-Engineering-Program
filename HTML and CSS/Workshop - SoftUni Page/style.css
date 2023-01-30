@@ -155,3 +155,12 @@ footer i {
   width: 18%;
   font-size: 30px;
 }
+
+header button:hover {
+    background-color: #6b2d97;
+}
+
+.career-center button:hover {
+    background-color:#200930;
+    color: #d8aef5;
+}
