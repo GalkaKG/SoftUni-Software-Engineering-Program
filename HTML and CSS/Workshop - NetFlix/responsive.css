@@ -1,0 +1,226 @@
+@media screen and (max-width: 1200px) {
+  .enjoy img,
+  .download img,
+  .watch img {
+    width: 70%;
+    margin: auto;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header nav img {
+    width: 20%;
+  }
+
+  header {
+    height: 900px;
+  }
+
+  .header {
+    height: 300px;
+    width: 300px;
+    position: unset;
+    margin: auto;
+  }
+
+  .input-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .input-header input {
+    padding: 15px 0;
+    margin: 1%;
+  }
+
+  .input-header button {
+    margin: 20px 60px;
+    padding: 10px 0;
+  }
+
+  .enjoy,
+  .download,
+  .watch {
+    flex-direction: column;
+  }
+
+  .enjoy div:nth-child(1) {
+    text-align: center;
+    height: 80%;
+    width: 90%;
+  }
+
+  .download div:nth-child(2) {
+    text-align: center;
+    width: 90%;
+    padding-top: 10%;
+  }
+
+  .watch div:nth-child(1) {
+    height: 80%;
+    text-align: center;
+    width: 90%;
+  }
+
+  .enjoy h2,
+  .watch h2 {
+    padding-top: 10px;
+  }
+
+  .enjoy img,
+  .download img,
+  .watch img {
+    width: 60%;
+    margin: 0 20%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .enjoy img,
+  .download img,
+  .watch img {
+    width: 80%;
+    margin: 10%;
+  }
+
+  .watch div:nth-child(2) {
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header nav img {
+    width: 40%;
+  }
+
+  header nav button {
+    padding: 6px 10px;
+    margin-top: 5px;
+  }
+
+  header {
+    height: 700px;
+  }
+
+  .header {
+    height: 300px;
+    width: 300px;
+    position: unset;
+    margin: auto;
+  }
+
+  .header h1 {
+    font-size: 2.5em;
+  }
+
+  .header p {
+    font-size: 0.8em;
+  }
+
+  .input-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .input-header input {
+    padding: 10px 0;
+    margin: 1%;
+  }
+
+  .input-header button {
+    margin: 20px 60px;
+    padding: 10px 0;
+  }
+
+  .enjoy img,
+  .watch img {
+    width: 100%;
+    margin: 20% auto;
+  }
+
+  .download img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .download div:nth-child(1) {
+    height: 90%;
+  }
+
+  .download h2 {
+    padding-top: 0;
+  }
+
+  .enjoy div:nth-child(1) {
+    height: 300px;
+  }
+
+  .download div:nth-child(1) {
+    height: 60%;
+  }
+
+  .input-questions {
+    flex-direction: column;
+  }
+
+  .input-questions input {
+    padding: 10px 3px;
+    margin: 0 10px;
+  }
+
+  .input-questions button {
+    padding: 8px 10px;
+    font-size: smaller;
+    margin: 10px 31%;
+  }
+
+  .questions h2 {
+    font-size: large;
+  }
+
+  .questions p {
+    font-size: medium;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .enjoy h2,
+  .download h2,
+  .watch h2 {
+    font-size: x-large;
+  }
+
+  .enjoy p,
+  .download p,
+  .watch p {
+    font-size: large;
+  }
+
+  .enjoy img {
+    margin-top: 40%;
+  }
+
+  /* .enjoy div:nth-child(1) {
+        height: 30%;
+    } */
+
+  .download img {
+    padding-top: 20%;
+  }
+
+  .download div:nth-child(2) {
+    height: 90%;
+  }
+}
