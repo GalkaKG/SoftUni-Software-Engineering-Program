@@ -69,8 +69,13 @@ body > header > div > p:nth-child(2) {
   background-color: #e40914;
   border: none;
   color: #fff;
-  padding: 20px 60px 20px 5px;
+  padding: 20px 40px 20px 5px;
   font-size: 1.2rem;
+}
+
+.header button:hover {
+    background-color: transparent;
+    border: 10px solid red;
 }
 
 .header input {
@@ -200,6 +205,11 @@ body > header > div > p:nth-child(2) {
   font-size: 1rem;
 }
 
+.questions button:hover {
+    background-color: transparent;
+    border: 10px solid red;
+}
+
 .questions > p {
   padding-top: 30px;
 }
@@ -224,4 +234,9 @@ footer h4 {
 .footer {
   display: flex;
   justify-content: space-around;
+}
+
+footer a {
+    text-decoration: none;
+    color: #868383;
 }
