@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #202020;
+}
+
+header {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.3)),
+    url(assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 750px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+header nav img {
+  width: 12%;
+  height: 50%;
+}
+
+header nav button {
+  background-color: #e40914;
+  color: #fff;
+  border: none;
+  height: 50%;
+  padding: 8px 20px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+header div {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+.header {
+  position: relative;
+  top: 13%;
+  left: 25%;
+  width: 750px;
+  height: 400px;
+}
+
+body > header > div > p:nth-child(2) {
+  font-size: 1.6rem;
+  margin: 10px;
+}
+
+.header button {
+  background-color: #e40914;
+  border: none;
+  color: #fff;
+  padding: 20px 60px 20px 5px;
+  font-size: 1.2rem;
+}
+
+.header input {
+  padding: 20px 280px 20px 5px;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.input-header {
+  display: flex;
+  margin-top: 30px;
+}
+
+.enjoy {
+  background-color: black;
+  display: flex;
+  color: #fff;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.enjoy div,
+.download div,
+.watch div {
+  height: 460px;
+}
+
+.enjoy h2 {
+  font-size: 2.5rem;
+  padding: 10% 20% 0 30%;
+}
+
+.enjoy p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 0 25% 0 30%;
+}
+
+.enjoy img {
+  margin-left: -5%;
+  width: 90%;
+  margin-top: 8%;
+}
+
+.download {
+  background-color: black;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.download h2 {
+  font-size: 2.5rem;
+  padding: 10% 10% 2% 30%;
+}
+
+.download p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 0 15% 0 30%;
+}
+
+.download img {
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.watch {
+  display: flex;
+  background-color: black;
+  color: #fff;
+}
+
+.watch img {
+  width: 85%;
+  margin-top: 8px;
+}
+
+.watch h2 {
+  font-size: 2.5rem;
+  padding: 10% 20% 0 30%;
+}
+
+.watch p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 0 15% 0 30%;
+}
+
+.questions {
+  text-align: center;
+  color: #fff;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+.questions h2 {
+  font-size: 2.5rem;
+  padding-top: 30px;
+  margin-top: 10px;
+}
+
+.form {
+  width: 600px;
+  margin: auto;
+}
+
+.form p {
+  text-align: left;
+  background-color: #303030;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.questions input {
+  padding: 16px 280px 14px 5px;
+}
+
+.questions button {
+  background-color: #e40914;
+  color: #fff;
+  border: none;
+  padding: 15px 20px 15px 5px;
+  font-size: 1rem;
+}
+
+.questions > p {
+  padding-top: 30px;
+}
+
+.input-questions {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  background-color: black;
+  color: #303030;
+  padding: 30px;
+}
+
+footer p,
+footer h4 {
+  padding-left: 8.6%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
