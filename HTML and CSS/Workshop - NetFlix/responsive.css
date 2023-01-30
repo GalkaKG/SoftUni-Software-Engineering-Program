@@ -146,8 +146,10 @@
     margin: 0;
   }
 
-  .download div:nth-child(1) {
-    height: 90%;
+  .download div:nth-child(2) {
+    height: 70%;
+    padding-bottom: 10%;
+    padding-top: 0;
   }
 
   .download h2 {
@@ -196,6 +198,17 @@
 }
 
 @media screen and (max-width: 400px) {
+  .header {
+    width: 100%;
+  }
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .header p {
+    font-size: 0.5em;
+  }
+
   .enjoy h2,
   .download h2,
   .watch h2 {
@@ -209,12 +222,12 @@
   }
 
   .enjoy img {
-    margin-top: 40%;
+    padding-top: 40%;
   }
 
-  /* .enjoy div:nth-child(1) {
-        height: 30%;
-    } */
+  .enjoy div:nth-child(2) {
+    height: 80%;
+  }
 
   .download img {
     padding-top: 20%;
@@ -224,3 +237,4 @@
     height: 90%;
   }
 }
+
