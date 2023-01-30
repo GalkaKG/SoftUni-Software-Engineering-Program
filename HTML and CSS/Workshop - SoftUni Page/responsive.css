@@ -1,0 +1,75 @@
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  header img {
+    width: 70%;
+    padding-left: 80px;
+  }
+
+  header ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header button {
+    padding: 10px;
+  }
+
+  header li:hover {
+    text-decoration: underline rgb(142, 110, 142) 2px;
+  }
+
+  .diploms {
+    flex-direction: column;
+    height: 1000px;
+  }
+
+  .diploms-text {
+    width: 100%;
+  }
+
+  .diploms-pics {
+    top: 68%;
+  }
+
+  .diploms-pics img {
+    width: 100%;
+  }
+
+  .svg {
+    width: 300px;
+    height: 300px;
+    top: 5%;
+  }
+
+  .diploms-2 {
+    flex-direction: column;
+  }
+
+  .diploms-2 img {
+    width: 80%;
+  }
+
+  .diploms-2 div:nth-child(2) {
+    left: 30px;
+    top: 30px;
+  }
+
+  .career-center {
+    flex-direction: column;
+  }
+
+  .career-center img {
+    width: 110%;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+
+  footer a:hover {
+    text-decoration: underline white 1.5px;
+  }
+}
