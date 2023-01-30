@@ -1,5 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,6 +7,12 @@
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3.h4 {
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -157,10 +163,10 @@ footer i {
 }
 
 header button:hover {
-    background-color: #6b2d97;
+  background-color: #6b2d97;
 }
 
 .career-center button:hover {
-    background-color:#200930;
-    color: #d8aef5;
+  background-color: #200930;
+  color: #d8aef5;
 }
