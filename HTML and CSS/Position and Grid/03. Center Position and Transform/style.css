@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(238, 238, 238);
+  font-family: Georgia, serif;
+  font-size: 1em;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  height: 600px;
+  width: 500px;
+  position: relative;
+  left: 33%;
+  top: 50px;
+  outline: darkslategrey;
+}
+
+button {
+  background-color: rgb(0, 153, 0);
+  position: absolute;
+  bottom: -50px;
+  right: 20px;
+  border: none;
+  padding: 10px 15px;
+}
+
+h3 {
+  font-size: 1.2;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+div:nth-child(2) {
+  position: absolute;
+  bottom: 15%;
+  margin: 0 40px;
+  font-size: 20px;
+  line-height: 1.5;
+}
