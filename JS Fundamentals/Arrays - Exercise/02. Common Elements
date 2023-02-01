@@ -1,0 +1,12 @@
+function arraysDemo(firstArr, secondArr) {
+
+      for (const element of firstArr) {
+        if(secondArr.includes(element)) {
+            console.log(element);
+        }
+      }
+}
+
+
+arraysDemo(['Hey', 'hello', 4],
+          ['Peter', 10, 'hello', 4]);
