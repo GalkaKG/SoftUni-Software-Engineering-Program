@@ -1,14 +1,17 @@
-body, ul, li {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+body,
+ul,
+li {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 ul {
-  justify-content: space-between; 
+  justify-content: space-evenly;
 }
 
 img {
-    border: solid 6px black;
-    padding: 3rem;
+  border: solid 6px black;
+  padding: 2rem 1.5rem;
+  object-fit: contain;
 }
