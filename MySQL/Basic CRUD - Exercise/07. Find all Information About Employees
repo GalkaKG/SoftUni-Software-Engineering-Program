@@ -1,0 +1,3 @@
+SELECT * FROM `employees`
+WHERE `job_title` = 'Sales representative'
+ORDER BY `employee_id`;
