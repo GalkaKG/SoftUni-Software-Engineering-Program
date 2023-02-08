@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(238, 238, 238);
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  border-bottom: solid 2px black;
+  font-size: 20px;
+}
+
+img {
+  background-color: rgb(255, 255, 255);
+}
+
+header,
+h1,
+h2 {
+  font-family: Georgia, serif;
+}
+
+a {
+  color: rgb(0, 153, 0);
+}
+
+blockquote {
+  font-family: Georgia, serif;
+}
