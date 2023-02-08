@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.container {
+  display: flex;
+  gap: 8px;
+}
+
+div {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+img {
+  height: 100%;
+}
+
+div:first-child {
+  width: 150px;
+}
+
+div:nth-child(2) {
+  width: 62%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+div:nth-child(3) {
+  width: 150px;
+}
+
+div:nth-child(4) {
+  width: 150px;
+}
+
+div:nth-child(2) {
+  text-align: center;
+}
