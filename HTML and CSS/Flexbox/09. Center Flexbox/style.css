@@ -17,3 +17,12 @@ h1,
 p {
   padding-left: 10px;
 }
+
+h1,
+p {
+  padding-left: 10px;
+}
+
+h1 {
+  margin-bottom: 0;
+}
