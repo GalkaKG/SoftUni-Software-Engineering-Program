@@ -5,8 +5,6 @@ html {
 div {
   display: flex;
   max-width: 65vw;
-  /* align-items: center; */
-  max-width: 65vw;
 }
 
 section {
