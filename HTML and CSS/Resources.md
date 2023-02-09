@@ -3,6 +3,10 @@ CSS Resets:
   <li>
        https://andy-bell.co.uk/a-modern-css-reset/
   </li>
-https://meyerweb.com/eric/tools/css/reset/
-https://www.joshwcomeau.com/css/custom-css-reset/
+  <li>
+      https://meyerweb.com/eric/tools/css/reset/
+  </li>
+  <li>
+     https://www.joshwcomeau.com/css/custom-css-reset/
+  </li>
 </ul>
