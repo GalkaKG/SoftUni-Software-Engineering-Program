@@ -2,24 +2,25 @@
   #main-menu {
     display: flex;
     flex-direction: column;
-    padding-right: 100px;
-    position: relative;
-    right: 120px;
+    width: 100%;
+    justify-content: center;
   }
 
-  #main-menu img {
-    padding-left: 28px;
+  #main-menu img,
+  #main-menu ul {
+    width: 30%;
+    margin-left: 30%;
   }
 
   #main-menu ul {
     display: flex;
     flex-direction: column;
-    text-align: center;
     gap: 8px;
   }
 
   #main-menu ul li {
     border: 1px solid red;
+    text-align: center;
   }
 
   #left-aside {
