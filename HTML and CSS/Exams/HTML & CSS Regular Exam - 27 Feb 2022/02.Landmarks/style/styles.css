@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Krub');
+
+body {
+    margin: 0;
+    font-family: 'Krub', sans-serif;
+}
+
+header nav ul li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+header div img {
+    width: 100%;
+    max-width: 100%;
+}
+
+#top-bar {
+    background: #e52236;
+    color: white;
+}
+
+#top-bar ul {
+    margin: 0;
+}
+
+#top-bar ul:nth-child(1) {
+    float: left;
+}
+
+#top-bar ul:nth-child(2) {
+    text-align: right;
+    padding-right: 15px;
+}
+
+#top-bar ul li {
+    padding: 8px;
+}
+
+#top-bar ul li i {
+    padding: 3px;
+}
+
+#main-menu ul li {
+    color: #e52236;
+    background: white;
+}
+
+#main-menu img {
+    padding-left: 40px;
+    float: left;
+}
+
+#main-menu ul {
+    text-align: right;
+    vertical-align: bottom;
+    padding-right: 15px;
+}
+
+#main-menu ul li {
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main {
+    width: auto;
+}
+
+#left-aside {
+    color: #e52236;
+    margin: 25px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#left-aside article {
+    border-bottom: 1px solid #e52236;
+    margin-bottom: 8px;
+}
+
+#right-aside {
+    margin: 25px;
+    width: 27%;
+}
+
+main aside, main section {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#news {
+    width: 58%;
+    margin: 25px;
+}
+
+#news article {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+}
+
+#news article img {
+    width: 100%;
+    max-width: 100%;
+}
+
+#news article h3 {
+    color: #e52236;
+}
+
+#right-aside div:nth-child(1){
+    background: #e52236;
+    color: white;
+    padding: 30px;
+}
+
+#right-aside div:nth-child(1) label input {
+    background: transparent;
+    border: none;
+    width: 90%;
+    outline: none;
+}
+
+#right-aside div:nth-child(1) label {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+#right-aside div:nth-child(1) input::placeholder {
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#right-aside button {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 13px 25px;
+    letter-spacing: 2px;
+}
+
+#right-aside div:nth-child(1) button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+#right-aside div:nth-child(2) {
+    background: #ebebeb;
+    color: #040404;
+    padding: 30px;
+}
+
+#right-aside div:nth-child(2) button {
+    background: #e52236;
+    color: white;
+    border: 1px solid transparent;
+}
+
+footer {
+    background: #e52236;
+    color: white;
+}
+
+footer ul {
+    width: 26%;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer ul li {
+    text-decoration: none;
+    display: block;
+    margin: 4px 0;
+}
+
+footer ul li:first-child {
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+footer ul li i {
+    font-size: 25px;
+    margin: 8px;
+    cursor: pointer;
+}
+
