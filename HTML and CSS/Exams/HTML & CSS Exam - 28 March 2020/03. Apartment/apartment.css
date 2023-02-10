@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/luxury-home.jpg") no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+.div-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-logo {
+  width: 10%;
+  text-align: left;
+}
+
+.div-logo>img {
+  width: 60%;
+}
+
+ul {
+  display: flex;
+  padding: 30px 50px 0 0;
+}
+
+ul li {
+  padding-right: 5px;
+  list-style: none;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+i.fa {
+  font-size: 20px;
+  padding: 2px 5px 0 5px;
+}
+
+.logo-center {
+  width: 10%;
+  padding-top: 15px;
+}
+
+.logo-center h3 {
+  padding-bottom: 25px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.logo-center h1 {
+  margin: auto;
+  width: 50%;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.button-header {
+  background: none;
+  border: none;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 15px;
+  margin: 90px 0 100px 0;
+}
+
+.button-header:hover {
+  background: black;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 35px;
+}
+
+.options article {
+  text-align: left;
+  border-top: 1px solid white;
+  width: 15%;
+  padding-bottom: 50px;
+}
+
+.options article h4 {
+  padding-left: 15px;
+  padding-top: 20px;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.options a {
+  font-weight: lighter;
+  font-size: 12px;
+  padding-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  padding: 30px 0;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 85px;
+}
+
+.gallery article a {
+  font-weight: bold;
+  border: 1px solid gray;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  margin-left: 150px;
+}
+
+.gallery article>img {
+  width: 380px;
+  height: 200px;
+  padding-bottom: 20px;
+}
+
+.gallery article p {
+  text-align: center;
+  padding-bottom: 15px;
+  font-style: italic;
+}
+
+.blog-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  width: 80%;
+  padding: 40px 0 0 100px;
+}
+
+.blog {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/background-blog.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 35px;
+}
+
+.blog-title h4 {
+  font-size: 50px;
+  color: white;
+  font-weight: lighter;
+}
+
+.blog-title h4 span {
+  padding-left: 20px;
+  color: #000;
+}
+
+.blog-title a {
+  padding-top: 35px;
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+}
+
+.blog article {
+  display: flex;
+  justify-content: space-around;
+}
+
+.blog article img {
+  width: 500px;
+  height: 400px;
+  border-radius: 50%;
+  margin-top: 45px;
+}
+
+#about-blog {
+  background: white;
+  width: 35%;
+  height: 35%;
+  margin-top: 45px;
+}
+
+#about-blog h3 {
+  padding: 45px 0 10px 0;
+  width: 80%;
+  margin: 0 20px 20px 20px;
+}
+
+#about-blog p {
+  font-size: 14px;
+  margin: 0 20px 20px 20px;
+}
+
+#about-blog button {
+  border: none;
+  background: #3174D3;
+  color: white;
+  padding: 10px 15px;
+  margin: 20px 0 20px 20px;
+}
+
+.magazine {
+  padding-top: 50px;
+}
+
+.magazine-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  width: 80%;
+  padding: 40px 0 0 100px;
+}
+
+.magazine-title h4 {
+  font-size: 50px;
+  color: black;
+  font-weight: lighter;
+}
+
+.magazine-title h4 span {
+  padding-left: 20px;
+  color: grey;
+}
+
+.magazine-title a {
+  padding-top: 35px;
+  text-decoration: none;
+  color: black;
+}
+
+.magazine article {
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+}
+
+#magazine-img {
+  width: 60%;
+  height: 20%;
+  padding-left: 45px;
+  border: 1px solid black;
+  margin-top: 35px;
+}
+
+.magazine-title {
+  border-bottom: 2px solid black;
+}
+
+.magazine-info img {
+  width: 300px;
+  height: 279px;
+}
+
+.magazine-info button {
+  border: none;
+  background: #3174D3;
+  color: white;
+  padding: 10px 15px;
+  margin: 20px 0 20px 20px;
+}
+
+.magazine-info {
+  margin-left: 150px;
+}
+
+footer {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background: black;
+  padding: 20px 20px;
+  color: white;
+  font-weight: lighter;
+}
+
+.icons a i.fa {
+  color: white;
+}
