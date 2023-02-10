@@ -20,14 +20,13 @@ img {
   box-shadow: 1px 1px 100px 1px #888888;
 }
 
-img:nth-child(2) {
+div:nth-child(2) img {
   width: 500px;
 }
 
 img:hover {
   width: 500px;
 }
-
 
 
 
