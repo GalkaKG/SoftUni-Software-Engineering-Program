@@ -21,8 +21,11 @@ Masonry Layout:
   </li>
 </ul>
 
-FlexBox game:
+FlexBox games:
 <ul>
+  <li>
+    https://flexboxfroggy.com/
+  </li>
   <li> 
     https://codingfantasy.com/games/flexboxadventure
   </li>
