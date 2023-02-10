@@ -3,6 +3,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 90vh;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+img {
+  transition: width 300ms;
+  width: 100px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 1px 1px 100px 1px #888888;
+}
+
+img:nth-child(2) {
+  width: 500px;
+}
+
+img:hover {
+  width: 500px;
+}
+
+
+
+
+/* SECOND DECISION */
+
+/* body {
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 80vh;
 }
 
@@ -42,3 +77,4 @@ div:nth-child(4) {
 div:nth-child(2) {
   text-align: center;
 }
+ */
