@@ -13,3 +13,9 @@ CSS Resets:
     https://github.com/GalkaKG/SoftUni-Software-Engineering-Program/blob/SoftUni-Software-Engineering-Program/HTML%20and%20CSS/resets/simple-reset.css
   </li>
 </ul>
+
+Masonry Layout:
+<ul>
+  <li> 
+    https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/
+  </li>
