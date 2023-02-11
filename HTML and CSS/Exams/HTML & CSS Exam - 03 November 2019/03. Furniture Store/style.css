@@ -1,0 +1,184 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f93700;
+  color: #fff;
+  padding: 20px 40px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  gap: 20px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input input {
+  padding-right: 250px;
+  padding-left: 10px;
+  height: 40px;
+  border: none;
+}
+
+.input i {
+  height: 40px;
+  padding: 12px 30px 0 30px;
+  background-color: #b6afaf;
+}
+
+.account {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.account i {
+  padding-top: 5px;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.images img {
+  width: 400px;
+  height: 400px;
+}
+
+.collection {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
+.text h1 {
+  color: #f84918;
+  font-size: 2.9rem;
+  margin-top: 60px;
+}
+
+.text p {
+  color: gray;
+  font-size: 1.2rem;
+  padding-top: 20px;
+}
+
+.text button {
+  background-color: #f93700;
+  border: none;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 3px;
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
+
+.deals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  margin-top: 30px;
+}
+
+.deals div {
+  text-align: center;
+  color: #757575;
+  background-color: #cac3c3;
+  height: 450px;
+  width: 565px;
+  padding-top: 30px;
+}
+
+.deals img {
+  width: 300px;
+  height: 300px;
+  color: transparent;
+  background-color: #e6d6d6;
+  border-radius: 100%;
+  padding: 20px;
+}
+
+.deals h4 {
+  color: #616060;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 6%;
+}
+
+footer a {
+  color: #757575;
+}
+
+div.about-us,
+div.contact-us {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: #757575;
+}
+
+footer button {
+  border: none;
+  background-color: #cac3c3;
+  color: #616060;
+  padding: 10px 50px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+footer div i {
+  font-size: 1.6rem;
+  padding: 5px;
+}
+
+footer h4 {
+  font-size: 1.3rem;
+}
+
+.text button:hover {
+  background-color: #c5350d;
+}
+
+.input i:hover {
+  background-color: #a59d9d;
+}
