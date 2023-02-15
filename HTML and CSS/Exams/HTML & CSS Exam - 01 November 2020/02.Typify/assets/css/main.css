@@ -1,0 +1,440 @@
+@import url(font-awesome.min.css);
+@import url("http://fonts.googleapis.com/css?family=Raleway:300,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #444;
+}
+
+body,
+input,
+textarea {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+  font-weight: 300;
+  letter-spacing: 0.09em;
+  line-height: 1.65em;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 700;
+}
+
+i {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 2em 0;
+}
+
+h2,
+h3 {
+  font-weight: 300;
+  line-height: 1em;
+  margin: 0 0 1em 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+input,
+textarea {
+  color: #555;
+}
+
+a {
+  color: #00cdcf;
+}
+
+strong {
+  color: #555;
+}
+
+h2,
+h3 {
+  color: #555;
+}
+
+input[type="submit"],
+.button {
+  appearance: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-radius: 0;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  height: 2.85em;
+  line-height: 2.95em;
+  padding: 0 1.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+input[type="submit"]:disabled,
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+input[type="submit"],
+.button {
+  background-color: #f7f7f7;
+  color: #555 !important;
+}
+
+input[type="submit"]:hover,
+.button:hover {
+  background-color: white;
+}
+
+input[type="submit"]:active,
+.button:active {
+  background-color: #eaeaea;
+}
+
+.button.special {
+  background-color: #00cdcf;
+  color: #ffffff !important;
+}
+
+.button.special:hover {
+  background-color: #00e6e9;
+}
+
+.button.special:active {
+  background-color: #00b4b5;
+}
+
+form {
+  margin: 0 0 2em 0;
+}
+
+.grid-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.grid-form .form-control {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.grid-form .form-control.narrow {
+  width: 47%;
+}
+
+.grid-form .actions {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 0.9em;
+  margin: 0 0 0.2em 0;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  appearance: none;
+  border-radius: 0;
+  border: none;
+  border: solid 1px;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 0 1em;
+  text-decoration: none;
+  width: 100%;
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+
+input[type="text"],
+input[type="email"] {
+  height: 2.75em;
+}
+
+textarea {
+  padding: 0.75em 1em;
+}
+
+label {
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(144, 144, 144, 0.075);
+  border-color: #e3e3e3;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #00cdcf;
+  box-shadow: 0 0 0 1px #00cdcf;
+}
+
+ul {
+  list-style: disc;
+  margin: 0 0 2em 0;
+  padding-left: 1em;
+}
+
+ul li {
+  padding-left: 0.5em;
+}
+
+ul.actions {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.actions li {
+  display: inline-block;
+  padding: 0 1em 0 0;
+  vertical-align: middle;
+}
+
+ul.actions li:last-child {
+  padding-right: 0;
+}
+
+section.special {
+  text-align: center;
+}
+
+header {
+  margin-bottom: 1em;
+}
+
+header h2 {
+  display: inline-block;
+  padding-bottom: 0.4em;
+  border-bottom-style: double;
+  border-bottom-width: 4px;
+}
+
+header.major {
+  margin-bottom: 4em;
+}
+
+header h2 {
+  border-bottom-color: #e3e3e3;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.feature {
+  padding: 2em 2em 0.1em 2em;
+  border-style: solid;
+  border-width: 1px;
+  margin-left: -1px;
+  margin-top: -1px;
+  width: 33.33333%;
+}
+
+.feature .fa {
+  font-size: 2.8em;
+  margin-bottom: 0.7em;
+}
+
+.feature {
+  border-color: #e3e3e3;
+}
+
+.feature .fa {
+  color: #00cdcf;
+}
+
+.wrapper {
+  padding: 6em 0 4em 0;
+  position: relative;
+}
+
+.wrapper > .inner {
+  margin: 0 auto;
+  width: 65em;
+}
+
+.wrapper > .inner.narrow {
+  width: 35em;
+}
+
+.wrapper.style2 {
+  background-color: #f7f7f7;
+  color: #444;
+}
+
+.wrapper.style2 input,
+.wrapper.style2 textarea {
+  color: #555;
+}
+
+.wrapper.style2 h2 {
+  color: #555;
+}
+
+.wrapper.style2 input[type="submit"] {
+  background-color: #555;
+  color: #f7f7f7 !important;
+}
+
+.wrapper.style2 label {
+  color: #555;
+}
+
+.wrapper.style2 input[type="text"],
+.wrapper.style2 input[type="email"],
+.wrapper.style2 textarea {
+  background: #fff;
+  border-color: #ddd;
+}
+
+.wrapper.style2 input[type="text"]:focus,
+.wrapper.style2 input[type="email"]:focus,
+.wrapper.style2 textarea:focus {
+  border-color: #00cdcf;
+  box-shadow: 0 0 0 1px #00cdcf;
+}
+
+.wrapper.style2 header h2 {
+  border-bottom-color: #ddd;
+}
+
+.banner {
+  background-color: #00cdcf;
+  color: #ffffff;
+  padding: 8em 0 6em 0;
+  text-align: center;
+}
+
+.banner a {
+  color: #00cdcf;
+}
+
+.banner strong {
+  color: #ffffff;
+}
+
+.banner h2 {
+  color: #ffffff;
+}
+
+.banner .button {
+  background-color: #f7f7f7;
+  color: #555 !important;
+}
+
+.banner .button:hover {
+  background-color: white;
+}
+
+.banner .button:active {
+  background-color: #eaeaea;
+}
+
+.banner .button.special {
+  background-color: #009a9c;
+  color: #fff !important;
+}
+
+.banner .button.special:hover {
+  background-color: #00b4b5;
+}
+
+.banner .button.special:active {
+  background-color: #008183;
+}
+
+.banner h2 {
+  border-style: double solid;
+  border-width: 4px 1px;
+  font-size: 2.4em;
+  line-height: 1.35em;
+  margin: 0 auto 1em;
+  padding: 1.1em;
+  position: relative;
+  width: 40%;
+}
+
+.banner p {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: #f7f7f7;
+  color: #444;
+  padding: 5em 0 4em 0;
+  position: relative;
+}
+
+.footer a {
+  color: #00cdcf;
+}
+
+.footer:before {
+  background-color: #ddd;
+  content: "";
+  height: 1px;
+  left: 30%;
+  position: absolute;
+  top: 0;
+  width: 40%;
+}
+
+.footer .copyright {
+  color: #bbb;
+  font-size: 0.9em;
+  margin: 0 0 2em 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
