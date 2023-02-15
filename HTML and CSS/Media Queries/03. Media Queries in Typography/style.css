@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(238, 238, 238);
+  font-size: 12px;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  border-bottom: solid 2px black;
+  font-size: 20px;
+}
+
+img {
+  background-color: rgb(255, 255, 255);
+}
+
+header,
+h1,
+h2 {
+  font-family: Georgia, serif;
+}
+
+a {
+  color: rgb(0, 153, 0);
+}
+
+blockquote {
+  font-family: Georgia, serif;
+}
+
+@media (min-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1300px) {
+  body {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1800px) {
+  body {
+    font-size: 23px;
+  }
+}
