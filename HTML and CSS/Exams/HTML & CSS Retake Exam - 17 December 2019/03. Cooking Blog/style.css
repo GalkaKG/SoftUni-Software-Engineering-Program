@@ -71,10 +71,10 @@ header .fa-solid {
 
 .what .fa-solid {
   position: relative;
-  left: 1.7%;
+  left: 2%;
   color: #524633;
   z-index: 1;
-  top: 4px;
+  top: 5px;
 }
 
 .what div {
@@ -216,4 +216,3 @@ footer a {
 footer a:not(:first-child) {
   border-left: black 1px solid;
 }
-
