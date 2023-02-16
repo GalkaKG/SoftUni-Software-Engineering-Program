@@ -37,6 +37,12 @@ header button {
   font-size: 24px;
 }
 
+header button:hover {
+  background-color: transparent;
+  color: #524633;
+  border: #524633 3px solid;
+}
+
 header > div {
   display: flex;
 }
@@ -65,7 +71,7 @@ header .fa-solid {
 
 .what .fa-solid {
   position: relative;
-  left: 1.6%;
+  left: 1.7%;
   color: #524633;
   z-index: 1;
   top: 4px;
@@ -104,7 +110,7 @@ header .fa-solid {
 
 .royal > div,
 .party > div {
-  width: 25%;
+  width: 30%;
 }
 
 .white {
@@ -117,7 +123,7 @@ header .fa-solid {
 
 .white h4 {
   font-size: 2.2em;
-  padding-top: 35%;
+  padding-top: 30%;
 }
 
 .white p {
@@ -155,30 +161,29 @@ header .fa-solid {
   gap: 4%;
 }
 
-.images-img > div {
-  background-color: #fff;
+.images-img div {
+  display: flex;
+  flex-direction: column;
 }
 
 .images-img > div p {
   padding: 10px 0;
   text-align: center;
-  opacity: calc(0.7);
+  background-color: #fff;
+  opacity: 0.5;
   font-style: italic;
-}
-
-.images-img div div {
-  opacity: calc(0.7);
 }
 
 .images > p {
   background-color: #fff;
   opacity: calc(0.6);
-  width: 10%;
+  width: 15%;
   text-align: center;
   align-self: center;
   padding: 10px;
   font-weight: 800;
   margin: 20px;
+  box-shadow: 1px 1px 15px 4px grey;
 }
 
 .images button {
@@ -187,9 +192,13 @@ header .fa-solid {
   color: #fff;
   margin: 20px;
   border: none;
-  width: 10%;
-  padding: 8px 0;
+  width: 15%;
+  padding: 10px 0;
   font-size: 20px;
+}
+
+.images button:hover {
+  background-color: #ac2109;
 }
 
 footer {
@@ -207,3 +216,4 @@ footer a {
 footer a:not(:first-child) {
   border-left: black 1px solid;
 }
+
