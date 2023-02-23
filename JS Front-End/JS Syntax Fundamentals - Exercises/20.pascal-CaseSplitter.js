@@ -3,7 +3,7 @@ function pascalCaseSplit(text) {
     let matches = text.matchAll(pattern);
     let arr = [];
 
-    for (word of matches) {
+    for (let word of matches) {
         arr.push(word[0]);
     }
 
