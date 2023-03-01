@@ -1,3 +1,6 @@
+// В Judge се качва само функцията solve()
+
+
 window.addEventListener('load', solve);
 
 function solve() {
