@@ -4,7 +4,6 @@ class Storage {
         this.storage = [];
     }
 
-
     get totalCost () {
         return this.storage.reduce((previous, el) => {
             return previous + el.price * el.quantity
