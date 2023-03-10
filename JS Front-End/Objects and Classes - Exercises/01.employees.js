@@ -1,3 +1,4 @@
+// 1-st decision:
 function employees(data) {
 
     obj = {}
@@ -8,3 +9,28 @@ function employees(data) {
     }
 
 }
+
+
+
+// 2-nd decision:
+function employees(input) {
+    Object.entries(
+        input.reduce((data, employee) => {
+            data[employee] = employee.length;
+            return data; 
+        }, {})
+    ).forEach(([employee, length]) => {
+        console.log(`Name: ${employee} -- Personal Number: ${length}`);
+    })  
+}
+
+
+
+// Test:
+employees([
+    'Silas Butler',
+    'Adnaan Buckley',
+    'Juan Peterson',
+    'Brendan Villarreal'
+    ]
+    )
