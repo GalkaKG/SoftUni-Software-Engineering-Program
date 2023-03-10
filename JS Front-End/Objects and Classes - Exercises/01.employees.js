@@ -7,7 +7,6 @@ function employees(data) {
         obj.num = info.length;
         console.log(`Name: ${obj.name} -- Personal Number: ${obj.num}`);
     }
-
 }
 
 
