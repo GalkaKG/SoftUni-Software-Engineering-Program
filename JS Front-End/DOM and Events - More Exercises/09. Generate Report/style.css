@@ -1,0 +1,39 @@
+table {
+    margin: auto;
+    font-style: ;
+}
+
+table, tbody, thead, tr, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+}
+
+th, td {
+    padding: 4px 8px;
+}
+
+div {
+    text-align: center;
+    margin: auto;
+    margin-top: 16px;
+}
+
+textarea {
+    width: 450px;
+    height: 150px;
+    text-align: left;
+}
+
+button {
+    font-size: larger;
+    border: 0;
+    background-color: #60a1b1;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+button:hover {
+    background-color: #78c6da;
+    cursor: pointer;
+}
