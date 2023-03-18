@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Montserrat:400,700);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:22px;
+}
+
+.restaurant-race-class {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    color: #aaa;
+}
+body{
+    background-image: url(./softuni-wallpaper-1-1920x1080.jpg);
+    background-position: top;
+}
+
+h2 {
+    color: white;
+    padding: 0.3rem;
+}
+span {
+    width: 25%;
+    margin: 0 auto;
+    height: 1px;
+    display: block;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+
+textarea {
+    background: #fff;
+    border-radius: 5px; 
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    border: 1px solid #00BFFF;
+    margin-right: 1.2rem;
+    outline: none;
+    color: black;
+    font-size: 21px;
+    width: 50%;
+    resize: none;
+    height: 20vh;
+    width: 80%;
+    text-align: center;
+}
+
+#inputs, #outputs div{
+    margin: 20px 0px 20px 20px;
+    width: 1135px;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-left: 35px;
+    box-shadow: rgba(0, 0, 0, .15) 0 1px 3px;
+    background: radial-gradient(black, transparent);
+    text-shadow: black;
+    color:white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+label{
+    font-size: 18px;
+}
+button{
+    margin-top: 10px;
+    font-size: 22px;
+    margin-left: 5px;
+    background-color: #03496B;
+    outline: none;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 40%;
+    border-top-color: white;
+    padding: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0px 1px 7px 4px white;
+}
