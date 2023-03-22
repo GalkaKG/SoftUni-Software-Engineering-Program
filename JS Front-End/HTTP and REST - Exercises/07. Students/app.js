@@ -10,15 +10,7 @@ async function attachEvents() {
     const students = await getResponse.json();
     
     Object.values(students).forEach((student) => {
-      const row = document.createElement('tr');
-      row.innerHTML = `
-      <tr>
-        <td>${student.firstName}</td>
-        <td>${student.lastName}</td>
-        <td>${student.facultyNumber}</td>
-        <td>${student.grade}</td>
-      </tr>`;
-      tableBody.appendChild(row);
+      addInnerHTML(student);
     });
   }
 
@@ -44,20 +36,24 @@ async function attachEvents() {
         body: JSON.stringify(newStudent)
       }); 
 
-      const row = document.createElement('tr');
-      row.innerHTML = `
-      <tr>
-        <td>${newStudent.firstName}</td>
-        <td>${newStudent.lastName}</td>
-        <td>${newStudent.facultyNumber}</td>
-        <td>${newStudent.grade}</td>
-      </tr>`;
-      tableBody.appendChild(row)
+      addInnerHTML(newStudent);
 
       document.querySelector('#form input[name=firstName]').value = '';
       document.querySelector('#form input[name=lastName]').value = '';
       document.querySelector('#form input[name=facultyNumber]').value = '';
       document.querySelector('#form input[name=grade]').value = '';
+  }
+
+  function addInnerHTML(student) {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+    <tr>
+      <td>${student.firstName}</td>
+      <td>${student.lastName}</td>
+      <td>${student.facultyNumber}</td>
+      <td>${student.grade}</td>
+    </tr>`;
+    tableBody.appendChild(row);
   }
 }
 
