@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="template.css">
+	<title>Locked Profile</title>
+</head>
+
+<body>
+	<div id="container">
+		<main id="main">
+
+			<div class="profile">
+				<img src="./iconProfile2.png" class="userIcon" />
+				<label>Lock</label>
+				<input type="radio" name="user1Locked" value="lock" checked>
+				<label>Unlock</label>
+				<input type="radio" name="user1Locked" value="unlock"><br>
+				<hr>
+				<label>Username</label>
+				<input type="text" name="user1Username" value="" disabled readonly />
+				<div class="user1Username">
+					<hr>
+					<label>Email:</label>
+					<input type="email" name="user1Email" value="" disabled readonly />
+					<label>Age:</label>
+					<input type="text" name="user1Age" value="" disabled readonly />
+				</div>
+				
+				<button>Show more</button>
+			</div>
+
+		</main>
+	</div>
+	<script src="./app.js"></script>
+	<script>
+		window.onload = lockedProfile();
+	</script>
+</body>
+
+</html>
