@@ -60,10 +60,7 @@ async function onAdd(event) {
     let count = document.getElementById('count').value;
     let price = document.getElementById('price').value;
     let data = {product: name, count: count, price: price}
-
-    document.getElementById('product').value = '';
-    document.getElementById('count').value = '';
-    document.getElementById('price').value = '';
+    cleanInputs();
 
     await fetch(BASE_URL, {
         method: 'post',
@@ -102,29 +99,30 @@ function onEdit(event) {
 
    async function onUpdate() {
     
-    let editedProduct = document.getElementById('product').value;
-    let editedCount =  document.getElementById('count').value;
-    let editedPrice =  document.getElementById('price').value;
-    let data = {product: editedProduct, count: editedCount, price: editedPrice}
+        let editedProduct = document.getElementById('product').value;
+        let editedCount =  document.getElementById('count').value;
+        let editedPrice =  document.getElementById('price').value;
+        let data = {product: editedProduct, count: editedCount, price: editedPrice}
 
-    await fetch(BASE_URL + id, {
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
+        await fetch(BASE_URL + id, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
 
-    onLoad()
-
-    document.getElementById('product').value = '';
-    document.getElementById('count').value = '';
-    document.getElementById('price').value = '';
+        onLoad();
+        cleanInputs();
+    }
 }
-}
-
 
 function getId(product) {
     return productIdObjs[product];
 }
 
+function cleanInputs() {
+    document.getElementById('product').value = '';
+    document.getElementById('count').value = '';
+    document.getElementById('price').value = '';
+}
