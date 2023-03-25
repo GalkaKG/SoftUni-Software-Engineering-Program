@@ -1,3 +1,7 @@
+window.addEventListener("load", solve);
+
+// В Джъдж се качва само функцията solve()
+
 function solve() {
   const makeEl = document.getElementById('make');
   const modelEl = document.getElementById('model');
