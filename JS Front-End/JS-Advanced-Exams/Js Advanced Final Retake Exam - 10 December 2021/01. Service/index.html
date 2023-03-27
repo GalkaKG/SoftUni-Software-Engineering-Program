@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="./style/css/style.css">
+</head>
+
+<body>
+    <main>
+
+        <h1>Computer & Mobile Repair Services</h1>
+        <section id="main-container">
+
+            <div id="left">
+                <div id="head">
+                    <h1>Easy! Convenient! Quick!</h1>
+                    <p>Send the defective device directly to our Service Center.</p>
+                </div>
+            </div>
+
+            <div id="right">
+                <h1>Repair form </h1>
+                <form action="#">
+                    <label for="type-product">Product type:</label>
+                    <select id="type-product" name="type-product">
+                        <option value="Computer">Computer</option>
+                        <option value="Phone">Phone</option>
+                    </select>
+
+                    <label for="description">Description of the problem:</label>
+                    <textarea id="description" cols="20" placeholder="The device refuses to charge"></textarea>
+
+                    <label for="client-name">Client name:</label>
+                    <input type="text" id="client-name" name="client-name" placeholder="Petar Petrson">
+
+                    <label for="client-phone">Client phone:</label>
+                    <input type="text" id="client-phone" name="client-phone" placeholder="+359...">
+
+                    <button type="submit">Send form</button>
+                </form>
+            </div>
+        </section>
+
+        <div id="wrapper">
+
+            <section id="received-orders">
+                <h2>Received orders:</h2>
+                <img src="./style/img/slider_2.jpg">
+
+            </section>
+
+
+            <section id="completed-orders">
+                <h2>Completed orders:</h2>
+                <img src="./style/img/completed-order.png">
+                <button class="clear-btn">Clear</button>
+
+            </section>
+
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
