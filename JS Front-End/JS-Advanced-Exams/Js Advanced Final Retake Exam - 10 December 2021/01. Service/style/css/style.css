@@ -1,0 +1,304 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 115vh;
+}
+
+body {
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(#e6e6e6, #bbbbbb);
+    background-position: 0% 90%;
+    background-image: url("../img/slider_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main>h1 {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #e3fcfc;
+    font-size: 600;
+    font-size: 42px;
+    padding: 10px;
+    margin-bottom: 0.4em;
+}
+
+#main-container {
+    position: relative;
+    width: 550px;
+    height: 360px;
+    left: 16%;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: white;
+    margin-bottom: 1.7em;
+}
+
+#left {
+    position: relative;
+    background: linear-gradient( 135deg, rgba(91, 36, 122, 0.45) 0%, rgba(27, 206, 223, 0.55) 100%), url("../img/image-21.webp");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 40%;
+    top: 23px;
+    left: -25px;
+    padding: 7px 15px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    color: #f4ffff;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+#left #head {
+    opacity: 0.95;
+}
+
+#right {
+    position: absolute;
+    width: 300px;
+    height: 380px;
+    top: 0;
+    left: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 20px;
+}
+
+#right form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+#right>h1 {
+    box-shadow: 0 2px 0px #4183d7;
+    padding: 4px;
+    margin-bottom: 0.3em;
+}
+
+label {
+    margin-top: 4px;
+}
+
+#right form input,
+#right form select {
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    border: none;
+    border-bottom: 1.8px solid #ccc;
+    padding: 5px;
+    margin-top: 1.5px;
+    position: relative;
+    font-size: 14.5px;
+}
+
+textarea {
+    border: none;
+    border-bottom: 1.8px solid #ccc;
+    font-size: 14.5px;
+    resize: none;
+}
+
+#right form .form-field {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-bottom: 12.5px;
+}
+
+#right form #date-val {
+    display: flex;
+    justify-content: space-between;
+}
+
+#right form #date-val select {
+    width: 45%;
+}
+
+#right form button[type="submit"] {
+    background: linear-gradient( 135deg, #4183d7 0%, #66cc99 100%);
+    padding: 5px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 400;
+    font-size: 12pt;
+    margin-top: 10px;
+}
+
+#right form button[type="submit"]:hover {
+    background: transparent;
+    box-shadow: 0 0 0 3px #4183d7;
+    color: #4183d7;
+}
+
+.start-btn,
+.finish-btn {
+    background: linear-gradient( 135deg, #4183d7 0%, #7e8a16 100%);
+    padding: 6.5px;
+    width: 140px;
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 9pt;
+    margin: 10px;
+    margin-bottom: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.start-btn:hover,
+.finish-btn:hover {
+    background: transparent;
+    box-shadow: 0 0 0 3px #666e1c;
+    color: #666e1c;
+}
+
+.clear-btn {
+    background: linear-gradient( 135deg, #da3a3a 50%, #7e8a16 0%);
+    padding: 6.5px;
+    width: 140px;
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 9pt;
+    margin-top: 1em;
+}
+
+.clear-btn:hover {
+    background: transparent;
+    box-shadow: 0 0 0 3px #da3a3a;
+    color: #da3a3a;
+}
+
+.start-btn:disabled,
+.finish-btn:disabled {
+    background: linear-gradient( 135deg, #bdbdbd 0%, #cfcfae 100%);
+}
+
+.start-btn:disabled:hover,
+.finish-btn:disabled:hover {
+    box-shadow: none;
+    color: #fcfcfc;
+}
+
+#received-orders {
+    min-height: 220px;
+}
+
+h2 {
+    padding: 5px;
+    margin-top: 0.5em;
+    color: #453d8d;
+    font-size: 23px;
+    box-shadow: 0 2px 0px #4183d7;
+}
+
+#received-orders {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.911);
+    width: 350px;
+    right: 36%;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 2em;
+}
+
+#completed-orders {
+    background-color: rgba(255, 255, 255, 0.911);
+    width: 55%;
+    left: 59%;
+    position: absolute;
+    width: 350px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 2em;
+}
+
+#completed-orders {
+    min-height: 220px;
+}
+
+#received-orders>img,
+#completed-orders>img {
+    width: 100%;
+    height: 135px;
+    margin-top: -0.7em;
+    object-fit: cover;
+    padding-bottom: 0.3em;
+    box-shadow: 0 2px 0px #4183d7;
+}
+
+#received-orders>h2,
+#completed-orders>h2 {
+    font-size: 20px;
+}
+
+.container {
+    /* box-shadow: 10px 10px 20px hsl(0, 54%, 46%);*/
+    padding: 0px 4px 4px 4px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    word-break: break-all;
+    position: relative;
+    background-color: rgb(243, 244, 245);
+    border: 4px outset rgb(98, 108, 202);
+    border-radius: 15px;
+}
+
+#wrapper {
+    justify-content: center;
+    display: flex;
+}
+
+.container {
+    text-align: center;
+    height: auto;
+}
+
+.container>h2 {
+    color: rgb(56, 86, 151);
+    font-size: 16px;
+    text-align: center;
+    padding-left: 2px;
+    padding: 3.5px;
+    font-weight: 700;
+    margin-bottom: -0.7em;
+    margin-top: 0.25em;
+}
+
+.container>h3 {
+    color: hsl(229, 26%, 50%);
+    font-size: 14px;
+    text-align: left;
+    padding-left: 2px;
+    padding: 5px;
+    font-weight: 600;
+    margin-bottom: -1.68em;
+}
+
+.container>h4 {
+    color: hsl(0, 0%, 59%);
+    font-size: 14px;
+    text-align: left;
+    padding: 5px;
+    font-weight: 600;
+    margin-bottom: -0.1em;
+}
