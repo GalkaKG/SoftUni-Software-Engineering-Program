@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(247, 246, 246);
+    background-image: url('./images/img.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin: 5px;
+}
+
+h1 {
+    font-size: 1.5em;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    border-radius: 3px;
+    color: white;
+}
+
+form {
+    background: rgb(157, 212, 223);
+    width: 350px;
+    height: 350px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 17px;
+    padding: 12px;
+    text-align: center;
+    margin: 12px;
+    margin-left: 25px;
+    display: inline-block;
+    -webkit-box-shadow: 9px 2px 15px 2px rgba(14, 13, 13, 0.705);
+    box-shadow: 7px 2px 15px 2px rgba(61, 55, 55, 0.767);
+    opacity: 0.8;
+    border: 1px solid white;
+}
+
+#add {
+    color: white;
+    background-color: rgb(111, 125, 139);
+    padding: 5px;
+}
+
+#add:hover {
+    background-color: ivory;
+    color: black;
+}
+
+.title {
+    color: rgba(77, 70, 70, 0.836);
+    font-size: 26px;
+    padding: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 2px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+html {
+    box-sizing: border-box;
+    font: 16px/1.5 Georgia, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+form,
+input,
+textarea,
+option,
+select,
+button,
+section,
+article {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, serif;
+}
+
+#information {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+    margin-left: 0px;
+    opacity: 0.8;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px 20px;
+}
+
+tfoot td {
+    background: rgb(157, 212, 223);
+}
+
+thead>tr>th {
+    background: rgb(157, 212, 223);
+}
+
+tr:nth-child(odd) {
+    background: rgb(179, 192, 192);
+}
+
+tr:nth-child(even) {
+    background: #e5d1d1;
+}
+
+input[type="button"] {
+    width: 100px;
+}
+
+tfoot>tr>td {
+    font-style: italic;
+    font-weight: bold;
+    width: 30px;
+    empty-cells: show;
+}
+
+.moreBtn,
+.buyBtn {
+    color: white;
+    background-color: rgb(111, 125, 139);
+    padding: 5px;
+}
+
+.moreBtn:hover,
+.buyBtn:hover{
+    background-color: ivory;
+    color: black;
+}
+
+footer {
+    position: fixed;
+    padding: 12px 0;
+    opacity: 0.8;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    background: grey;
+}
+.hide {
+    display: none;
+    background-color: #e5d1d1;
+}
+
+@media only screen and (max-width: 1600px) {
+    footer {
+        position: fixed;
+    }
+    #store {
+        text-align: center;
+    }
+}
