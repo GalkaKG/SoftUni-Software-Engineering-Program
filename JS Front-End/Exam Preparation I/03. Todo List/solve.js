@@ -9,9 +9,7 @@ function attachEvents() {
     const ulToDoList = document.getElementById('todo-list');
 
     async function onLoad(e) {
-        if (e) {
-            e.preventDefault();
-        }
+        e?.preventDefault();
         ulToDoList.innerHTML = '';
     
         let response = await fetch(BASE_URL);
