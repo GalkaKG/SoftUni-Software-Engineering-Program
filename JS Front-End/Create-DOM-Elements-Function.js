@@ -36,9 +36,9 @@ function createElement(type, parentNode, content, classes, id, attributes, useIn
   }
   
 
-  
+********************************************************************************************************************************************************************** 
 
-// ** SECOND **
+//  SECOND 
   
 //   function createElement(type, content, parentNode, id, classes, attributes){
 //   const htmlElement = document.createElement(type)
