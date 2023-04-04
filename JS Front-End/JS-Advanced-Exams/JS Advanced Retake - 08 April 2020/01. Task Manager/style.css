@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font: 18px/1.5 Verdana, sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, form, input, textarea, option, select, button, section, article {
+    font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+}
+
+h1 {
+    font-size: 1.6em;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 0.75em;
+    padding: 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 0.55em;
+    margin: 5px;
+    text-align: center;
+}
+
+p+p {
+    margin-top: 1rem;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    max-width: 24%;
+    flex-basis: 30%;
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin: 2px;
+}
+
+article {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    min-height: 10%;
+    background-color: aliceblue;
+    font-size: 1.2em;
+}
+
+form {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    min-height: 10%;
+    background-color: aliceblue;
+    font-size: 0.75em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 2px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 3px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 0.75rem;
+}
+
+form button {
+    display: block;
+    margin-left: auto;
+    background-color: #8f7ee6;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto 0;
+    border-radius: 5px;
+    width: 90%;
+    background-color: #889fab;
+}
+
+.gray {
+    background-color: #3d474d;
+}
+
+.orange {
+    background-color: #ff9f1a;
+}
+
+.yellow {
+    background-color: #ffd500;
+}
+
+.green {
+    background-color: #8acc47;
+    color: white;
+}
+
+.red {
+    background-color: #d93651;
+    color: white;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
