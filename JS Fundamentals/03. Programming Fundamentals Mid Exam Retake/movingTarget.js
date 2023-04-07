@@ -27,22 +27,21 @@ function movingTarget(input) {
         if (targets[idx] <= 0) {
             targets.splice(idx, 1);
         }
+        return targets;
     }
 
     function add(idx, value) {
         if (validateIdx(idx)) {
             return targets.splice(idx, 0, value);
-        } else {
-            console.log('Invalid placement!');
-        }
+        } 
+        console.log('Invalid placement!');
     }
  
     function strike(idx, radius) {
         if (validateIdx(idx) && validateIdx(idx - radius) && validateIdx(idx + radius)) {
-            targets.splice(idx - radius, radius + radius + 1);     
-        } else {
-            console.log('Strike missed!');
-        }
+            return targets.splice(idx - radius, radius + radius + 1);     
+        } 
+        console.log('Strike missed!');
     }
 
     function validateIdx(idx) {
