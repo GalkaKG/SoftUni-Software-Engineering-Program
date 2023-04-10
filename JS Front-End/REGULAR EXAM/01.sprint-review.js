@@ -55,7 +55,7 @@ function sprintReview(input) {
             let pointsForRemove = data[assignee][index].estimatedPoints;
             let currStatus = data[assignee][index].status;
             points[currStatus] -= pointsForRemove;
-            delete data[assignee][index];         
+            data[assignee].splice(index, 1);         
         }
     }
 
