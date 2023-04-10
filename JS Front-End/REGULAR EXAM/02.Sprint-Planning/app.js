@@ -64,7 +64,7 @@ function solve() {
         estimationPointsEl.value = '';
         assigneeEl.value = '';
 
-        pointsEl.textContent = `Total Points: ${totalPoints}pts`;
+        pointsEl.textContent = `Total Points ${totalPoints}pts`;
     }
 
     function onDelete(e) {
