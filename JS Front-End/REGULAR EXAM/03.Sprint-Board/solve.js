@@ -1,8 +1,8 @@
 function attachEvents() {
-    let BASE_URL = 'http://localhost:3030/jsonstore/tasks/';
-    let loadBoardBtn = document.getElementById('load-board-btn');
+    const BASE_URL = 'http://localhost:3030/jsonstore/tasks/';
+    const loadBoardBtn = document.getElementById('load-board-btn');
     loadBoardBtn.addEventListener('click', onLoadBoard);
-    let addTaskBtn = document.getElementById('create-task-btn');
+    const addTaskBtn = document.getElementById('create-task-btn');
     addTaskBtn.addEventListener('click', onAdd);
     const titleEl = document.getElementById('title');
     const descriptionEl = document.getElementById('description');
