@@ -28,9 +28,9 @@ function solve() {
       }
 
 
-       if (!data.title || !data.description || !data.label || !data.estimatedPoints || !data.assignee) {
-           return;
-       }
+      if (!data.title || !data.description || !data.label || !data.estimatedPoints || !data.assignee) {
+          return;
+      }
 
       id++;
       totalPoints += Number(data.estimatedPoints);
@@ -56,12 +56,7 @@ function solve() {
       let div4 = createElement('div', article, '', ['task-card-actions']);
       let deleteBtn = createElement('button', div4, 'Delete');
       deleteBtn.addEventListener('click', onDelete);
-  
-      titleEl.value = '';
-      descriptionEl.value = '';
-      labelEl.value = '';
-      estimationPointsEl.value = '';
-      assigneeEl.value = '';
+      clearInputs();
 
       pointsEl.textContent = `Total Points ${totalPoints}pts`;
   }
@@ -92,13 +87,8 @@ function solve() {
       articleForRemove.remove()
       totalPoints -= Number(currPoints);
       pointsEl.textContent = `Total Points ${totalPoints}pts`;
-
-      titleEl.value = '';
-      descriptionEl.value = '';
-      labelEl.value = '';
-      estimationPointsEl.value = '';
-      assigneeEl.value = '';
-
+      clearInputs();
+      
       titleEl.disabled = false;
       descriptionEl.disabled = false; 
       labelEl.disabled = false;
@@ -108,6 +98,14 @@ function solve() {
       deleteTaskBtn.disabled = true;
       createBtn.disabled = false;
   }
+
+    function clearInputs() {
+      titleEl.value = '';
+      descriptionEl.value = '';
+      labelEl.value = '';
+      estimationPointsEl.value = '';
+      assigneeEl.value = '';
+    }
 
   function createElement(type, parentNode, content, classes, id, attributes, useInnerHtml) {
       const htmlElement = document.createElement(type);
