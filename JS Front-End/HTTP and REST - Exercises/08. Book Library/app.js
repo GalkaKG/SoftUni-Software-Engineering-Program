@@ -1,108 +1,124 @@
 function attachEvents() {
-  BASE_URL = 'http://localhost:3030/jsonstore/collections/books/'
-  const loadBooksBtn = document.getElementById('loadBooks');
-  const tbody = document.querySelector('tbody');
-  const h3 = document.querySelector('#form h3');
-  loadBooksBtn.addEventListener('click', loadAllBooks);
-  const titleEl = document.querySelector('input[name="title"]');
-  const authorEl = document.querySelector('input[name="author"]');
-  const submitBtn = document.querySelector('#form button');
-  submitBtn.addEventListener('click', onSubmit);
-  let id = null;
-  let infoObj = {};
+  document.getElementById("loadBooks").addEventListener("click", loadAll);
+  document.querySelector("#form button").addEventListener("click", save);
+  window.addEventListener("load", clear);
+}
 
-  function loadAllBooks() {
-      tbody.innerHTML = '';
+let baseUrl = "http://localhost:3030/jsonstore/collections/books";
+let tbody = document.querySelector("tbody");
+let inputTitle = document.querySelector("[name='title']");
+let inputAuthor = document.querySelector("[name='author']");
+let id = "";
+let submitBtn = document.querySelector("#form button");
+let h3 = document.querySelector("#form h3");
 
-      fetch(BASE_URL)
-      .then((response) => response.json())
-      .then((data) => {
-        for (let obj of Object.entries(data)) {
-          let author = obj[1].author;
-          let title = obj[1].title;
-          let id = obj[0];
-          infoObj[title] = id;
-
-          let tr = document.createElement('tr');
-          let td1 = document.createElement('td');
-          let td2 = document.createElement('td');
-          let td3 = document.createElement('td');
-          let editBtn = document.createElement('button');
-          let deleteBtn = document.createElement('button');
-          td1.textContent = title;
-          td2.textContent = author;
-          editBtn.textContent = 'Edit';
-          // editBtn.id = id;
-          
-          deleteBtn.textContent = 'Delete';
-          // deleteBtn.id = id;
-          editBtn.addEventListener('click', onEdit);
-          deleteBtn.addEventListener('click', onDelete);
-          td3.appendChild(editBtn);
-          td3.appendChild(deleteBtn);
-          tr.appendChild(td1);
-          tr.appendChild(td2);
-          tr.appendChild(td3);
-          tbody.appendChild(tr);
-        }
-      })
-      .catch((error) => console.error(error))
-  }
-
-  function onSubmit() {
-    let title = titleEl.value;
-    let author = authorEl.value;
-
-      if (h3.textContent === 'FORM') {
-        if (!title || !author) {
-          return
-        }
-        fetch(BASE_URL, {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({ author, title })
-        })
-        loadAllBooks()
-      } 
-      
-      if (h3.textContent === 'Edit FORM') {
-        let changedTitle = titleEl.value;
-        let changedAuthor = authorEl.value;
-        submitBtn.textContent = 'Submit';
-        h3.textContent = 'FORM'; 
-        fetch(`${BASE_URL}${id}`, {
-          method: 'PUT',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            "author": changedAuthor,
-            "title": changedTitle
-          })
-        })
-        loadAllBooks();
-      }   
-    // loadAllBooks();
-    titleEl.value = '';
-    authorEl.value = '';
-  }
-
-  function onEdit(e) { 
-    // id = e.currentTarget.id;
-    submitBtn.textContent = 'Save';
-    h3.textContent = 'Edit FORM';
-    titleEl.value = e.target.parentNode.parentNode.querySelector('td:first-child').textContent;
-    authorEl.value = e.target.parentNode.parentNode.querySelector('td:nth-child(2)').textContent;  
-    id = infoObj[titleEl.value];
-  }
-
-  function onDelete(e) {
-    // id = e.currentTarget.id
-    let title = e.currentTarget.parentNode.parentNode.querySelector('td:first-child').textContent;
-    id = infoObj[title];
-    fetch(`${BASE_URL}${id}`, {
-      method: 'DELETE'
-    })
-    e.target.parentNode.parentNode.remove();
+async function loadAll() {
+  tbody.replaceChildren();
+  try {
+    const response = await fetch(baseUrl);
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    const data = await response.json();
+    Object.entries(data).forEach((obj) => {
+      let tr = createTr(obj[0], obj[1]);
+      tbody.appendChild(tr);
+    });
+  } catch (error) {
+    alert(error);
   }
 }
 
-attachEvents()
+async function save() {
+  if (!inputTitle.value || !inputAuthor.value) {
+    alert("Please fill all fields");
+  } else {
+    let method = "";
+    let url=""
+    if (submitBtn.textContent == "Submit") {
+      method = "POST";
+      url=baseUrl
+    } else if (submitBtn.textContent == "Save") {
+      method = "PUT";
+      url = baseUrl + "/" + id;
+         submitBtn.textContent = "Submit";
+    }
+       try {
+      let response = await fetch(url, {
+        method: `${method}`,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: inputTitle.value,
+          author: inputAuthor.value,
+        }),
+      });
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+      h3.textContent = "FORM";
+      //inputTitle.value = "";
+    //  inputAuthor.value = "";
+      loadAll();
+      return await response.json;
+    } catch(error) {
+      alert(error);
+    }
+  }
+}
+
+function edit(ev) {
+  submitBtn.textContent = "Save";
+  id = ev.target.id;
+  h3.textContent = "Edit FORM";
+  inputTitle.value =
+    ev.target.parentElement.parentElement.children[0].textContent;
+  inputAuthor.value =
+    ev.target.parentElement.parentElement.children[1].textContent;						 
+}
+async function deleteRecord(ev) {
+  let urlToken = `${baseUrl}/${ev.target.id}`;
+  try {
+    let response = await fetch(urlToken, {
+      method: "DELETE",
+    });
+    if (!response.ok) {
+      throw new Error(`${response.status} ${response.statusText}`);
+    }
+    ev.target.parentElement.parentElement.remove();
+    loadAll();
+    return await response.json();
+  } catch (error) {
+    alert(error);
+  }
+}
+
+
+function clear() {
+  tbody.replaceChildren();
+}
+
+function createTr(key, obj) {
+  let tr = document.createElement("tr");
+  let tdBook = document.createElement("td");
+  tdBook.textContent = obj.title;
+  let tdAuthor = document.createElement("td");
+  tdAuthor.textContent = obj.author;
+  let tdBtn = document.createElement("td");
+  let editBtn = document.createElement("button");
+  editBtn.textContent = "Edit";
+  editBtn.id = key;
+  editBtn.addEventListener("click", edit);
+  tdBtn.appendChild(editBtn);
+  let deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.id = key;
+  deleteBtn.addEventListener("click", deleteRecord);
+  tdBtn.appendChild(deleteBtn);
+  tr.appendChild(tdBook);
+  tr.appendChild(tdAuthor);
+  tr.appendChild(tdBtn);
+  return tr;
+}
+attachEvents();
