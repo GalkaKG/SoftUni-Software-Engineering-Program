@@ -29,9 +29,7 @@ function solve() {
             return
         }
 
-        Object.values(inputElements).forEach((el) => {
-            el.value = ''
-        });
+        Object.values(inputElements).forEach(el => el.value = '');
 
         let article = document.createElement('article');
         let h3 = document.createElement('h3');
