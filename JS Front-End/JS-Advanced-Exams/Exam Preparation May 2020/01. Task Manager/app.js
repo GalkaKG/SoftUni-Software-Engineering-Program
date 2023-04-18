@@ -3,7 +3,7 @@ function solve() {
         taskEl: document.getElementById('task'),
         descriptionEl: document.getElementById('description'),
         dateEl: document.getElementById('date')
-    };
+    }
 
     const sections = {
         openSection: document.querySelector('.wrapper section:nth-child(2) div:nth-child(2)'),
