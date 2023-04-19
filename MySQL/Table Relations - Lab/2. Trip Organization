@@ -7,7 +7,7 @@ SELECT
 FROM
     vehicles AS v
         JOIN
-	campers AS c ON v.driver_id = c.id;
+    campers AS c ON v.driver_id = c.id;
 
 
 ------------------------------------------------------------
