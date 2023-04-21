@@ -22,7 +22,6 @@ function onLoad() {
 
             for (let info of Object.values(data)) {
                 id = info._id;
-                console.log(id);
                 let div = document.createElement('div');
                 div.className = 'container';
                 let h2 = document.createElement('h2');
@@ -64,14 +63,16 @@ function onLoad() {
         let teacherName = teachersNameEl.value;
        fetch(BASE_URL, {
         method: 'POST',
-        body: JSON.stringify({ "title": courseTitle, "type": courseType, "description": description, "teacher": teacherName})
+        body: JSON.stringify({
+                "title": courseTitle,
+                "type": courseType,
+                "description": description,
+                "teacher": teacherName
+            })
        })
        .then(() => onLoad());
 
-       courseTitleEl.value = '';
-       courseTypeEl.value = '';
-       descriptionEl.value = '';
-       teachersNameEl.value = '';
+       clear();
        editBtn.disabled = true;
        addBtn.disabled = false;
    }
@@ -101,7 +102,7 @@ function onLoad() {
         body: JSON.stringify({ title, type, description, teacher })
     })
     .then(() => onLoad());
-     
+     clear();
    }
 
    function onFinish(e) {
@@ -111,4 +112,11 @@ function onLoad() {
     })
     .then(() => onLoad());
 
+   }
+
+   function clear() {
+       courseTitleEl.value = '';
+       courseTypeEl.value = '';
+       descriptionEl.value = '';
+       teachersNameEl.value = '';
    }
