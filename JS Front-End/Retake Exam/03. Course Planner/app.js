@@ -79,7 +79,6 @@ function onLoad() {
    function onEdit(e) {
     e.preventDefault();
     id = e.target.id;
-    // console.log(id);
     courseTitleEl.value = e.target.parentNode.querySelector('h2').textContent;
     courseTypeEl.value = e.target.parentNode.querySelector('h3:nth-child(3)').textContent;
     descriptionEl.value = e.target.parentNode.querySelector('h4').textContent;
@@ -92,7 +91,6 @@ function onLoad() {
 
    function onEditCourse(e) {
     e.preventDefault();
-    console.log(id);
     let title = courseTitleEl.value;
     let type = courseTypeEl.value;
     let description = descriptionEl.value;
