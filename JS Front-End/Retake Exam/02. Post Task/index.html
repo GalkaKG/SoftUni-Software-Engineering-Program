@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Task Posts</title>
+</head>
+
+<body>
+
+  <body>
+    <div id="main-container">
+      <div id="left-container">
+
+        <div id="newPost" class="container">
+
+          <form class="newPostContent">
+            <h1>Add New Task</h1>
+            <input type="text" placeholder="Enter title here" id="task-title" />
+
+            <input type="text" placeholder="Enter category here" id="task-category" />
+
+            <textarea placeholder="Add content..." id="task-content"></textarea>
+
+            <button type="button" id="publish-btn">Publish</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="middle-container">
+
+        <div id="relatedPosts" class="container">
+
+          <div class="bar title-bar">
+            <h2>Task for review:</h2>
+          </div>
+
+
+          <ul id="review-list">
+
+          </ul>
+
+        </div>
+        <div id="published-container">
+          <div class="container">
+            <div class="bar title-bar">
+              <h2>Uploaded Task:</h2>
+            </div>
+
+            <ul id="published-list">
+
+            </ul>
+          </div>
+        </div>
+        <script src="./app.js"></script>
+  </body>
+
+</html>
