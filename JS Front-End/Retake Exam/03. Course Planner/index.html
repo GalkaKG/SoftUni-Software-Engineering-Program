@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Planner</title>
+    <link rel="stylesheet" href="./style/css/style.css">
+</head>
+
+<body>
+    <main>
+
+        <h1>Course Planner</h1>
+        <section id="main-container">
+            <div id="form">
+                <h1>Course Form</h1>
+                <form action="#">
+                    <label for="course-name">Course Title:</label>
+                    <input type="text" id="course-name" name="course-name">
+
+                    <label for="course-type">Course Type:</label>
+                    <input type="text" id="course-type" name="course-type">
+
+                    <label for="description">Description of the Course:</label>
+                    <textarea id="description" cols="20"></textarea>
+
+                    <label for="teacher-name">Teacher's Name:</label>
+                    <input type="text" id="teacher-name" name="teacher-name">
+
+                    <button id="add-course">Add Course</button>
+                    <button id="edit-course" disabled>Edit Course</button>
+                </form>
+            </div>
+        </section>
+
+        <div id="wrapper">
+
+            <section id="progress-course">
+                <h2>Course in Progress:</h2>
+                <button id="load-course">Load Courses</button>
+                <div id="list">
+                    <!-- <div class="container">
+                        <h2>JS Back-End</h2>
+                        <h3>John Brown</h3>
+                        <h3>Long</h3>
+                        <h4>JS Back-end responsible for managing the interchange of data between the server
+                            and the users</h4>
+                        <button class="edit-btn">Edit Course</button>
+                        <button class="finish-btn">Finish Course</button>
+                    </div> -->
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
