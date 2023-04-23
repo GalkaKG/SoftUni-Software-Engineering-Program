@@ -10,8 +10,7 @@ def binary_search(nums, target, left, right):
 
     if target < mid_num:
         right = mid_idx - 1
-
-    if target > mid_num:
+    else:
         left = mid_idx + 1
 
     return binary_search(nums, target, left, right)
