@@ -3,7 +3,7 @@ def binary_search(nums, target, left, right):
     mid_num = nums[mid_idx]
 
     if left > right:
-        return 'This number doesn\'t exist'
+        return -1       # This number doesn't exist
 
     if mid_num == target:
         return mid_idx
