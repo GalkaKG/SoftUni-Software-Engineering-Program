@@ -6,7 +6,7 @@ If you are a student you can check the description of the decisions here --> htt
 
 # Netflix Webpage Workshop
 
-This repository contains the code for the Netflix webpage created as part of the "HTML&CSS" course. The webpage was developed using HTML and CSS to replicate the Netflix user interface.
+This repository contains also the code for the Netflix webpage created as part of the "HTML&CSS" course. The webpage was developed using HTML and CSS to replicate the Netflix user interface.
 
 ## Live Demo
 
