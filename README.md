@@ -27,5 +27,5 @@ I would like to acknowledge the "HTML&CSS" course for providing the foundation a
 
 ## Contact
 
-For any questions or inquiries, feel free to contact me at [your.email@example.com](mailto:your.email@example.com).
+For any questions or inquiries, feel free to contact me at [your.email@example.com](mailto:galinakrgeorgieva@gmail.com).
 
