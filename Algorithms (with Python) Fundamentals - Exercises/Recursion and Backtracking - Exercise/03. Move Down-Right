@@ -6,7 +6,7 @@ def count_all_paths(row, col, rows, cols):
 
     result = 0
     result += count_all_paths(row, col + 1, rows, cols) # Right
-    result += count_all_paths(row + 1, col, rows, cols)
+    result += count_all_paths(row + 1, col, rows, cols) # Down
 
     return result
 
