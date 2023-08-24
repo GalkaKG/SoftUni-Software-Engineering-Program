@@ -1,3 +1,17 @@
+def fibonacci(num):
+    if num <= 1:
+        return 1
+
+    return fibonacci(num - 1) + fibonacci(num - 2)
+
+
+number = int(input())
+print(fibonacci(number))
+
+
+
+
+
 def iterative_fib(number):
     fib0 = 1
     fib1 = 1
