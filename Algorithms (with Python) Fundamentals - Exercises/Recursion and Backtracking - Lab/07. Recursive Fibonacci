@@ -1,8 +1,15 @@
+cache = {}
+
+
 def fibonacci(num):
     if num <= 1:
         return 1
+    if num in cache:
+        return cache[num]
+    result = fibonacci(num - 1) + fibonacci(num - 2)
+    cache[num] = result
 
-    return fibonacci(num - 1) + fibonacci(num - 2)
+    return result
 
 
 number = int(input())
