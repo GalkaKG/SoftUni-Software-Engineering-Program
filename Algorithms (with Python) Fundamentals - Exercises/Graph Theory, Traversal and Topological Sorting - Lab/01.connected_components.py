@@ -20,11 +20,11 @@ for i in range(n):
 visited = [False] * n
 
 for node in graph:
+    if visited[node]:
+        continue
     connected = []
     dfs(node, visited, graph, connected)
-    if connected:
-        print(f'Connected component: {" ".join(str(x) for x in connected)}')
-
+    print(f'Connected component: {" ".join(str(x) for x in connected)}')
 
 
 # 2-nd decision
