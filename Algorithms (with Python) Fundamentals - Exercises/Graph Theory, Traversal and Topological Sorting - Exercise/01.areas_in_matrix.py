@@ -1,13 +1,4 @@
 # 1-st solution
-rows = int(input())
-cols = int(input())
-
-matrix = [list(input()) for _ in range(rows)]
-visited = [[False] * cols for _ in range(rows)]
-
-result = {}
-
-
 def dfs(curr_node, row, col, matrix, visited, result):
     if row < 0 or col < 0 or row >= len(matrix) or col >= len(matrix[0]):
         return 0
@@ -24,6 +15,14 @@ def dfs(curr_node, row, col, matrix, visited, result):
 
     return 1
 
+
+rows = int(input())
+cols = int(input())
+
+matrix = [list(input()) for _ in range(rows)]
+visited = [[False] * cols for _ in range(rows)]
+
+result = {}
 
 total_areas = 0
 for row in range(rows):
