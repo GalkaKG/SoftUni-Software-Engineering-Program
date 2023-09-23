@@ -1,1 +1,3 @@
- docker run --name ls-server -p 80:8080 -d lightstreamer:latest
+# Run this command in the Terminal
+
+docker run --name ls-server -p 80:8080 -d lightstreamer:latest
