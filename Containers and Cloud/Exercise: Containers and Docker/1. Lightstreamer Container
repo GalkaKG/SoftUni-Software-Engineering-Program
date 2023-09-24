@@ -1,3 +1,3 @@
-# Run this command in the Terminal
+# Run this command in the Terminal on Windows 11
 
 docker run --name ls-server -p 80:8080 -d lightstreamer:latest
