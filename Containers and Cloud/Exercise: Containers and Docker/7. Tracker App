@@ -1,0 +1,2 @@
+docker build . -f ./Dockerfile -t galka777/tracker_app
+docker push galka777/tracker_app
