@@ -1,0 +1,11 @@
+docker network create express-mongo
+docker network create react-express
+docker build . -f ./Dockerfile -t backend_image:latest
+docker build . -f ./Dockerfile -t frontend_image:latest
+docker run -d -p 3000:3000 --name frontend --network react-express frontend_image:latest
+docker run -d --name backend --network express-mongo backend_image:latest
+docker pull mongo
+docker run -d --name mongo --network express-mongo -v ${PWD}/data:/data/db mongo:latest
+docker network connect react-express backend
+docker network inspect react-express
+docker network inspect express-mongo
