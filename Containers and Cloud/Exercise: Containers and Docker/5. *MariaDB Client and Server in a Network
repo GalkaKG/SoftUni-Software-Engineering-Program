@@ -1,0 +1,6 @@
+# Run this commands in the Terminal on Windows 11
+
+docker pull mariadb
+docker network create some-network 
+docker run --detach --network some-network --name mariadb-server --env MARIADB_USER=example-user --env MARIADB_PASSWORD=my_cool_secret --env MARIADB_ROOT_PASSWORD=my-secret-pw  mariadb:latest
+docker run -it --network some-network --name mariadb-client --rm mariadb:latest mariadb -hmariadb-server -uexample-user -p
