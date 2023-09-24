@@ -1,0 +1,4 @@
+docker build . -f ./TaskBoard.WebApp/Dockerfile -t galka777/taskboard_app
+docker images
+docker login
+docker push galka777/taskboard_app
