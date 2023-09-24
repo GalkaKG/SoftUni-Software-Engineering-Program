@@ -1,0 +1,3 @@
+docker pull mongo
+docker run -p 27017:27017 -v ${PWD}/data:/etc/mongo -d -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=mongoadminpass mongo
+docker run -p 27017:27017 -v data:/etc/mongo -d -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=mongoadminpass mongo
