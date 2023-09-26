@@ -1,3 +1,4 @@
 docker compose build
 docker compose up
 docker ps
+docker compose down --rmi all --volumes
