@@ -1,0 +1,12 @@
+### From the last exercise
+docker pull node:16
+vue init browserify MyWebsite
+cd MyWebsite
+npm install
+npm run dev
+###########################
+
+docker image build . -f Dockerfile -t galka777/my-webapp
+docker login
+docker push galka777/my-webapp
+docker run -d -p 8080:8080 galka777/my-webapp
