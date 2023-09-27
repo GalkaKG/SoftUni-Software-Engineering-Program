@@ -3,4 +3,4 @@ vue init browserify MyWebsite
 cd MyWebsite
 npm install
 npm run dev
-docker run -it -p 8080:8080 -v ${PWD}:/app -w /app node:16 nmp run serve
+docker run -it -p 8080:8080 -v ${PWD}:/app -w /app node:16 npm run serve
