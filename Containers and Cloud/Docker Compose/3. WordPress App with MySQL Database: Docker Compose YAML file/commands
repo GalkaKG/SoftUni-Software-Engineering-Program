@@ -1,1 +1,3 @@
-docker network create
+docker network create my_network
+docker-compose build
+docker-compose up -d
