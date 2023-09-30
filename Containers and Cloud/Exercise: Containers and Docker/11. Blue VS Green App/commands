@@ -1,3 +1,20 @@
+# Create the networks
 docker network create frontend
 docker network create backend
 docker network ls
+
+# Create the redis container
+docker run --name redis -d --network backend redis
+docker network inspect backend
+
+# Create the postgres container
+docker volume create postgres
+docker run --name db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d -v postgres:/var/lib/postgresql/data --network backend postgres
+docker network inspect backend
+
+# Create the result app
+docker build -t result .  
+docker images -a
+docker run -d -p 5001:80 --name result --network backend -v result:/app result
+docker network connect frontend result
+docker network inspect frontend
