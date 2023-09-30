@@ -1,0 +1,5 @@
+docker login azure
+docker context create aci nginxacicontext
+docker context ls
+docker context use nginxacicontext
+docker run -p 80:80 registry.hub.docker.com/nginxdemos/hello
