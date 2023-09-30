@@ -47,5 +47,8 @@ networks:
     external: true
 volumes:
   postgres:
+    external: true
   result:
+    external: true
   vote:
+    external: true
