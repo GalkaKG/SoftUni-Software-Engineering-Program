@@ -2,3 +2,32 @@
 $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi
 az --version
 
+docker build -t tracker-app-image .
+docker images
+
+# Check localy if the app works
+docker run -p 5000:80 -d --name tracker-app tracker-app-image
+
+az login
+az group create --name trackerappgr --location westeurope
+az acr create --resource-group trackerappgr --name trackerappcon --sku Basic
+az acr login --name trackerappcon
+az acr show --name trackerappcon --query loginServer --output table
+docker tag tracker-app-image trackerappcon.azurecr.io/tracker-app-image:v1
+docker images
+docker push trackerappcon.azurecr.io/tracker-app-image:v1
+az acr repository list --name trackerappcon
+
+$ACR_NAME='trackerappcon'
+$SERVICE_PRINCIPAL_NAME='trackerappservice'
+$ACR_REGISTRY_ID=$(az acr show --name $ACR_NAME --query "id" --output tsv)
+$PASSWORD=$(az ad sp create-for-rbac --name $SERVICE_PRINCIPAL_NAME --scope $ACR_REGISTRY_ID --role acrpull --query "password" --output tsv)
+
+az container create --resource-group trackerappgr --name trackerappcon --image trackerappcon.azurecr.io/tracker-app-image:v1 --cpu 1 --memory 1 --registry-login-server trackerappcon.azurecr.io --registry-username trackerappcon --registry-password 4PfsyuNRgiGKnh6wxFZnmcT2Uxzn1dPxW8uceZCNbP+ACRAs6efk --ip-address Public --dns-name-label trackerappdns --ports 80
+
+az container show --resource-group trackerappgr --name trackerappcon --query instanceView.state
+az container show --resource-group trackerappgr --name trackerappcon --query ipAddress.fqdn
+
+az container logs --resource-group trackerappgr --name trackerappcon
+az group delete --name trackerappgr
+
