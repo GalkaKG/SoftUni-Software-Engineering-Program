@@ -12,9 +12,14 @@ docker volume create postgres
 docker run --name db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d -v postgres:/var/lib/postgresql/data --network backend postgres
 docker network inspect backend
 
-# Create the result app
+# Create the result app container
 docker build -t result .  
 docker images -a
 docker run -d -p 5001:80 --name result --network backend -v result:/app result
 docker network connect frontend result
 docker network inspect frontend
+
+# Create the vote app container
+docker build -t vote . 
+docker volume create vote
+docker run -d -p 5000:80 --name vote --network backend -v vote:/app vote
