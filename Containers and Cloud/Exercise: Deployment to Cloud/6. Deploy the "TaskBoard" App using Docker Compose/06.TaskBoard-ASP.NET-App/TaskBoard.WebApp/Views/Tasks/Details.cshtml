@@ -1,0 +1,48 @@
+﻿@model TaskDetailsViewModel
+
+@{
+    ViewBag.Title = "View Task Details";
+}
+
+<link href="~/css/style.css" rel="stylesheet" type="text/css" />
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<table class="task-details">
+    <tr class="task-id">
+        <th>ID</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr class="title">
+        <th>Title</th>
+        <td>@Model.Title</td>
+    </tr>
+    <tr class="description">
+        <th>Description</th>
+        <td>@Model.Description</td>
+    </tr>
+    <tr class="board">
+        <th>Board</th>
+        <td>@Model.Board</td>
+    </tr>
+    <tr class="board">
+        <th>Owner</th>
+        <td>@Model.Owner</td>
+    </tr>
+    <tr class="dateCreated">
+        <th>Created on</th>
+        <td>@Model.CreatedOn</td>
+    </tr>
+    @if (Model.Owner == this.User.Identity.Name)
+    {
+        <tr class="actions">
+            <th>Actions</th>
+
+            <td>
+                <a asp-controller="Tasks" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                <a asp-controller="Tasks" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-secondary">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

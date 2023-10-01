@@ -1,0 +1,34 @@
+﻿@model TaskViewModel
+
+@{
+    ViewData["Title"] = "Delete Task";
+}
+
+<link href="~/css/style.css" rel="stylesheet" type="text/css" />
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<form asp-action="Delete">
+    <table class="tasks-entry form">
+        <tr>
+            <th>
+                <label asp-for="Title" class="control-label"></label>
+            </th>
+            <td>
+                <input asp-for="Title" class="form-control" disabled="disabled" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label asp-for="Description" class="control-label"></label>
+            </th>
+            <td>
+                <textarea asp-for="Description" class="form-control" disabled="disabled"></textarea>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Delete" class="btn btn-primary" />
+</form>
+
+

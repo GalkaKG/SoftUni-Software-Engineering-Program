@@ -1,0 +1,32 @@
+﻿@model IEnumerable<TaskViewModel>
+
+@foreach (var task in Model)
+{
+    <table class="task-entry">
+        <tbody>
+            <tr class="title">
+                <th>Title</th>
+                <td>@task.Title</td>
+            </tr>
+            <tr class="description">
+                <th>Description</th>
+                <td>
+                    <div class="description">@task.Description</div>
+                </td>
+            </tr>
+            <tr class="actions">
+                <th>Actions</th>
+                <td>
+                    <a asp-controller="Tasks" asp-action="Details" asp-route-id="@task.Id" class="btn btn-secondary mb-2">View</a>
+                    <span></span>
+                    @if (this.User.Identity.Name == task.Owner)
+                    {
+                        <a asp-controller="Tasks" asp-action="Edit" asp-route-id="@task.Id" class="btn btn-secondary mb-2">Edit</a>
+                        <span></span>
+                        <a asp-controller="Tasks" asp-action="Delete" asp-route-id="@task.Id" class="btn btn-secondary mb-2">Delete</a>
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}

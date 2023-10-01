@@ -1,0 +1,46 @@
+﻿@model TaskSearchFormModel
+
+@{
+    ViewBag.Title = "Search Tasks";
+}
+
+<link href="~/css/style.css" rel="stylesheet" type="text/css" />
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+@if (Context.Request.Method == "POST")
+{
+    <h2>Tasks Matching Keyword "@Model.Keyword"</h2>
+}
+
+@if (Model.Tasks.Any())
+{
+    <h5>@Model.Tasks.Count() tasks found.</h5>
+    <div class="tasks-grid">
+        @await Html.PartialAsync("~/Views/Shared/_TaskPartial.cshtml", Model.Tasks)
+    </div>
+}
+else if (Context.Request.Method == "POST")
+{
+    <h5>No tasks found.</h5>
+}
+
+<form asp-action="Search">
+    <table class="tasks-entry form">
+        <tr>
+            <th>
+                <label asp-for="Keyword"></label>
+            </th>
+            <td>
+                <input asp-for="Keyword" class="form-control" placeholder="Keyword..." />
+                <span asp-validation-for="Keyword" class="small text-danger"></span>
+            </td>
+        </tr>
+    </table>
+    <input class="btn btn-primary" type="submit" value="Search" />
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

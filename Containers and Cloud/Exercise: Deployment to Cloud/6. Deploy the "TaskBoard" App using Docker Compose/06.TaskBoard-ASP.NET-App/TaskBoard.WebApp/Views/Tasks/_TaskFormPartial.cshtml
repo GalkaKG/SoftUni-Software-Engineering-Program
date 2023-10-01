@@ -1,0 +1,36 @@
+﻿@model TaskFormModel
+
+<table class="tasks-entry form">
+    <tr>
+        <th>
+            <label asp-for="Title"></label>
+        </th>
+        <td>
+            <input asp-for="Title" class="form-control" placeholder="Title...">
+            <span asp-validation-for="Title" class="small text-danger"></span>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label asp-for="Description"></label>
+        </th>
+        <td>
+            <textarea asp-for="Description" class="form-control" placeholder="Description..."></textarea>
+            <span asp-validation-for="Description" class="small text-danger"></span>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label asp-for="BoardId"></label>
+        </th>
+        <td>
+            <select asp-for="BoardId" class="form-control">
+                @foreach (var tag in Model.Boards)
+                {
+                    <option value="@tag.Id">@tag.Name</option>
+                }
+            </select>
+            <span asp-validation-for="BoardId" class="small text-danger"></span>
+        </td>
+    </tr>
+</table>

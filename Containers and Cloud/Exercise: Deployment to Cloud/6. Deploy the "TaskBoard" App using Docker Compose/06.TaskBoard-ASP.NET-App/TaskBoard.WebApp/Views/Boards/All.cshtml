@@ -1,0 +1,30 @@
+﻿@model IEnumerable<BoardViewModel>
+
+@{
+    ViewData["Title"] = "Task Board";
+}
+
+<link href="~/css/style.css" rel="stylesheet" type="text/css" />
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr/>
+
+<div class="tasks-grid">
+    @if (!Model.Any())
+    {
+        <h3 class="text-center">No tasks yet!</h3>
+    }
+    else
+    {
+        @foreach (var board in Model)
+        {
+            <div class="task">
+                <h1>@board.Name</h1>
+                @if (board.Tasks.Any())
+                {
+                    @await Html.PartialAsync("~/Views/Shared/_TaskPartial.cshtml", board.Tasks)
+                }
+            </div>
+        }
+    }
+</div>

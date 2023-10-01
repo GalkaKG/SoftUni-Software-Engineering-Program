@@ -1,0 +1,60 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="home-page">
+    @if (!this.User.Identity.IsAuthenticated)
+    {
+        <h1 class="text-center">Task Board: A Board for Your Tasks</h1>
+        <hr class="hr-2 bg-dark" />
+        <h3 class="mt-4"><a class="font-weight-bold" href="/Identity/Account/Login">Login</a> to start creating tasks.</h3>
+        <h5>(Default user credentials: <b>guest</b> / <b>guest</b>)</h5>
+        <h3 class="mt-4"><a class="font-weight-bold" href="/Identity/Account/Register">Register</a> if you don't have an account.</h3>
+    }
+    else
+    {
+        <h1 class="text-center">Welcome, @this.User.Identity.Name</h1>
+        <hr class="hr-2 bg-secondary" />
+        <h4 class="mt-4 text-center">TaskBoard is here for all your tasks.</h4>
+    }
+    <br />
+    <span class="boardSpan">Tasks: <b>@Model.AllTasksCount</b></span>
+    <ul>
+        @foreach (var board in Model.BoardsWithTasksCount)
+        {
+            <li>
+                <span class="boardSpan">@board.BoardName: <b>@board.TasksCount</b></span>
+            </li>
+        }
+    </ul>
+    @if (Model.UserTasksCount > -1)
+    {
+        <h5>You have: <b>@Model.UserTasksCount</b> tasks</h5>
+    }
+</section>
+
+@if (this.User.Identity.IsAuthenticated)
+{
+    <div class="home-page-icons">
+        <a asp-area="" asp-controller="Boards">
+            <span class="icon">🖹</span>
+            <span>Task Board</span>
+        </a>
+        <a asp-area="" asp-controller="Tasks" asp-action="Create">
+            <span class="icon">✚</span>
+            <span>New Task</span>
+        </a>
+        <a asp-area="" asp-controller="Tasks" asp-action="Search">
+            <span class="icon">⌕</span>
+            <span>Search Tasks</span>
+        </a>
+    </div>
+}
+
+
+
+
+
+
