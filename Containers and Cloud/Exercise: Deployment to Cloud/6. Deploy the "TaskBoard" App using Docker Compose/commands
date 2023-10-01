@@ -7,6 +7,11 @@ docker push taskboardcr.azurecr.io/taskboard-image
 az acr repository show --name taskboardcr --repository taskboard-image
   
 docker context create aci taskboardcontext
-docker context ls
 docker context use taskboardcontext
+docker context ls
+
+# First you need to create Azure Storage Account with the same name like in the docker-compose.yaml file
 docker compose up
+docker ps
+
+# And visite the ip to see the deployed app :)
