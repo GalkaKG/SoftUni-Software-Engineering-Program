@@ -1,0 +1,12 @@
+az group create --name taskBoardResourceGroup --location westeurope
+az acr create --resource-group taskBoardResourceGroup --name taskboardcr --sku Basic
+az acr login --name taskboardcr
+
+docker-compose up --build -d
+docker push taskboardcr.azurecr.io/taskboard-image
+az acr repository show --name taskboardcr --repository taskboard-image
+  
+docker context create aci taskboardcontext
+docker context ls
+docker context use taskboardcontext
+docker compose up
