@@ -1,0 +1,15 @@
+az group create --name posioResourceGroup --location westeurope
+az acr create --resource-group posioResourceGroup --name posioapp --sku Basic
+az group list --output table
+az acr login --name posioapp 
+
+docker build -t posioapp.azurecr.io/posio-app .
+docker push posioapp.azurecr.io/posio-app
+az acr repository show --name posioapp --repository posio-app
+
+docker context create aci posiocontext
+docker context use posiocontext
+docker context ls
+
+docker compose up
+docker ps
