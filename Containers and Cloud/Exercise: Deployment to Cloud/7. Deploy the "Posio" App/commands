@@ -13,3 +13,5 @@ docker context ls
 
 docker compose up
 docker ps
+
+az group delete --name posioResourceGroup --yes --no-wait
