@@ -1,1 +1,4 @@
 mvn clean package
+docker build -t resellerapp .
+docker network create backend
+docker-compose up -d
