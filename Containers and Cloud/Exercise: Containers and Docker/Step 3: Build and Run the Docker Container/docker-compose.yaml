@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./static:/app/staticfiles
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=False
