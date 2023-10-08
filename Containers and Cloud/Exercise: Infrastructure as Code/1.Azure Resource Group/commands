@@ -5,3 +5,5 @@ terraform fmt   # Formating the .tf file
 terraform validate   # Validating the .tf file
 terraform apply    # Added/downloaded the resource
 yes   # Accepting the apply
+terraform destroy   # Deleting the resource group
+yes
