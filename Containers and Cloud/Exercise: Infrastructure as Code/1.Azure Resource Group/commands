@@ -1,0 +1,7 @@
+code .   # Open VSC in the Terminal
+az login   # Login to Azure
+terraform init   # Download the provider initiliazed in the .tf file
+terraform fmt   # Formating the .tf file
+terraform validate   # Validating the .tf file
+terraform apply    # Added/downloaded the resource
+yes   # Accepting the apply
