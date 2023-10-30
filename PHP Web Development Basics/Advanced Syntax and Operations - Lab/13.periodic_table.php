@@ -1,6 +1,5 @@
 <?php
 // Read the input from the console
-echo "Enter chemical elements (comma-separated): ";
 $input = trim(fgets(STDIN)); // Using fgets to read input
 
 // Split the input string into an array using commas as the delimiter
