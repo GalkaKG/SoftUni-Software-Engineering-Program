@@ -1,6 +1,5 @@
 <?php
 // Read the array of integers
-echo "Enter integers (space-separated): ";
 $input = trim(fgets(STDIN));
 
 // Split the input string into an array of integers
